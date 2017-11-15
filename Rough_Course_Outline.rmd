@@ -5,7 +5,7 @@ output:
 ---
 #**Data Analysis Course Outline**
 
-###WEEK 1
+### WEEK 1
 
 * Why use code!?
 * INSTALL R / R-studio
@@ -17,7 +17,7 @@ output:
 help()
 ```
   
-###WEEK 2
+### WEEK 2
 
 * Assigning things to objects
 * Get familiar with object types and basic functions
@@ -42,7 +42,7 @@ c()       list()      cbind()       rbind()       sum()         mean()        sd
 
 
   
-###WEEK 3
+### WEEK 3
 
 * Importing data
 * Useful data formats
@@ -61,7 +61,7 @@ hist()            boxplot()         barplot()         plot()                heat
 sample()          t()               sort()
 ```
   
-###WEEK 4
+### WEEK 4
 
 * Finding/Installing/Loading packages
 * Extending functionality of R
@@ -85,7 +85,7 @@ write.table()       sink()
       * Export summary statistics to text file
   
 
-###WEEK 5
+### WEEK 5
 
 * Data estimations
     * point estimates
@@ -102,7 +102,7 @@ lm()        glm()         aov()       summary()
 t.test()    chisq.test()  
 ```
 
-###WEEK 6
+### WEEK 6
 
 Experimental design
 common designs and analysis options
@@ -122,7 +122,7 @@ fitdist()       denscomp()        cdfcomp()
 TukeyHSD()      
 ```
 
-###WEEK 7
+### WEEK 7
 
 * Non-parametric alternatives
 * Mann-Whitney-Wilcoxin
@@ -137,7 +137,7 @@ wilcox.test()     kruskal.test()
 
 apply()     sapply()      lapply()      tapply()
 ```
-###WEEK 8
+### WEEK 8
 
 * Other peoples' data
 * Principles of tidy data
@@ -171,7 +171,7 @@ gather()      spread()
       * Test hypothesis / post-hoc tests
       
 
-###WEEK 9
+### WEEK 9
 * Predicting data
 * Intro to ggplot	
 
@@ -186,7 +186,7 @@ ggplot()
     aes()
 ```
     
-###WEEK 10
+### WEEK 10
 * Figure generation
 * Figure export
 
@@ -200,7 +200,7 @@ geom_point()      geom_boxplot()      geom_bar()      geom_violin()
 labs()            ggsave()            
 ```
 
-###WEEK 11
+### WEEK 11
 * Figure generation continued
 
 ```{r eval=FALSE, include=TRUE}
@@ -214,7 +214,7 @@ ggplot()
 scale_*()
 ```
 
-###WEEK 12
+### WEEK 12
 * Data standardization / normalization
 * Ecology examples
     * Ordinations / NMDS
@@ -239,7 +239,7 @@ metaMDS()         adonis()
       * Use model to predict new response values from new predictors
       * Generate and export plots from data sets
 
-###WEEK 13
+### WEEK 13
 
 * Importing and manipulating DNA sequence data
     * Bioconductor
@@ -261,7 +261,7 @@ biostrings
 
 ```
 
-###WEEK 14
+### WEEK 14
 
 * Command-line tools
 * BASH
@@ -269,7 +269,7 @@ biostrings
 * grep, sed, find, |
 
 
-###WEEK 15
+### WEEK 15
 * Data management
 * Reporting
 * Rmd
