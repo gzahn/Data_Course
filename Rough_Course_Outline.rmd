@@ -3,7 +3,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-#**Data Analysis Course Outline**
+# **Data Analysis Course Outline**
 
 ### WEEK 1
 
