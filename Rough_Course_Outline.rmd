@@ -15,7 +15,8 @@ output:
 
 **This document was constructed entirely within R as an R-markdown (Rmd) file.**
 
-The complete code for this document can be found online [HERE](https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd) 
+The complete code for this document can be found online [HERE](https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd)
+
 All course documents and data sets can be found on the [Course GitHub repository](https://github.com/gzahn/Data_Course)
 
 
@@ -151,7 +152,7 @@ t.test()    chisq.test()
 ```
 
 ```{r}
-ANOVA = aov(CO2$uptake ~ CO2$conc) # define an analysis of variance model CO2 uptake by plants, predicted by CO2 concentration in atmosphere
+ANOVA = aov(uptake ~ conc, data = CO2) # define an analysis of variance model CO2 uptake by plants, predicted by CO2 concentration in atmosphere
 summary(ANOVA) # show summary ANOVA table and P-value
 ```
 
@@ -281,8 +282,14 @@ ggplot()
 ```
 
 ```{r fig.height=3,fig.width=4}
-library(ggplot2)
-qplot(CO2$conc,CO2$uptake)
+library(ggplot2) # load ggplot2 package
+
+new.data = data.frame(conc = c(1500,2000)) # give new predictor values (CO2 concentration)
+predicted = predict(ANOVA, newdata = new.data) # predict plant uptake for those values based on previous ANOVA model ... see Week 5
+predicted # Look at predictions based on our ANOVA model
+
+plot(CO2$conc,CO2$uptake,xlim=c(0,2000),ylim=c(0,60)) # simple plot of CO2 data
+points(x=c(1500,2000),y=predicted[1:2],pch=20,col="Red") # Add our predicted uptake values for higher CO2 concentrations in red
 ```
     
 ---------------------------------------------------------------------------  
