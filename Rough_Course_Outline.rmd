@@ -15,7 +15,8 @@ output:
 
 **This document was constructed entirely within R as an R-markdown (Rmd) file.**
 
-The complete code for this document can be found online [HERE](https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd) at the [Course GitHub repository](https://github.com/gzahn/Data_Course)
+The complete code for this document can be found online [HERE](https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd) 
+All course documents and data sets can be found on the [Course GitHub repository](https://github.com/gzahn/Data_Course)
 
 
 ---------------------------------------------------------------------------
