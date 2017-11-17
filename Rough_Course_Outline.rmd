@@ -8,7 +8,7 @@ output:
 **Below are the tentative weekly topics to be covered.**
 **Also included are selected R functions that we will learn how to use.**
 
-**Further, there is are examples of some code and its output for each week**
+**Further, there are examples of some code and its output for each week**
 **to give you an rough idea about what these topics are covering.**
 
 **We will learn all of this as we go, so don't be scared by anything...it get pretty easy once you have a foundation.**
