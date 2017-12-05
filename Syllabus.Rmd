@@ -89,10 +89,10 @@ _____________________________
 _____________________________
 
 ### **Weekly Assignments**
-These will be announced in class and detailed instructions will be posted on the course GitHub repository. They will generally consist of requiring you to complete a task using R and to upload your code as an R script to Canvas. Some may vary. Any data sets required for the assignment will be on the GitHub repository as well. These assignments will not be accepted for credit after the due date.
+These will be announced in class and detailed instructions will be posted on the course GitHub repository. They will generally consist of requiring you to complete a task using R and to upload your code as an R script to Canvas and/or GitHub. Some may vary. Any data sets required for the assignment will be on the GitHub repository as well. These assignments will not be accepted for credit after the due date.
 
 ### **Skills Tests**
-These will take place during class time. They will be similar to the sorts of tasks on the precedent Weekly Assignments, and you will be "open book," but they will be timed.
+These will take place during class time. They will be similar to the sorts of tasks on the precedent Weekly Assignments, and they will be "open book," but they will be timed.
 
 ### **Final Project**
 Beginning early in the semester, we will decide on individual projects based on personal interest. Working with instructor feedback, you will come up with a question that interests you and will identify a data set that can address that question. You will then apply the data exploration and visualization skills you learn in class to prepare a well-formatted report that contains all the code and results of your analyses. **Most importantly this project will require you to teach yourself new R skills using the resources we learn about (or any others). You will be required to learn analyses explicitly not covered in this course (Check the course schedule to see what we are covering), and to apply them correctly to your analysis and report.**
@@ -114,6 +114,8 @@ Examples of unique topics could include, but are not limited to:
 **An initial draft of your exploratory code is due before Skills Test 2**
 
 **Then you will work with the instructor to identify a new skill to be applied for your project**
+
+**Your project will culminate in a "markdown" report that integrates your background research, code, results, figures, and discussion into a single reproducible document**
 
 ______________________________
 
