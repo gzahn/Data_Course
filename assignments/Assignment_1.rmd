@@ -1,6 +1,11 @@
 ## Assignment 1
 
 ________________
+#### First, read the following document. It will set the stage for version control and why we will be using it.
+
+https://github.com/gzahn/Data_Course/blob/master/readings/Bryan_2017_Excuse_me%2C_do_you_have_a_moment_to_talk_about_vers.pdf
+
+________________
 
 1.  If you do not have R installed on your computer, install it. Google "how to install R" for instructions.
 2.  Install RStudio on your computer. [https://www.rstudio.com/products/rstudio/download/#download]
