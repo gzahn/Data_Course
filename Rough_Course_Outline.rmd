@@ -144,6 +144,7 @@ data[data$Type == "Quebec",] # subset data to only include samples from "Quebec"
     * chi-square
     * ANOVA
     * LM/GLM
+    * Mixed-effect models (lme4)
 
 ```{r eval=FALSE, include=TRUE}
 # Functions covered (parital list):
