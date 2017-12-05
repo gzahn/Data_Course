@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 # **Data Analysis Course Outline**
 
@@ -144,12 +144,16 @@ data[data$Type == "Quebec",] # subset data to only include samples from "Quebec"
     * chi-square
     * ANOVA
     * LM/GLM
+<<<<<<< HEAD
     * Mixed-effect models (lme4)
+=======
+    * rpart
+>>>>>>> b26891862de9aa2558f6ee907eaa18f7dfea92a5
 
 ```{r eval=FALSE, include=TRUE}
 # Functions covered (parital list):
 lm()        glm()         aov()
-t.test()    chisq.test()  
+t.test()    chisq.test()  rpart()     gmodel()
 ```
 
 ```{r}
