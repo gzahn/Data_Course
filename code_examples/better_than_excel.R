@@ -16,5 +16,10 @@ wingspan_vs_mass = wingspan_vs_mass[order(wingspan_vs_mass$mass, decreasing = TR
 summary(wingspan_vs_mass$wingspan)[c(1,3,6)]
 summary(wingspan_vs_mass$mass)[c(1,3,6)]
 
+# Plot wingspan vs mass
+plot(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass)
 
-
+# Print a file that contains the measured mass values, ordered from highest to lowest (one value per line)
+sink("./code_examples/mass_ordered.txt")
+cat(wingspan_vs_mass$mass, sep = "\n")
+sink(NULL)
