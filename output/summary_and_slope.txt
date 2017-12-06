@@ -1,0 +1,9 @@
+[1] Wingspan
+  Min. Median   Max. 
+ 17.32  27.89  39.01 
+[1] Mass
+  Min. Median   Max. 
+ 22.42  64.39 108.50 
+[1] Slope of linear model fit
+wingspan_vs_mass$mass 
+            0.2518819 
