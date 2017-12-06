@@ -16,8 +16,10 @@ wingspan_vs_mass = wingspan_vs_mass[order(wingspan_vs_mass$mass, decreasing = TR
 summary(wingspan_vs_mass$wingspan)[c(1,3,6)]
 summary(wingspan_vs_mass$mass)[c(1,3,6)]
 
-# Plot wingspan vs mass
-plot(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass)
+# Plot wingspan vs mass and save to file
+jpeg("./output/scatterplot.jpg")
+plot(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass, xlab="Mass",ylab="Wingspan")
+dev.off()
 
 # Get linear model fit
 fit = lm(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass)
