@@ -7,7 +7,7 @@ library(readr)
 getwd()
 
 # Import dataset
-wingspan_vs_mass <- read_csv("./data/wingspan_vs_mass.csv", col_types = cols(X1 = col_skip()))
+wingspan_vs_mass <- read_csv("../data/wingspan_vs_mass.csv", col_types = cols(X1 = col_skip()))
 
 # Sort by mass (decreasing)
 wingspan_vs_mass = wingspan_vs_mass[order(wingspan_vs_mass$mass, decreasing = TRUE),]

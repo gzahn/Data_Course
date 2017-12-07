@@ -10,17 +10,17 @@ ________________
 1.  If you do not have R installed on your computer, install it. Google "how to install R" for instructions.
 2.  Install RStudio on your computer. [https://www.rstudio.com/products/rstudio/download/#download]
 3.  Download and install git and create an account on github.com. Choose a professional-sounding username!
-4.  Create a new repository on your GitHub page called "Data_Course_Assignments"
+4.  Create a new repository on your GitHub page called "Data_Course_YOUR-LAST-NAME"
   + Look for the "+" in the top menu
   + Enter the name "Data_Course_Assignments" where prompted
   + Leave the "Public" option checked
   + Be sure to check the box " Initialize this repository with a README"
-5.  Make a directory on your computer for this course. Directory "paths" look different on Windows vs Mac/Linux. On a linux machine, this will look something like: "~/Desktop/Data_Class/"
+5.  Make a directory on your computer for this course. Directory "paths" look different on Windows vs Mac/Linux. On a linux machine, this will look something like: "~/Desktop/Data_Course_YOUR-LAST-NAME/"
   + Create a subdirectory called "Assignments" within that Data_Course directory
-  + Now create a sub-directory called "materials" within that Data_Course directory
-6.  Open your terminal and navigate to the "materials" subdirectory of the course directory you just created. (the command "cd ~/Desktop/Data_Class/materials" would navigate there, if that was your "path")
+7.  Now create an entirely new directory called "Data_Course_materials" - This will contain all the stuff your instructor makes (assignments, readings, example code, etc.) 
+6.  Open your terminal and navigate to the "Data_Course_materials" directory you just created. (the command "cd ~/Desktop/Data_Course_materials" would navigate there, if that was your "path")
 7.  Clone the course materials into this directory by typing: git clone "https://github.com/gzahn/Data_Course"
-8.  Go back to your "assignments" subdirectory and clone your new GitHub repository
+8.  Go back to your "Data_Course_YOUR-LAST-NAME/assignments" directory and clone your new GitHub repository (that you created online)
   + Hint: use the same command as above, but modify the web address to your new GitHub repository
 9.  Back in your terminal, make sure you are still in the "assignments" directory (you should now see a file called "README.md" in there), and type the following commands (exactly), in order:
   + echo "This README file contains information about my uploaded assignments" >> README.md
