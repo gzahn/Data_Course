@@ -37,4 +37,7 @@ grades$Final.Points = points
 data_course_letter_grades(grades)
 
 #Assign letter grades to grading data frame
-df$Letter_Grade = letter.grades
+grades$Letter_Grade = letter.grades
+
+# take a look at the assigned grades
+grades
