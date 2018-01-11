@@ -12,24 +12,31 @@ ________________
 3.  Download and install git and create an account on github.com. Choose a professional-sounding username!
 4.  Create a new repository on your GitHub page called "Data_Course_YOUR-LAST-NAME"
   + Look for the "+" in the top menu
-  + Enter the name "Data_Course_Assignments" where prompted
+  + Enter the name "Data_Course_YOUR_LAST_NAME" where prompted
   + Leave the "Public" option checked
-  + Be sure to check the box " Initialize this repository with a README"
-5.  Make a directory on your computer for this course. Directory "paths" look different on Windows vs Mac/Linux. On a linux machine, this will look something like: "~/Desktop/Data_Course_YOUR-LAST-NAME/"
-  + Create a subdirectory called "Assignments" within that Data_Course directory
-7.  Now create an entirely new directory called "Data_Course_materials" - This will contain all the stuff your instructor makes (assignments, readings, example code, etc.) 
-6.  Open your terminal and navigate to the "Data_Course_materials" directory you just created. (the command "cd ~/Desktop/Data_Course_materials" would navigate there, if that was your "path")
-7.  Clone the course materials into this directory by typing: git clone "https://github.com/gzahn/Data_Course"
-8.  Go back to your "Data_Course_YOUR-LAST-NAME/assignments" directory and clone your new GitHub repository (that you created online)
-  + Hint: use the same command as above, but modify the web address to your new GitHub repository
-9.  Back in your terminal, make sure you are still in the "assignments" directory (you should now see a file called "README.md" in there), and type the following commands (exactly), in order:
+  + Be sure to check the box "Initialize this repository with a README"
+
+5.  Back in your terminal, navigate to your Desktop
+
+6.  Clone the course materials onto your desktop by typing: git clone "https://github.com/gzahn/Data_Course"
+	This will directly create a new folder on your desktop called "Data_Course"
+	This directory will contain everything that I have uploaded onto the course github repository
+
+7.  Make sure you're still in your Desktop directory and now clone the github page you created (The one called Data_Course_YOUR-LAST-NAME)
+  + Hint: use the same git clone command as above, but modify the web address to your new GitHub repository (Copy and paste from the web browser)
+	This will import the website repository onto your personal computer (as a git repository)
+
+8.  Navigate into this new repository (The one called Data_Course_YOUR-LAST-NAME) and type the following commands:
   + echo "This README file contains information about my uploaded assignments" >> README.md
   + git add README.md
   + git commit -m "1st commit"
   + git push
-  + (Here it will ask for your GitHub userID and password....enter those when asked)
-10. Check back on your GitHub page online...if you see that new text ("This README file contains information about my uploaded assignments") then you are finished!
-11. To get credit, upload a link to your GitHub repository to "Assignment 1" in Canvas. I'll click on that and see whether your README.md file is correct.
+	(Here it will ask for your GitHub userID and password....enter those when asked)
+	This series of commands commits your changes (Adding that text to the README.md file) and pushes the changes back onto the website version
+
+9. Check back on your GitHub page online...if you see that new text ("This README file contains information about my uploaded assignments") then you are finished!
+
+10. To get credit, upload a link to your GitHub repository to "Assignment 1" in Canvas. I'll click on that and see whether your README.md file is correct.
 
 #### We will discuss what is actually going on with all of this in class, but this is to test whether you can follow precise instructions and troubleshoot.
 
