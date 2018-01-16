@@ -19,4 +19,18 @@ Your task is to run this script on ALL the .txt files buried within the "many_fi
 	This is a tough one. Remember that to run a shell script you need to type "bash PATH_TO_SCRIPT"
 	Hint: find -exec, for loop
 
+for loop reminder:
+
+# this will cycle through the values 1 through 10
+# with each new value, it will pause for 1 second, and then echo the current value to the screen
+
+for i in {1..10}
+ do
+ sleep 1
+ echo $i
+ done
+
+On one line, it would look like this:
+for i in {1..10};do sleep 1;echo $i;done
+
 
