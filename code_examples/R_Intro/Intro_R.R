@@ -223,9 +223,9 @@ plot(virginica$Sepal.Length, virginica$Petal.Length)
 # The first file is the species observation table
 # The second file is information about each sampling site (metadata)
 
-otus = read.csv("~/Desktop/GIT_REPOSITORIES/R_workshop/otu_table_ordered.csv", as.is = TRUE, stringsAsFactors = FALSE,
+otus = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/code_examples/R_Intro/otu_table.csv", as.is = TRUE, stringsAsFactors = FALSE,
          check.names = FALSE)
-metadata = read.csv("~/Desktop/GIT_REPOSITORIES/R_workshop/otu_mapping.csv", as.is = TRUE, stringsAsFactors = TRUE,
+metadata = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/code_examples/R_Intro/otu_mapping.csv", as.is = TRUE, stringsAsFactors = TRUE,
          check.names = FALSE)
 
 # The object "otus" is a data frame with species as rows, and sites as columns
@@ -308,6 +308,20 @@ which(rowSums(otus) == max(rowSums(otus)))
 
 
 # Which OTU is present in more sites than any other?? (This one is much tougher to answer)
+TF = otus > 0
+sums = rowSums(TF)
+maximum = max(sums)
+which(rowSums(TF) == maximum)
+
+
+# make backup copy of data frame ("pa" for "presence-absence")
+otu_pa = otus
+
+# Convert everything greater than 0 to 1
+otu_pa[otu_pa>0] = 1
+
+
+
 
 
 
@@ -325,6 +339,9 @@ which(rowSums(otus) == max(rowSums(otus)))
 # for making publication-quality figures, and for making them reproducible 
 # We will save ggplot2 for a future workshop, but it's a great example of how R makes your data analyses simple
 # and REPRODUCIBLE
+
+
+densityplot(otus$`69CV.1`)
 
 
 library(ggplot2) # library() loads a given package
@@ -363,6 +380,8 @@ grid.arrange(length.figure,width.figure, nrow = 1)
 
 library(vegan)
 
+?decostand
+
 otus_pa = decostand(otus, method = "pa") # one function, decostand(), lets us standarize our data. In this case,
 # we wanted presence/absence, since we are interested in which OTU is present in more sites than any other,
 # not so much in overall abundance
@@ -386,7 +405,7 @@ which(rowSums(otus_pa) == max.sites) # We see that OTU_1236 is the most commonly
 
 
 # We can also easily create a heatmap to look at abundances broadly
-heatmap(as.matrix(otus)) # this will take some time to run...there are > 15000 species to compute
+# heatmap(as.matrix(otus)) # this will take some time to run...there are > 15000 species to compute
 
 # That heatmap has some issues! It's impossible to read, the colors are ugly. I hate it.
 # Let's subset our data so we're just looking at the most abundant species
@@ -411,10 +430,10 @@ library(plyr)
 ecosys.colors = mapvalues(metadata$Project, from = c("Snail","Meso_Algae"), to = c("Green", "Blue"))
 
 
-heatmap(as.matrix(abundant.otus), col = gray.colors(100), ColSideColors = ecosys.colors,
+heatmap(as.matrix(t(abundant.otus)), col = gray.colors(100),
         Rowv = NA, distfun = vegdist)
 
 # This heatmap makes me happy! Our heatmap columns are colored by habitat and it's much easier to read.
-
+?dist
 
 
