@@ -6,6 +6,7 @@ library(dplyr)
 
 
 # setwd("pick a new empty directory - make one first if you have to")
+
 dir.create("empty_directory") # this will make a new directory in your file system named "empty_directory"
 setwd("empty_directory/")
 
@@ -20,13 +21,18 @@ for(i in dfs){
                     Col3 = rbinom(100, size = 100, prob = sample(c(.25,.5,.75),1))),
          envir = .GlobalEnv)
 }
-
-rm(dfs) # cleanup
+rm(dfs, df) #cleanup
 
 # write fake csv files
 for(i in objects(pattern = "df")){
   write.csv(get(i), file = paste0(i,".csv"))
+
 }
+
+#remove all those "df" objects from the environment
+
+rm(list = ls(pattern = "df"))
+rm(i)
 
 ############### Read in those csv files with function to compute values of each ###############
 
@@ -47,6 +53,10 @@ for(i in list.files(pattern = ".csv")){
 }
 
 data.frame(FILE = names, Mean_Col3 = mean_values)
+
+# also:  
+?eapply
+
 
 #######################################
 
@@ -132,7 +142,6 @@ new_object = dat %>%
             MeanHeadwidth = mean(Headwidth),
             MaxHeadwidth = max(Headwidth))
 # the functions we use inside "summarize()" must return a single value!
-
 
 
 
