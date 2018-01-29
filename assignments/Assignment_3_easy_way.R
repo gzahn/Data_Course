@@ -61,7 +61,14 @@ data.frame(FILE = names, Mean_Col3 = mean_values)
 ?eapply
 
 
-#######################################
+############ Manipulating system files from R ####################
+
+path = file.path("empty_directory/")
+remove_these = paste0(path,list.files(path = path, pattern = "df"))
+file.remove(remove_these)
+file.remove(path)
+
+##################################################################
 
 
 
