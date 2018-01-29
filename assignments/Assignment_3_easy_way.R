@@ -1,13 +1,14 @@
-library(dplyr)
+# install.packages("dplyr")
+library(dplyr) # install this package if you haven't already
 
 # for loops on files and objects (instead of just vectors)
 
 ################# Make csv files to test function on ################
 
-
-# setwd("pick a new empty directory - make one first if you have to")
-
-dir.create("empty_directory") # this will make a new directory in your file system named "empty_directory"
+if(dir.exists("empty_directory") == FALSE){
+  dir.create("empty_directory") # this will make a new directory in your file system named "empty_directory"
+}
+  
 setwd("empty_directory/")
 
 # define fake objects
@@ -28,6 +29,8 @@ for(i in objects(pattern = "df")){
   write.csv(get(i), file = paste0(i,".csv"))
 
 }
+
+list.files() # check to see that they showed up in our new directory
 
 #remove all those "df" objects from the environment
 
@@ -86,11 +89,11 @@ dat = na.omit(dat)
 
 ##### Now that it's clean and tidy, summarize for each Size.class category #####
 
-new_vector = dat %>%
+size.class.summary = dat %>%
   group_by(Size.class) %>%
-  summarise(N = n(), Mean = mean(Headwidth),
-            SD = sd(Headwidth))
+  summarise(N = n(), Mean = mean(Headwidth), SD = sd(Headwidth))
 
+size.class.summary
 
 #### Our first groovy package ####
 # dplyr (note that we called this library on the first line of the script)
