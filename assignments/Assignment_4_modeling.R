@@ -49,12 +49,23 @@ for(i in names(dat)){
 # look at distribution of mpg
 
         # What is a distribution???
+        # Let's say we decided to measure human height. If we measured EVERY human on earth,
+        # the distribution of their heights would show the probability of a random person 
+        # having a given height.
 
 distributions = c("norm", "lnorm", "pois", "exp", "gamma", "binom", "nbinom", "geom", "beta", "unif", "logis")
 # Here's a good web page with all the distributions included in base R:  https://en.wikibooks.org/wiki/R_Programming/Probability_Distributions
 
 # Normal distribution
-plot(density(dnorm(c(10000,10000))), main = "Normal Distribution")
+
+x<-seq(-4,4,length=2000)
+y<-dnorm(x,mean=0, sd=1)
+plot(x,y, type="l", lwd=2, main = "Normal Distribution")
+
+
+  # BUT... there's no way to measure the height of every human. 
+  # You can instead take a representative sample of humans and ESTIMATE the distribution of heights.
+
 
   # Plot random samples from a truly normal distribution:
   points(density(rnorm(5)), col = "Red") # for 5 random samples
@@ -87,9 +98,42 @@ plot(fitdist(dat$cyl, "norm")) # whoa now!
 # Binomial distribution
 
   # imagine flipping a coin 10 times...at the end, how many heads would you have?
+  # This is what a binomial distribution is all about... counts of an outcome of an experiment.
+x = seq(0,50,by=1)
+y = y <- dbinom(x,50,0.5)
+plot(x,y, type = "l", main = "Binomial Dist. - N=50, P=0.5")
+  # shows probability of getting a specific number of a certain outcome, given a probability for each result
+    # we can see it would be highly unlikely to get fewer than 10 tails in 50 coin flips.
+
+x = seq(0,50,by=1)
+y = y <- dbinom(x,50,0.5)
+plot(x,y, type = "l", main = "Binomial Dist. - N=50, P=0.5")
+
+
+
+
   # What if you flipped it 100000 times?
 
-  # Our coin flip experiment
+x = seq(0,10000,by=1)
+y = y <- dbinom(x,10000,0.5)
+plot(x,y, type = "l", main = "Binomial Dist. - N=10000, P=0.5")
+
+
+########### A lot of statistical tests are all about determining whether your representative sample
+########### could have really come from a given probability distribution!
+
+# Look at the previous plot (P of outcomes from 50 flips)
+# If you flipped a coin 50 times and only got 4 heads, how likely is it that it was just random chance,
+# vs. how likely is it that the true probability of heads/tails is 50/50 ????
+
+?binom.test()
+binom.test(x=4,n=50,p=0.5)  # 4 successes, out of 50 flips, probability of success is 0.5
+                                  # Reject the null hypothesis (P-value of 4.462e-10)
+binom.test(x=4,n=50,p=0.1)  # 4 successes, out of 50 flips, probability of success is 0.1
+                                  # Fail to reject the null Hypothesis (P-value of 0.8151)
+
+
+# Our coin flip experiment and the Central Limit Theorem
   sample(c("Heads","Tails"), size = 10, replace = TRUE) %>%
     table()
 
@@ -103,7 +147,7 @@ plot(fitdist(dat$cyl, "norm")) # whoa now!
   x=1
   heads = 0
   num.heads = c()
-  flips = seq(from = 2, to = 5000, by=2)
+  flips = seq(from = 2, to = 500, by=2)
 
 for(i in flips){
   heads = table(sample(c("Heads","Tails"), size = i, replace = TRUE))[1]
@@ -114,7 +158,7 @@ for(i in flips){
 # plot!
   plot(x=flips, y=num.heads/flips, ylim = c(0,1)) # Explain what this plot is showing!
   
-  
+
 # Which variables predict MPG?
 
 ########################################
@@ -223,9 +267,11 @@ points(dat$mpg ~ dat$wt, col = dat$cyl) # color over points, using No. of Cylind
 ggplot(data = dat) +
   geom_point(aes(x=wt, y=mpg, col = factor(cyl))) +
   geom_smooth(aes(x=wt, y=mpg), method = "glm", col = "Black")
-?geom_smooth
+
 # Notice pattern that heavier cars have more cylinders?  This could be a "covariate" .. in other words, wt and cyl are NOT independent
 # cyl could also be considered "categorical" since you can't have 4.5 cylinders
+
+dat$cyl = as.factor(dat$cyl)
 
 # categorical predictors of mpg...we can use ANOVA and Tukey's Test
 mod3 = aov(mpg ~ factor(cyl)*am, data = dat)
@@ -237,7 +283,20 @@ par(mfrow = c(1, 1)) # changes viewing panel into a 2x2 grid
 summary(mod3)
 TukeyHSD(mod3)
 
+names(dat)
 
+# ANOVA: Find out which terms have significant impact on response
+aov(mpg ~ cyl*disp*hp*am*wt, data = dat) %>% summary()
+# anova can handle categorical predictors, remember!
+    # looks like hp doesn't help our model much...
 
+aov(mpg ~ cyl*disp*am*wt, data = dat) %>% summary()
+    # maybe we could even drop am
 
+aov(mpg ~ cyl*disp*wt, data = dat) %>% summary()
+mod4 = aov(mpg ~ cyl*disp*wt, data = dat)
+
+mod4_pred = add_predictions(dat, model = mod4) %>% select_("pred")
+plot(dat$mpg, mod4_pred[,1])
+abline(lm(dat$mpg ~ mod4_pred[,1]))
 
