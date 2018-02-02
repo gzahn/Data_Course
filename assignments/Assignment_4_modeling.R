@@ -47,8 +47,11 @@ for(i in names(dat)){
 }
 
 # look at distribution of mpg
+hist(dat$mpg)
+plot(density(dat$mpg))
+        
 
-        # What is a distribution???
+# What is a distribution???
         # Let's say we decided to measure human height. If we measured EVERY human on earth,
         # the distribution of their heights would show the probability of a random person 
         # having a given height.
@@ -95,7 +98,7 @@ plot(fitdist(dat$mpg, "logis"))
 # try it on a different vector of data
 plot(fitdist(dat$cyl, "norm")) # whoa now!
 
-# Binomial distribution
+##### Binomial distribution
 
   # imagine flipping a coin 10 times...at the end, how many heads would you have?
   # This is what a binomial distribution is all about... counts of an outcome of an experiment.
@@ -104,12 +107,6 @@ y = y <- dbinom(x,50,0.5)
 plot(x,y, type = "l", main = "Binomial Dist. - N=50, P=0.5")
   # shows probability of getting a specific number of a certain outcome, given a probability for each result
     # we can see it would be highly unlikely to get fewer than 10 tails in 50 coin flips.
-
-x = seq(0,50,by=1)
-y = y <- dbinom(x,50,0.5)
-plot(x,y, type = "l", main = "Binomial Dist. - N=50, P=0.5")
-
-
 
 
   # What if you flipped it 100000 times?
@@ -281,10 +278,39 @@ plot(mod3)
 par(mfrow = c(1, 1)) # changes viewing panel into a 2x2 grid
 
 summary(mod3)
+
+# So let's say you see some significant interaction between two explanatory variables.
+# How do you determine what what the specific effects are? All you see is "significant interaction"
 TukeyHSD(mod3)
 
-names(dat)
+###### Another Tukey Test example ...
 
+# Let's look at the decomposition rates of some foods sitting in cafeterias at two universities
+decomp = data.frame(Food = c(rep("Banana", 40), rep("Apple", 40), rep("Gravy",40)),
+                University = c(rep(c("UVU","BYU"),times = 60)),
+                Decomposition_Rate = abs(rnorm(120))*c(1,4)*c(rep(1,40),rep(5,40),rep(1,40)))
+
+
+
+decomp_model = aov(Decomposition_Rate ~ University:Food, data = decomp)
+summary(decomp_model)
+
+# Aaaa HAAA! There is a significant interaction between University and Food
+
+# Let's take a look and see if we can visually find the pattern
+ggplot(decomp, mapping = aes(x=Food, y=Decomposition_Rate, fill = University)) +
+  geom_boxplot()
+
+# what I see: Food decomposes more rapidly at BYU, but apples, in particular, have a pronounced effect
+
+# a plot is fine, but how about a statistical test...
+TukeyHSD(decomp_model)
+
+######
+
+
+
+names(dat)
 # ANOVA: Find out which terms have significant impact on response
 aov(mpg ~ cyl*disp*hp*am*wt, data = dat) %>% summary()
 # anova can handle categorical predictors, remember!
@@ -298,5 +324,12 @@ mod4 = aov(mpg ~ cyl*disp*wt, data = dat)
 
 mod4_pred = add_predictions(dat, model = mod4) %>% select_("pred")
 plot(dat$mpg, mod4_pred[,1])
-abline(lm(dat$mpg ~ mod4_pred[,1]))
+abline(lm(dat$mpg ~ mod4_pred[,1])) # How do predictions match up?
+
+# is it looking like a good model? 
+
+# What defines a "good" model???
+
+
+
 
