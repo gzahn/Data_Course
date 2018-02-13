@@ -32,6 +32,10 @@ p = ggplot(sub1, aes(x=Home.Value,y=Structure.Cost)) +
 gganimate(p, interval=0.2)
 
 
+violin = ggplot(df, aes(x=factor(Qrtr),y = Land.Value,fill = factor(Qrtr))) +
+  geom_boxplot(aes(frame=factor(df$Year)))
+
+gganimate(violin, interval = 0.2)
 
 # A ggplot is made up of two main components – a ggplot() object and at least one geom layer.
 ggplot() + geom_.....
@@ -51,6 +55,16 @@ ggplot() + geom_.....
       
     # The aes() function is the “how” – how data is stored, how data is split
     # geoms are the “what”—what the data looks like. These are geometrical objects stored in subsequent layers.
+
+p2 = ggplot(df, aes(x=Year,y=Land.Value))
+
+p2 + geom_point()
+p2 + geom_point(col="SteelBlue")
+p2 + geom_point(aes(col=factor(Qrtr)))
+p2 + geom_point(aes(size=Home.Value))
+p2 + geom_point(aes(size=Home.Value,col=factor(Qrtr)))
+
+
 
 
 # Layers
@@ -79,7 +93,15 @@ ggplot(data = df, mapping = aes(x = Home.Value, y = Structure.Cost)) +
   geom_line() +
   geom_point() +
   geom_area() +
-  geom_boxplot()
+  geom_boxplot(aes(col=factor(Year), group = factor(Year))) +
+  geom_violin(fill="green")
+
+
+ggplot(df, aes(x=factor(Qrtr),y = Land.Value,fill = factor(Qrtr))) +
+geom_violin()
+
+
+
 
 # Notice how we can keep piling on geom layers as long as they are compatible with our aesthetics
 
@@ -117,5 +139,11 @@ plot2 +
        subtitle = "This is, like, the subtitle. It's basically smaller text, okay?") +
   scale_fill_discrete(label = c("The cold place","The place with horse\nraces","The boring place")) +
   scale_color_discrete(name = "The new legend name")
+
+
+xlim()
+ylim()
+coord_cartesian()
+labs(x="...",y="...",title="...",subtitle="...",caption="...")
 
 
