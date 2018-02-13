@@ -147,3 +147,7 @@ coord_cartesian()
 labs(x="...",y="...",title="...",subtitle="...",caption="...")
 
 
+library(ggthemes)
+plot2 + theme_fivethirtyeight()
+plot2 + theme_few()
+plot2 + theme_wsj()
