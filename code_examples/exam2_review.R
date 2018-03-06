@@ -108,6 +108,17 @@ p1 + ylim(c(0,5))
 library(outliers)
 ?outlier()
 
-
+# subset based on values ... get rid of outliers?
 df2[(df2$Petal.Length < mean(df2$Petal.Length)),]
 
+
+# violin plot
+ggplot(df2, aes(x=Species,y=Petal.Length,fill=Species)) +
+  geom_violin()
+
+
+
+
+# ellipses
+p1 +
+  stat_ellipse(aes(x=Petal.Width,y=Petal.Length,color=Species))
