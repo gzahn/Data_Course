@@ -8,12 +8,12 @@ rm(list = ls())
 
 # only have to do this biocLite stuff once on your computer (hopefully)
 # this downloads a series of packages that are for working with DNA data...
-source("http://bioconductor.org/biocLite.R")
-biocLite()
-biocLite("msa")
-biocLite("S4Vectors")
-biocLite("SummarizedExperiment")
-biocLite("ShortRead")
+# source("http://bioconductor.org/biocLite.R")
+# biocLite()
+# biocLite("msa")
+# biocLite("S4Vectors")
+# biocLite("SummarizedExperiment")
+# biocLite("ShortRead")
 
 
 
@@ -173,8 +173,23 @@ library(dada2)
 
 plotQualityProfile(fq.files[1])
 
+# get filenames for files without path
+filt.files = dir(path = getwd(), full.names = FALSE, pattern = ".fastq")
 
-dr = derepFastq(fq.files[c(9:10)])
+# make new directory
+dir.create(file.path(getwd(),"filtered"))
+
+# stringent quality filter to remove N's etc
+file.path(getwd(),"filtered/",i)
+
+for(i in filt.files){
+  fastqFilter(i,paste0(getwd(),"/filtered/",i,".filt"))
+}
+
+setwd(file.path(paste0(getwd(),"/filtered")))
+filtered = dir(path = getwd(), pattern = ".filt")
+
+dr = derepFastq(filtered)
 err = learnErrors(dr)
 
 plotErrors(err)
@@ -183,7 +198,7 @@ clean = dada(dr,err)
 
 SeqTable = makeSequenceTable(clean)
 
-taxonomy = assignTaxonomy(SeqTable, refFasta = "rdp_train_set_16.fa.gz")
+taxonomy = assignTaxonomy(SeqTable, refFasta = "../rdp_train_set_16.fa.gz")
 
 taxa.print <- taxonomy # Removing sequence rownames for display only
 rownames(taxa.print) <- NULL
