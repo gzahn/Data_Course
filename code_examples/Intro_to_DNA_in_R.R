@@ -102,6 +102,7 @@ align2 = msa(fa.2)
 # if you want to print the full alignment and/or save as a text file
 print(align1, show = "complete") # you could wrap this in sink() to save it
 
+
 # if this is a phylogenetically informative region of DNA, you can build a tree from these alignments
 # but first you need to decide what tree package you want and convert the alignment to that format
 
@@ -123,8 +124,8 @@ dm2 = dist.ml(seq_align2)
 #check it out
 head(dm1,20)
 # each number is the "distance" between the sequences indicated in "rows" and "columns"
-
-
+View(as.matrix(dm1))
+heatmap(as.matrix(dm1))
 # We can use the values to compute a phylogenetic tree
 
 # first, we will try a "Neighbor-Joining" tree method
@@ -180,16 +181,20 @@ filt.files = dir(path = getwd(), full.names = FALSE, pattern = ".fastq")
 dir.create(file.path(getwd(),"filtered"))
 
 # stringent quality filter to remove N's etc
-file.path(getwd(),"filtered/",i)
+
 
 for(i in filt.files){
-  fastqFilter(i,paste0(getwd(),"/filtered/",i,".filt"))
+  fastqFilter(fn = i,fout = paste0(getwd(),"/filtered/",i,".filt"),
+              truncLen = 200, trimLeft = 20)
 }
+
 
 setwd(file.path(paste0(getwd(),"/filtered")))
 filtered = dir(path = getwd(), pattern = ".filt")
 
 dr = derepFastq(filtered)
+dr$F3D0_S188_L001_R1_001.fastq.filt$uniques
+
 err = learnErrors(dr)
 
 plotErrors(err)
@@ -211,6 +216,9 @@ taxa = as.data.frame(taxonomy)
 View(RSV)
 names(RSV) <- paste0(taxa$Family,"_",taxa$Genus)
 View(RSV)
+
+
+write.csv(RSV,file = "RSV_Table_w_taxonomy.csv")
 
 
 #
