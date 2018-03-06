@@ -174,7 +174,7 @@ library(dada2)
 plotQualityProfile(fq.files[1])
 
 
-dr = derepFastq(fq.files)
+dr = derepFastq(fq.files[c(9:10)])
 err = learnErrors(dr)
 
 plotErrors(err)
