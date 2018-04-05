@@ -1,0 +1,49 @@
+SampleID  ,Replica ,SampleType,Season ,Specie,Location 
+Or.Ma.D.e,1,epiphyte ,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.e,1,epiphyte ,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.e,1,epiphyte ,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.e,1,epiphyte ,Rainy,Opuntia.robusta,San.Francisco
+Or.Ma.D.le,1,leaf.endophyte,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.le,1,leaf.endophyte,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.le,1,leaf.endophyte,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.le,1,leaf.endophyte,Rainy,Opuntia.robusta,San.Francisco
+Or.Ma.D.re,1,root.endophyte,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.re,1,root.endophyte,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.re,1,root.endophyte,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.re,1,root.endophyte,Rainy,Opuntia.robusta,San.Francisco
+Or.Ma.D.rzs,1,root.zone.soil,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.rzs,1,root.zone.soil,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.rzs,1,root.zone.soil,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.rzs,1,root.zone.soil,Rainy,Opuntia.robusta,San.Francisco
+Or.Ma.D.rz,1,rhizosphere,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.rz,1,rhizosphere,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.rz,1,rhizosphere,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.rz,1,rhizosphere,Rainy,Opuntia.robusta,San.Francisco
+Or.Ma.D.s,1,Soil,Dry,Opuntia.robusta,Magueyal
+Or.Ma.R.s,1,Soil,Rainy,Opuntia.robusta,Magueyal
+Or.Sf.D.s,1,Soil,Dry,Opuntia.robusta,San.Francisco
+Or.Sf.R.s,1,Soil,Rainy,Opuntia.robusta,San.Francisco
+Mg.Ma.D.e,1,epiphyte ,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.e,1,epiphyte ,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.e,1,epiphyte ,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.e,1,epiphyte ,Rainy,Myrtillocactus.geometrizans,San.Francisco
+Mg.Ma.D.le,1,leaf.endophyte,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.le,1,leaf.endophyte,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.le,1,leaf.endophyte,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.le,1,leaf.endophyte,Rainy,Myrtillocactus.geometrizans,San.Francisco
+Mg.Ma.D.re,1,root.endophyte,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.re,1,root.endophyte,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.re,1,root.endophyte,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.re,1,root.endophyte,Rainy,Myrtillocactus.geometrizans,San.Francisco
+Mg.Ma.D.rz,1,rhizosphere,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.rz,1,rhizosphere,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.rz,1,rhizosphere,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.rz,1,rhizosphere,Rainy,Myrtillocactus.geometrizans,San.Francisco
+Mg.Ma.D.rzs,1,root.zone.soil,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.rzs,1,root.zone.soil,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.rzs,1,root.zone.soil,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.rzs,1,root.zone.soil,Rainy,Myrtillocactus.geometrizans,San.Francisco
+Mg.Ma.D.s,1,Soil,Dry,Myrtillocactus.geometrizans,Magueyal
+Mg.Ma.R.s,1,Soil,Rainy,Myrtillocactus.geometrizans,Magueyal
+Mg.Sf.D.s,1,Soil,Dry,Myrtillocactus.geometrizans,San.Francisco
+Mg.Sf.R.s,1,Soil,Rainy,Myrtillocactus.geometrizans,San.Francisco
