@@ -1,0 +1,1161 @@
+"FedID","UnivName","State","Tier","AssistProf","AssocProf","FullProf"
+1002,"Alabama Agri.&Mech. Univ.","AL","II",31000,36900,44200
+1004,"University of Montevallo","AL","II",31000,38500,44100
+1008,"Athens State College","AL","III",35100,39400,46600
+1009,"Auburn University- Main","AL","I",37400,43700,58000
+1012,"Birmingham Southern College","AL","III",32200,37900,49800
+1016,"Univ. of North Alabama","AL","III",35900,41200,50600
+1019,"Huntingdon College","AL","III",28700,30300,33900
+1020,"Jacksonville State Univ.","AL","II",33800,38900,46100
+1024,"Livingston University","AL","III",25800,30400,36000
+1029,"University of Mobile","AL","III",27700,32100,35400
+1033,"Oakwood College","AL","III",28300,29000,30100
+1036,"Samford University","AL","II",36300,42500,56500
+1041,"Spring Hill College","AL","III",31100,35200,43100
+1044,"Stillman College","AL","III",25100,28800,32100
+1047,"Troy State University-Main","AL","II",32200,38500,46200
+1050,"Tuskegee University","AL","II",30600,35200,41000
+1051,"University of Alabama","AL","I",38200,44700,60500
+1052,"Univ. Alabama at Birmingham","AL","I",36600,44500,63300
+1055,"Univ. Alabama in Huntsville","AL","II",37500,44300,63600
+1057,"University of South Alabama","AL","II",37000,42600,54200
+1061,"Alaska Pacific University","AK","III",36200,38200,45400
+1063,"Univ.Alaska-Fairbanks","AK","I",43200,56000,68600
+1065,"Univ.Alaska-Southeast","AK","II",32900,49400,53300
+1074,"Grand Canyon University","AZ","III",27400,32800,35800
+1081,"Arizona State University","AZ","I",39900,44900,60300
+1082,"Northern Arizona University","AZ","I",35900,42200,51100
+1083,"University of Arizona","AZ","I",41100,46200,64800
+1085,"Univ. Ark. at Monticello","AR","III",33000,36300,45300
+1086,"Univ. Arkansas at Pine Bluff","AR","III",33200,36600,40600
+1088,"Arkansas College (Lyon College)","AR","III",33000,NA,49900
+1089,"Arkansas Tech University","AR","III",33700,38100,43900
+1090,"Arkansas State Univ.-Main","AR","II",34200,43300,52000
+1092,"Univ. of Central Arkansas","AR","II",33900,41600,52100
+1094,"University of the Ozarks","AR","III",27400,28000,30900
+1098,"Henderson State University","AR","III",34100,37500,44700
+1099,"Hendrix College","AR","III",36200,39900,48500
+1100,"John Brown University","AR","III",30400,33800,37200
+1101,"Univ. Ark. at Little Rock","AR","II",37200,41600,53600
+1102,"Ouachita Baptist University","AR","III",28900,35500,42200
+1106,"Williams Baptist College","AR","III",26400,NA,NA
+1107,"Southern Ark. Univ.-Main","AR","II",32100,38900,46100
+1108,"Univ. Arkansas-Fayetteville","AR","I",37900,43600,56300
+1117,"Azusa Pacific University","CA","II",31800,37500,43000
+1122,"Biola University","CA","II",30300,36900,45500
+1131,"California Inst. of Tech.","CA","I",57600,73300,97000
+1133,"California Lutheran Univ.","CA","III",33500,39200,47700
+1137,"Cal.St.Univ-Fullerton","CA","II",38700,49300,60500
+1138,"Cal.St.Univ-Hayward","CA","II",38400,49100,60600
+1139,"Cal.St.Univ-Long Beach","CA","II",40100,47400,60000
+1141,"Cal.St.Univ-Dominguez Hills","CA","II",39200,47200,60500
+1143,"Cal.Poly.St.U-Sn Luis Obispo","CA","II",39400,49600,60700
+1144,"Cal.Poly.St.Univ-Pomona","CA","II",40800,49200,61000
+1146,"Cal.St.Univ-Chico","CA","II",39500,48200,60400
+1147,"Cal.St.Univ-Fresno","CA","II",38200,47600,60300
+1149,"Humboldt State University","CA","II",38700,46800,59300
+1151,"San Diego State University","CA","II",40300,47900,60200
+1155,"San Jose State University","CA","II",40400,48600,59800
+1156,"Sonoma State University","CA","II",38000,45900,60200
+1164,"Chapman University","CA","II",42000,47000,57800
+1170,"Claremont McKenna College","CA","III",41100,51600,71600
+1171,"Harvey Mudd College","CA","III",45400,57900,77100
+1172,"Pitzer College","CA","III",38100,43900,65200
+1173,"Pomona College","CA","III",41700,52500,73000
+1174,"Scripps College","CA","III",37200,45800,61100
+1179,"College of Notre Dame","CA","III",37400,42100,52400
+1183,"Holy Names College","CA","III",27500,39400,48400
+1216,"University of La Verne","CA","II",32600,39200,48200
+1238,"Mills College","CA","II",40700,46100,59300
+1249,"Occidental College","CA","III",38800,46900,62400
+1253,"Fresno Pacific College","CA","III",NA,NA,NA
+1258,"Pacific Union College","CA","III",31500,33300,36200
+1262,"Point Loma Nazarene College","CA","III",35800,39300,50700
+1264,"Pepperdine University","CA","II",51100,56100,71500
+1302,"Saint Mary's Coll. of Calif.","CA","II",40400,49400,61400
+1305,"Stanford University","CA","I",51900,65800,95200
+1312,"Univ.of Calif.-Berkeley","CA","I",43300,51300,76400
+1313,"Univ.of Calif.-Davis","CA","I",40400,47800,68300
+1314,"Univ.of Calif.-Irvine","CA","I",42300,48800,70800
+1315,"Univ.of Calif.-Los Angeles","CA","I",42100,49700,74100
+1316,"Univ.of Calif.-Riverside","CA","I",39000,46100,67000
+1317,"Univ.of Calif.-San Diego","CA","I",40100,48700,72300
+1319,"Univ.of Calif.-San Francisco","CA","I",38000,44900,62400
+1320,"Univ.of Calif.-Santa Barbara","CA","I",40100,47300,71200
+1321,"Univ.of Calif.-Santa Cruz","CA","I",39100,46400,67700
+1322,"University of Redlands","CA","II",40600,46800,56600
+1325,"University of San Francisco","CA","II",40500,48600,61700
+1326,"Santa Clara University","CA","II",48700,55500,76300
+1328,"Univ. of Southern California","CA","I",48400,57400,80200
+1329,"University of the Pacific","CA","II",37200,42000,54200
+1339,"Western Baptist College","OR","III",25200,30800,NA
+1341,"Westmont College","CA","III",33900,40800,48900
+1342,"Whittier College","CA","II",34700,49900,66600
+1343,"Woodbury University","CA","II",36500,37300,NA
+1345,"Adams State College","CO","II",32100,35600,43600
+1347,"Colorado College","CO","III",39800,48800,61300
+1349,"Univ. of Northern Colorado","CO","I",33300,39000,48000
+1350,"Colorado State University","CO","I",40300,44700,59800
+1353,"Fort Lewis College","CO","III",34200,38500,43900
+1358,"Mesa State College","CO","III",29700,35300,42900
+1360,"Metro. State Coll.of Denver","CO","III",35100,40600,48000
+1363,"Regis University","CO","III",34900,43400,48900
+1365,"University Southern Colorado","CO","II",36000,42200,47400
+1370,"Univ. of Colorado- Boulder","CO","I",42100,49400,65200
+1371,"University of Denver","CO","I",43000,47900,62300
+1372,"Western State Coll. of Colo.","CO","III",32400,38100,45200
+1374,"Albertus Magnus College","CT","III",NA,34300,39100
+1378,"Central Connecticut St.Univ.","CT","II",39700,53400,66600
+1379,"Connecticut College","CT","III",36600,46100,61900
+1380,"Western Conn. State Univ.","CT","II",47700,51600,65800
+1385,"Fairfield University","CT","II",45200,54500,68500
+1397,"University of New Haven","CT","II",40100,45000,52400
+1402,"Quinnipiac College","CT","II",41200,54000,69700
+1403,"Sacred Heart University","CT","III",37400,44400,54600
+1406,"Southern Conn. State Univ.","CT","II",38500,51400,64400
+1409,"Saint Joseph College","CT","II",36000,45100,54800
+1414,"Trinity College","CT","III",39400,50100,70600
+1416,"University of Bridgeport","CT","II",36000,43700,50500
+1422,"University of Hartford","CT","II",38000,44500,52900
+1424,"Wesleyan University","CT","II",42300,50400,73400
+1425,"Eastern Connecticut St.Univ.","CT","II",40000,51500,65000
+1426,"Yale University","CT","I",44400,52200,92800
+1428,"Delaware State University","DE","II",35900,43500,54500
+1429,"Goldey Beacom College","DE","III",NA,40500,49200
+1431,"University of Delaware","DE","I",42200,53100,72300
+1433,"Wesley College","DE","III",33400,37300,44800
+1434,"American University","DC","I",41700,52000,74600
+1436,"Capitol College","MD","III",NA,34400,NA
+1437,"Catholic Univ. of America","DC","I",38500,44900,61100
+1443,"Gallaudet University","DC","II",39900,48000,62300
+1444,"George Washington University","DC","I",44700,54200,72900
+1445,"Georgetown University","DC","I",42700,55200,85700
+1448,"Howard University","DC","I",40300,48300,65600
+1452,"Mount Vernon College","DC","III",28800,36000,NA
+1460,"Trinity College","DC","III",29300,36200,45700
+1466,"Barry University","FL","II",35000,42000,48800
+1468,"St. Thomas University","FL","II",35100,48200,43800
+1479,"Embry-Riddle Aero University","FL","II",31000,36900,45700
+1480,"Florida A & M University","FL","II",35900,42600,52400
+1481,"Florida Atlantic University","FL","II",39400,42600,58000
+1487,"Eckerd College","FL","III",35700,42400,53400
+1488,"Florida Southern College","FL","III",33100,36900,44000
+1489,"Florida State University","FL","I",37800,39900,56400
+1515,"Rollins College","FL","II",32100,42000,54200
+1531,"Stetson University","FL","II",37000,43700,62200
+1535,"University of Florida","FL","I",39900,43000,61300
+1536,"University of Miami","FL","I",40800,51000,69300
+1537,"University of South Florida","FL","I",36900,41800,57100
+1538,"University of Tampa","FL","III",37100,42500,49500
+1542,"Agnes Scott College","GA","III",35600,42100,52700
+1544,"Albany State College","GA","III",33500,39500,44400
+1546,"Armstrong State College","GA","III",31500,36700,46200
+1552,"Augusta College","GA","II",33600,40900,50300
+1554,"Berry College","GA","III",34300,40300,51500
+1561,"Columbus College","GA","II",33300,37500,45600
+1564,"Emory University","GA","I",45100,54700,79600
+1566,"Fort Valley State College","GA","III",33900,38200,47100
+1569,"Georgia Institute of Tech.","GA","I",46200,51700,68400
+1570,"Southern Coll. of Technology","GA","III",36000,38600,45700
+1572,"Georgia Southern University","GA","II",32800,40800,49500
+1574,"Georgia State University","GA","I",39000,47400,66600
+1577,"Kennesaw State College","GA","II",35300,42800,52300
+1580,"Mercer University-Entire","GA","II",35100,42300,55500
+1586,"Oglethorpe University","GA","III",32900,45400,51600
+1591,"Shorter College","GA","III",29400,30800,37000
+1598,"University of Georgia","GA","I",37800,44400,61900
+1599,"Valdosta State University","GA","II",34400,38600,47700
+1601,"West Georgia College","GA","II",35300,39100,46600
+1602,"Georgia College","GA","II",34000,38800,44700
+1610,"Univ. of Hawaii at Manoa","HI","I",45800,53200,71300
+1616,"Boise State University","ID","II",35400,39100,44800
+1617,"Albertson Coll. of Idaho","ID","III",26600,33800,42400
+1620,"Idaho State University","ID","II",33700,38200,46600
+1621,"Lewis-Clark State College","ID","III",29200,32900,39100
+1624,"Northwest Nazarene College","ID","III",NA,NA,NA
+1626,"University of Idaho","ID","I",37300,40800,51400
+1633,"Augustana College","IL","III",36200,42500,52700
+1634,"Aurora University","IL","III",33900,37900,43400
+1635,"Barat College","IL","III",33300,40500,50700
+1639,"Blackburn University","IL","III",NA,NA,NA
+1641,"Bradley University","IL","II",37800,46400,57000
+1664,"College of Saint Francis","IL","III",34500,42200,44600
+1665,"Columbia College","IL","III",NA,NA,NA
+1666,"Concordia University","IL","III",29500,35100,39900
+1671,"DePaul University","IL","II",42700,54300,70200
+1674,"Eastern Illinois University","IL","II",33300,37300,44200
+1678,"Eureka College","IL","III",31500,37000,NA
+1684,"Greenville College","IL","III",29200,33100,37400
+1688,"Illinois College","IL","III",34700,42400,52200
+1691,"Illinois Institute of Tech.","IL","I",45200,48000,68000
+1692,"Illinois State University","IL","I",37300,43600,54800
+1693,"Northeastern Illinois Univ.","IL","II",35900,37800,46000
+1694,"Chicago State University","IL","II",32000,36900,44600
+1696,"Illinois Wesleyan University","IL","III",37400,45200,57000
+1700,"Judson College","IL","III",30500,35800,40000
+1703,"Kendall College","IL","III",NA,35700,NA
+1704,"Knox College","IL","III",34200,41400,50800
+1706,"Lake Forest College","IL","III",40200,47500,64400
+1707,"Lewis University","IL","II",33000,39200,46700
+1710,"Loyola Univ. of Chicago","IL","I",43300,53600,76100
+1717,"MacMurray College","IL","III",25000,26300,32400
+1722,"McKendree College","IL","III",34100,39700,43300
+1724,"Millikin University","IL","III",31300,40900,47800
+1725,"Monmouth College","IL","III",32500,33900,44300
+1733,"National-Louis University","IL","II",33700,40500,49000
+1734,"North Central College","IL","III",34800,39900,47300
+1735,"North Park College","IL","III",28500,33700,41500
+1737,"Northern Illinois University","IL","I",37500,43500,57800
+1739,"Northwestern University","IL","I",49600,59600,86000
+1741,"Olivet Nazarene University","IL","II",27800,33500,39100
+1744,"Principia College","IL","III",34500,40000,46500
+1745,"Quincy University","IL","III",28500,37100,37200
+1749,"Roosevelt University","IL","II",35900,40500,48400
+1750,"Rosary College","IL","III",37700,37800,44800
+1758,"Southern Ill.Univ-Carbondale","IL","I",35900,43600,56400
+1759,"Southern Ill.Univ-Edwardsvle","IL","II",38900,44200,53100
+1767,"Illinois Benedictine College","IL","II",31500,39500,46300
+1768,"Saint Xavier University","IL","II",38800,45200,55100
+1772,"Trinity College","IL","III",29100,34600,NA
+1774,"University of Chicago","IL","I",51500,58600,89400
+1775,"Univ. of Illinois-Urbana","IL","I",42100,49300,68200
+1776,"Univ. of Illinois-Chicago","IL","I",41100,47600,65600
+1780,"Western Illinois University","IL","II",35000,42700,50600
+1781,"Wheaton College","IL","II",36800,43700,51000
+1785,"Anderson University","IN","III",31600,34000,41500
+1786,"Ball State University","IN","I",33200,41000,51700
+1787,"Bethel College","IN","III",28500,NA,NA
+1788,"Butler University","IN","II",36600,44200,52100
+1792,"DePauw University","IN","III",36100,43300,54000
+1793,"Earlham College","IN","III",33800,39400,51400
+1795,"University of Evansville","IN","II",35100,41500,50000
+1798,"Franklin College of Indiana","IN","III",32500,36300,44000
+1799,"Goshen College","IN","III",29100,34100,38800
+1800,"Grace College","IN","III",22800,26400,32600
+1801,"Hanover College","IN","III",37700,43700,55500
+1803,"Huntington College","IN","III",30500,36700,43800
+1804,"University of Indianapolis","IN","II",35800,40800,48700
+1808,"Univ. of Southern Indiana","IN","II",37700,42100,49300
+1809,"Indiana Univ.-Bloomington","IN","I",39900,47900,67400
+1811,"Indiana Univ.-East","IN","III",32700,40500,NA
+1812,"Indiana-Purdue U.-Fort Wayne","IN","II",34000,40800,49800
+1813,"Indiana Univ.-Indianapolis","IN","II",40500,46900,64300
+1814,"Indiana Univ. at Kokomo","IN","III",38000,43200,51900
+1815,"Indiana Univ.-Northwest","IN","II",35500,44600,54400
+1816,"Indiana Univ. at South Bend","IN","II",39100,44500,54400
+1817,"Indiana Univ.-Southeast","IN","II",36900,40800,52900
+1820,"Manchester College","IN","III",28900,34000,41200
+1821,"Marian College","IN","III",30300,32900,42000
+1822,"Indiana Wesleyan University","IN","III",29400,34200,39600
+1824,"Oakland City College","IN","III",25200,28200,NA
+1825,"Purdue Univ.-Main Campus","IN","I",42300,48500,72100
+1827,"Purdue University-Calumet","IN","II",36400,41300,51900
+1830,"Rose-Hulman Inst. of Tech.","IN","III",44700,52200,60800
+1832,"Saint Francis College","IN","III",31300,33400,NA
+1833,"Saint Joseph's College","IN","III",31200,37400,37300
+1834,"Calumet College of St.Joseph","IN","III",23500,26400,32400
+1835,"Saint Mary-of-the-Woods Coll","IN","III",19900,23400,30700
+1836,"Saint Mary's College","IN","III",33100,39100,52400
+1837,"Saint Meinrad College","IN","III",NA,NA,35700
+1838,"Taylor University","IN","III",30000,35200,40400
+1839,"Tri-State University","IN","III",29100,32400,39500
+1840,"University of Notre Dame","IN","I",47000,56200,79800
+1842,"Valparaiso University","IN","II",37200,42300,55900
+1844,"Wabash College","IN","III",37100,47400,61200
+1846,"Briar Cliff College","IA","III",28600,32400,36700
+1847,"Buena Vista College","IA","III",33900,41600,48400
+1850,"Central University of Iowa","IA","III",33400,41300,46400
+1852,"Clarke College","IA","III",31200,36100,43600
+1854,"Coe College","IA","III",34000,42100,51600
+1856,"Cornell College","IA","III",36800,42600,57800
+1859,"Dordt College","IA","III",30800,35600,41100
+1860,"Drake University","IA","II",40900,45800,60100
+1866,"Graceland College","IA","III",30100,33100,41100
+1867,"Grand View College","IA","III",29500,32000,38500
+1868,"Grinnell College","IA","III",40500,51700,64200
+1869,"Iowa State University","IA","I",40400,50600,68400
+1873,"Loras College","IA","III",31400,36300,41900
+1874,"Luther College","IA","III",34700,39900,47800
+1879,"Morningside College","IA","III",30300,33100,38900
+1880,"Mount Mercy College","IA","III",33400,35600,37900
+1881,"Mount St. Clare College","IA","II",NA,NA,NA
+1883,"Northwestern College","IA","III",31100,37200,43000
+1887,"Simpson College","IA","III",33900,37700,49100
+1889,"St. Ambrose University","IA","III",32500,37400,43100
+1890,"University of Northern Iowa","IA","II",39000,46900,58600
+1891,"University of Dubuque","IA","III",30900,31500,35100
+1892,"University of Iowa","IA","I",43200,50900,70600
+1893,"Upper Iowa University","IA","III",28700,NA,NA
+1896,"Wartburg College","IA","III",30800,37000,44700
+1899,"Teikyo Westmar University","IA","III",28900,31400,NA
+1900,"William Penn College","IA","III",26900,31200,35100
+1903,"Baker University","KS","III",28800,31800,36900
+1904,"Bethany College","KS","III",24800,28000,33500
+1905,"Bethel College","KS","III",26700,28500,32500
+1915,"Fort Hays State University","KS","II",32500,37800,44600
+1926,"Pittsburg State University","KS","II",33100,38100,45000
+1927,"Emporia State University","KS","II",33000,39000,43500
+1928,"Kansas State University","KS","I",36800,41900,55000
+1929,"Kansas Wesleyan University","KS","III",26500,29000,33700
+1933,"McPherson College","KS","III",25400,27400,31800
+1937,"Ottawa University","KS","III",26400,29200,33800
+1940,"Southwestern College","KS","III",27800,31800,34000
+1943,"Saint Mary College","KS","III",26100,30100,33600
+1946,"Tabor College","KS","III",22200,NA,30400
+1948,"University of Kansas-Main","KS","I",36700,42200,57900
+1949,"Washburn University","KS","II",33300,43800,59400
+1950,"Wichita State University","KS","II",36100,41700,55500
+1954,"Bellarmine College","KY","II",32600,38500,47300
+1955,"Berea College","KY","III",35500,42800,55200
+1958,"Brescia College","KY","III",27300,32200,NA
+1959,"Campbellsville College","KY","III",25200,27800,34200
+1960,"Spalding University","KY","III",28900,31500,35900
+1961,"Centre College","KY","III",35100,41800,52100
+1962,"Cumberland College","KY","III",27200,29100,35400
+1963,"Eastern Kentucky University","KY","II",37100,43900,51900
+1964,"Georgetown College","KY","III",29700,33800,39800
+1968,"Kentucky State University","KY","III",32900,40300,46000
+1969,"Kentucky Wesleyan College","KY","III",29200,32600,38300
+1972,"Lindsey Wilson College","KY","III",27800,35900,NA
+1976,"Morehead State University","KY","II",32200,39500,47800
+1977,"Murray State University","KY","II",34200,39600,46200
+1980,"Pikeville College","KY","III",27500,31400,35900
+1987,"Transylvania University","KY","III",31800,39300,44700
+1988,"Union College","KY","III",25500,28700,31400
+1989,"University of Kentucky","KY","I",41800,47300,63400
+1999,"University of Louisville","KY","I",36800,44200,58400
+2001,"Thomas More College","KY","III",27700,32400,35200
+2002,"Western Kentucky University","KY","II",34700,40800,48500
+2003,"Centenary College of La.","LA","III",32400,38000,49900
+2004,"Dillard University","LA","III",34200,37300,49400
+2005,"Nicholls State University","LA","III",31600,36100,44000
+2006,"Grambling State University","LA","II",32900,39200,44200
+2007,"Louisiana College","LA","III",30800,32400,37500
+2008,"Louisiana Tech University","LA","II",34400,40800,47200
+2010,"Louisiana St.Univ.and A&M C.","LA","I",37900,43700,59400
+2013,"Louisiana St.Univ.Shreveport","LA","II",33700,41400,45800
+2015,"University of New Orleans","LA","II",35200,37800,51200
+2016,"Loyola University","LA","II",39300,45100,59300
+2017,"McNeese State University","LA","II",32300,37400,45600
+2020,"Northeast Louisiana Univ.","LA","II",32500,37600,45900
+2021,"Northwestern State Univ.","LA","II",31200,36000,41800
+2023,"Our Lady of Holy Cross Coll.","LA","III",32500,30600,NA
+2024,"Southeastern Louisiana Univ.","LA","II",32900,40500,46800
+2026,"Southern Univ.at New Orleans","LA","III",29800,32900,40600
+2029,"Tulane University","LA","I",41800,51400,71300
+2031,"Univ. Southwestern Louisiana","LA","I",35900,40900,53300
+2032,"Xavier University of La.","LA","II",33200,38900,45900
+2033,"Univ.of Maine at Presque Isl","ME","III",30200,35400,43900
+2036,"Bates College","ME","III",40400,49000,67100
+2038,"Bowdoin College","ME","III",41800,52700,73800
+2039,"Colby College","ME","III",38300,51500,74500
+2040,"Univ.of Maine at Farmington","ME","III",29200,34800,46400
+2041,"Univ.of Maine at Fort Kent","ME","III",32000,34700,43600
+2043,"Husson College","ME","III",30200,35800,40700
+2050,"University of New England","ME","II",32300,38000,45000
+2051,"Saint Joseph's College","ME","III",28300,32100,NA
+2052,"Thomas College","ME","III",29700,33800,NA
+2053,"Univ.of Maine at Orono","ME","I",36600,43600,57400
+2055,"Univ.of Maine at Machias","ME","III",28400,35500,46500
+2062,"Bowie State University","MD","II",34900,43300,51000
+2065,"College of Notre Dame of Md.","MD","III",30900,37700,44300
+2067,"Columbia Union College","MD","III",29300,29700,30800
+2068,"Coppin State College","MD","III",36600,43500,55700
+2072,"Frostburg State University","MD","II",36600,42300,49800
+2073,"Goucher College","MD","III",35800,38700,52900
+2076,"Hood College","MD","II",35200,42500,51600
+2077,"Johns Hopkins University","MD","I",43500,54200,79800
+2078,"Loyola College in Maryland","MD","II",39700,50000,63200
+2083,"Morgan State University","MD","II",43900,51700,59400
+2086,"Mount Saint Mary's Coll.&Sem","MD","III",31100,38400,46500
+2091,"Salisbury State University","MD","II",35700,44500,54300
+2092,"Saint John's College-Main","MD","III",NA,NA,NA
+2093,"Saint John's College","NM","III",NA,NA,NA
+2095,"St.Mary's Coll.of Maryland","MD","III",34700,42600,56000
+2099,"Towson State University","MD","II",38800,43300,53100
+2101,"U. S. Naval Academy","MD","III",37700,45500,59500
+2102,"University of Baltimore","MD","II",49000,56000,68000
+2103,"Univ.of Maryland-Coll. Park","MD","I",40600,48700,70300
+2105,"Univ.of Maryland-Balto.Co.","MD","I",39500,45500,63800
+2106,"Univ.of Maryland-Estrn Shore","MD","II",38800,45500,50000
+2108,"Washington College","MD","III",34800,41900,49600
+2109,"Western Maryland College","MD","III",31300,37900,47700
+2115,"Amherst College","MA","III",42500,51600,72600
+2117,"Anna Maria College","MA","III",31800,36400,40700
+2118,"Assumption College","MA","III",32500,40000,47900
+2120,"Merrimack College","MA","III",32600,39300,50700
+2121,"Babson College","MA","III",55700,61300,78700
+2124,"Bentley College","MA","II",49300,56600,71700
+2126,"Berklee College of Music","MA","III",32900,40200,50400
+2128,"Boston College","MA","I",49600,56900,78400
+2132,"Bradford College","MA","III",31000,35200,44700
+2133,"Brandeis University","MA","I",40300,49300,68700
+2139,"Clark University","MA","II",39500,46900,66400
+2140,"Coll.of Our Lady of the Elms","MA","III",30500,35300,43100
+2141,"College of the Holy Cross","MA","III",40600,50600,69500
+2146,"Emerson College","MA","II",38600,50200,66900
+2153,"Gordon College","MA","III",31900,35200,43200
+2155,"Harvard University","MA","I",50000,55900,100900
+2158,"Lasell College","MA","III",32200,33600,NA
+2161,"Univ. of Mass. at Lowell","MA","I",46400,53900,66400
+2178,"Massachusetts Inst. of Tech.","MA","I",52800,63700,90300
+2183,"Bridgewater State College","MA","II",40000,44000,51700
+2184,"Fitchburg State College","MA","II",39500,42900,51200
+2187,"North Adams State College","MA","III",36100,39400,51000
+2189,"Westfield State College","MA","II",37800,41900,52300
+2190,"Worcester State College","MA","II",37000,45600,52800
+2192,"Mount Holyoke College","MA","III",40000,50500,69400
+2199,"Northeastern University","MA","I",46000,52500,68800
+2206,"Regis College","MA","III",34500,42500,50400
+2208,"Simmons College","MA","II",38600,47100,58900
+2209,"Smith College","MA","II",40500,51400,73200
+2210,"Univ. of Mass.-Dartmouth","MA","II",42000,48200,57200
+2211,"Springfield College","MA","II",32100,40400,52000
+2217,"Stonehill College","MA","III",35400,42800,51300
+2218,"Suffolk University","MA","II",48400,54800,72700
+2219,"Tufts University","MA","I",44700,54900,73500
+2221,"Univ. Massachussets-Amherst","MA","I",43800,53700,70400
+2222,"Univ. Massachusetts-Boston","MA","II",44500,54300,65600
+2224,"Wellesley College","MA","III",45300,55000,75700
+2226,"Western New England College","MA","II",43700,49700,65900
+2227,"Wheaton College","MA","III",35700,43500,60200
+2228,"Wheelock College","MA","II",36200,42000,54500
+2229,"Williams College","MA","III",41700,50300,70700
+2233,"Worcester Polytechnic Inst.","MA","II",45100,52700,65900
+2234,"Adrian College","MI","III",31600,36500,43900
+2235,"Albion College","MI","III",34600,44300,56200
+2236,"Alma College","MI","III",33500,40800,52300
+2239,"Aquinas College","MI","III",27500,31300,38700
+2241,"Calvin College","MI","III",36300,41000,47100
+2243,"Central Michigan University","MI","II",39700,46000,58800
+2247,"Concordia College","MI","III",25700,30400,34200
+2252,"William Tyndale College","MI","III",NA,NA,30900
+2259,"Eastern Michigan University","MI","II",38900,44700,56000
+2260,"Ferris State University","MI","II",40900,47000,54600
+2266,"Grand Rapids Baptist College","MI","III",25400,28700,35300
+2268,"Grand Valley State Univ.","MI","III",38700,47900,56800
+2273,"Hope College","MI","III",35000,42000,51500
+2275,"Kalamazoo College","MI","III",35200,44000,55300
+2282,"Madonna University","MI","III",35200,39500,48200
+2284,"Marygrove College","MI","III",29000,36500,43300
+2290,"Michigan State University","MI","I",41300,49300,65100
+2292,"Michigan Technological Univ.","MI","II",42000,48200,66800
+2293,"Lake Superior State Univ.","MI","III",35700,44600,51000
+2301,"Northern Michigan University","MI","II",34700,45900,57100
+2307,"Oakland University","MI","II",43200,51800,63300
+2308,"Olivet College","MI","III",30600,NA,40000
+2314,"Saginaw Valley State Univ.","MI","II",36400,44800,49900
+2316,"Siena Heights College","MI","III",30000,34200,NA
+2318,"Spring Arbor College","MI","III",28400,32100,36800
+2326,"Univ.of Michigan-Dearborn","MI","II",40800,45200,55200
+2327,"Univ.of Michigan-Flint","MI","II",40900,46000,56600
+2329,"Wayne State University","MI","I",44700,52500,68300
+2330,"Western Michigan University","MI","I",39600,48900,60300
+2334,"Augsburg College","MN","III",31400,35600,43200
+2336,"Bemidji State University","MN","II",34100,40300,49000
+2340,"Carleton College","MN","III",39400,48600,63800
+2341,"College of Saint Benedict","MN","III",33400,40400,49300
+2342,"College of St. Catherine","MN","III",32600,36900,42800
+2343,"College of St. Scholastica","MN","III",32700,37400,46100
+2345,"University of St. Thomas","MN","II",36600,42900,56300
+2346,"Concordia College-Moorhead","MN","III",35600,41900,52700
+2347,"Concordia College-St. Paul","MN","III",31900,36300,40700
+2353,"Gustavus Adolphus College","MN","III",33800,40200,48600
+2354,"Hamline University","MN","II",34200,45100,55600
+2358,"Macalester College","MN","III",40600,49200,63900
+2360,"Mankato State University","MN","II",37100,44100,52300
+2367,"Moorhead State University","MN","II",35300,42100,51200
+2371,"Northwestern College","MN","III",31300,33900,37300
+2375,"Southwest State University","MN","III",35500,41700,52500
+2377,"St. Cloud State University","MN","II",35400,41700,51800
+2379,"St. John's University","MN","III",35300,41200,51200
+2380,"Saint Mary's Coll. of Minn.","MN","II",29500,39600,48800
+2382,"St. Olaf College","MN","III",35500,41700,55100
+2388,"Univ. Minnesota-Duluth","MN","II",38600,44600,55100
+2389,"Univ. Minnesota-Morris","MN","III",33400,39900,53300
+2394,"Winona State University","MN","III",35800,42000,51500
+2396,"Alcorn State University","MS","III",32600,37100,41900
+2397,"Belhaven College","MS","III",29800,30400,36400
+2398,"Blue Mountain College","MS","III",NA,25900,28400
+2403,"Delta State University","MS","II",31400,33700,40000
+2410,"Jackson State University","MS","II",33700,39100,42500
+2414,"Millsaps College","MS","III",32200,37600,49800
+2422,"Mississippi Univ. for Women","MS","II",30600,NA,40000
+2423,"Mississippi State University","MS","I",38900,43200,54000
+2424,"Mississippi Valley St. Univ.","MS","III",28700,33100,35900
+2433,"Rust College","MS","III",30200,28000,34100
+2439,"Tougaloo College","MS","III",24400,26700,30000
+2440,"University of Mississippi","MS","I",38400,42800,55800
+2441,"Univ.of Southern Mississippi","MS","I",35200,43800,56200
+2449,"Avila College","MO","III",29500,34000,37900
+2453,"Central Methodist College","MO","III",25200,33600,40200
+2454,"Central Missouri State Univ.","MO","II",37900,44000,51700
+2456,"Columbia College","MO","III",27300,30700,36200
+2460,"Culver-Stockton College","MO","III",29700,34800,39600
+2461,"Drury College","MO","III",32300,39400,44800
+2466,"Harris-Stowe State College","MO","III",30200,29800,35000
+2473,"Kansas City Art Institute","MO","III",29900,NA,44000
+2479,"Lincoln University","MO","II",28200,33500,41400
+2480,"Lindenwood College","MO","II",30600,36700,41600
+2482,"Maryville Univ. of St.Louis","MO","II",31000,35500,44900
+2488,"Missouri Southern State Coll","MO","III",34900,40600,48900
+2489,"Missouri Valley College","MO","III",28500,31800,NA
+2490,"Missouri Western State Coll.","MO","III",33400,39300,47300
+2495,"Northeast Missouri St. Univ.","MO","II",34200,41100,50500
+2496,"Northwest Missouri St. Univ.","MO","II",34800,40400,52600
+2498,"Park College","MO","III",28300,32000,34100
+2499,"Rockhurst College","MO","III",35000,38000,44800
+2500,"College of The Ozarks","MO","III",35000,39200,44600
+2501,"Southeast Missouri St. Univ.","MO","II",35900,43200,50500
+2503,"Southwest Missouri St. Univ.","MO","II",36400,42200,51600
+2506,"Saint Louis Univ.-Main","MO","I",40200,47500,65700
+2512,"Stephens College","MO","III",NA,NA,NA
+2516,"Univ.of Missouri-Columbia","MO","I",40700,45600,60300
+2517,"Univ.of Missouri-Rolla","MO","I",45400,50800,66300
+2518,"Univ.of Missouri-Kansas City","MO","I",38100,44500,58000
+2519,"Univ.of Missouri-St. Louis","MO","I",41200,46000,57600
+2520,"Washington University","MO","I",45100,53400,78200
+2521,"Webster University","MO","II",32500,43500,50500
+2523,"Westminster College","MO","III",29800,39000,45100
+2524,"William Jewell College","MO","III",30600,34200,42200
+2525,"William Woods University","MO","III",29000,30300,37000
+2526,"Carroll College","MT","III",28500,34300,39400
+2527,"College of Great Falls","MT","III",25800,30500,36100
+2530,"Eastern Montana College","MT","II",29200,35800,40900
+2531,"Montana Coll.Min.Sci.& Tech.","MT","II",33600,39500,48100
+2532,"Montana State University","MT","I",34600,39700,49700
+2533,"Northern Montana College","MT","II",30900,34200,40300
+2536,"University of Montana","MT","I",32300,36500,44600
+2537,"Western Montana Coll.of UM","MT","II",28900,33000,38800
+2539,"Chadron State College","NE","II",32900,40400,49100
+2540,"College of Saint Mary","NE","III",29300,32100,NA
+2541,"Concordia Teachers College","NE","III",28200,31600,35200
+2542,"Creighton University","NE","II",35100,46200,64900
+2543,"Dana College","NE","III",27600,30000,33800
+2544,"Doane College","NE","III",32600,39200,43600
+2548,"Hastings College","NE","III",30500,35900,42600
+2551,"Univ. of Nebraska at Kearney","NE","II",36500,43300,50900
+2553,"Midland Lutheran College","NE","III",27800,NA,37200
+2554,"Univ.of Nebraska at Omaha","NE","II",41700,44600,52800
+2555,"Nebraska Wesleyan University","NE","III",32700,38100,45400
+2559,"Peru State College","NE","III",30800,40200,48300
+2563,"Union College","NE","III",27200,29300,29000
+2565,"Univ.of Nebraska-Lincoln","NE","I",41000,47700,66100
+2566,"Wayne State College","NE","II",32400,41100,48100
+2568,"University of Nevada - Reno","NV","I",39000,48000,64700
+2569,"Univ. of Nevada-Las Vegas","NV","II",39200,47600,59600
+2572,"Colby-Sawyer College","NH","III",27700,38000,39700
+2573,"Dartmouth College","NH","I",42900,53600,78500
+2575,"Franklin Pierce College","NH","III",32300,38200,47000
+2579,"New England College","NH","III",25100,32900,42300
+2580,"New Hampshire College","NH","II",35600,42500,56700
+2584,"Notre Dame College","NH","III",26100,29900,33500
+2586,"Rivier College","NH","II",33100,36300,44900
+2587,"Saint Anselm College","NH","III",33800,40300,51200
+2589,"University of New Hampshire","NH","I",37500,45400,58700
+2590,"Keene State College","NH","III",33700,41700,49400
+2591,"Plymouth State College","NH","III",35400,40500,51800
+2597,"Bloomfield College","NJ","III",35400,43400,47600
+2599,"Centenary College","NJ","III",25200,30500,NA
+2600,"College of Saint Elizabeth","NJ","III",32200,38800,42600
+2603,"Drew University","NJ","II",38600,46300,60300
+2608,"Georgian Court College","NJ","III",37300,42500,49000
+2610,"Felician College","NJ","III",31100,35100,NA
+2613,"Jersey City State College","NJ","III",40500,52500,64900
+2616,"Monmouth College","NJ","II",40800,50900,61600
+2617,"Montclair State College","NJ","II",41700,52100,64700
+2621,"New Jersey Inst. of Tech.","NJ","II",50100,60600,77100
+2622,"Kean College of New Jersey","NJ","II",42300,51600,64000
+2625,"William Paterson College","NJ","III",40900,51900,65300
+2627,"Princeton University","NJ","I",43700,56400,96300
+2628,"Rider College","NJ","II",51100,55200,63600
+2631,"Rutgers State Univ.-Newark","NJ","II",52600,64000,89300
+2632,"Seton Hall University","NJ","II",41400,55700,73600
+2638,"Saint Peter's College","NJ","III",31700,39100,47700
+2639,"Stevens Institute of Tech.","NJ","II",41500,49400,64700
+2642,"Trenton State College","NJ","III",42200,52400,64400
+2651,"Eastern New Mexico Univ.","NM","II",32100,37700,49700
+2653,"New Mexico Highlands Univ.","NM","II",30500,36200,43500
+2654,"New Mexico Inst. Min.&Tech.","NM","I",40500,42100,53800
+2657,"New Mexico St. Univ- Main","NM","I",36000,43300,52400
+2667,"Dowling College","NY","III",48400,59600,66100
+2668,"Alfred University","NY","II",36700,42700,52000
+2671,"Bard College","NY","III",36500,46000,65700
+2681,"Canisius College","NY","II",37000,48000,54200
+2685,"Cazenovia College","NY","III",29500,35400,44300
+2699,"Clarkson University","NY","I",47500,51500,70300
+2701,"Colgate University","NY","III",40600,50500,66900
+2703,"College of Mount St. Vincent","NY","III",33600,38800,NA
+2704,"College of New Rochelle","NY","II",39100,44900,53900
+2705,"College of Saint Rose","NY","II",32900,40800,45600
+2707,"Columbia University","NY","I",45200,55400,88200
+2708,"Barnard College","NY","III",39500,51600,73300
+2709,"Concordia College","NY","III",27500,28900,35200
+2710,"Cooper Union for Adv.Sci&Art","NY","III",43300,51400,68400
+2711,"Cornell Univ.-Endowed Colls.","NY","I",48200,56200,78700
+2711,"Cornell Univ.-Statutory Clls","NY","I",43100,51100,65100
+2712,"D'Youville College","NY","III",32700,38500,40400
+2713,"Dominican College","NY","III",35400,40000,NA
+2718,"Elmira College","NY","III",30600,34200,49700
+2722,"Fordham University","NY","I",44400,57300,74400
+2728,"Hamilton College","NY","III",37700,47800,63100
+2729,"Hartwick College","NY","III",34000,42300,50500
+2731,"Hobart-William Smith Colls.","NY","III",35200,46200,60500
+2732,"Hofstra University","NY","I",47000,55000,75700
+2734,"Houghton College","NY","III",26500,32300,37000
+2735,"Hilbert College","NY","III",26100,NA,31800
+2737,"Iona College","NY","II",39300,46200,59400
+2739,"Ithaca College","NY","III",36600,48400,60600
+2744,"Keuka College","NY","III",28300,34600,40300
+2748,"Le Moyne College","NY","III",36500,45500,54200
+2758,"Manhattan College","NY","II",38800,50000,59500
+2765,"Marist College","NY","III",37300,48500,58000
+2768,"Marymount Coll. Tarrytown","NY","III",29700,34900,42600
+2769,"Marymount Manhattan College","NY","III",33200,40700,NA
+2772,"Mercy College","NY","III",34100,39900,52400
+2775,"Molloy College","NY","III",35300,43500,54100
+2777,"Medaille College","NY","III",27600,37100,43500
+2778,"Mount Saint Mary College","NY","III",34900,40700,51400
+2779,"Nazareth Coll. of Rochester","NY","III",34300,42800,51300
+2785,"New York University","NY","I",50700,59100,88700
+2788,"Niagara University","NY","II",37600,43000,50300
+2791,"Pace University","NY","II",43600,51300,68500
+2803,"Rensselaer Polytechnic Inst.","NY","I",47500,54800,75000
+2806,"Rochester Institute of Tech.","NY","II",41700,47600,56800
+2810,"Russell Sage College","NY","II",35100,40900,48700
+2813,"Sarah Lawrence College","NY","III",39800,47800,62300
+2814,"Skidmore College","NY","III",39700,49200,64200
+2816,"Siena College","NY","III",35700,42900,51500
+2817,"St.Bonaventure University","NY","II",37700,39800,49200
+2820,"St. Francis College","NY","III",35000,46600,54300
+2821,"St. John Fisher College","NY","III",37600,42700,51300
+2825,"Saint Joseph's College","NY","III",34900,39800,49500
+2829,"St. Lawrence University","NY","III",36600,47300,62700
+2832,"St. Thomas Aquinas College","NY","III",37400,40800,51000
+2835,"SUNY at Albany","NY","I",40700,52600,73200
+2836,"SUNY at Binghamton","NY","I",40700,51100,70500
+2838,"SUNY at Stony Brook","NY","I",41400,53400,75500
+2841,"SUNY College at Brockport","NY","II",39700,50100,60300
+2842,"SUNY College at Buffalo","NY","II",35900,43300,53600
+2843,"SUNY College at Cortland","NY","II",34100,41100,53000
+2844,"SUNY College at Fredonia","NY","II",35000,43800,56200
+2845,"SUNY College at Geneseo","NY","II",34800,41100,54100
+2846,"SUNY College at New Paltz","NY","II",37300,45800,58400
+2847,"SUNY College at Oneonta","NY","II",36200,42800,53900
+2848,"SUNY College at Oswego","NY","II",33900,42700,53700
+2849,"SUNY College at Plattsburgh","NY","II",34300,43500,53800
+2850,"SUNY College at Potsdam","NY","II",33700,41300,53100
+2882,"Syracuse University","NY","I",39400,47500,64800
+2883,"Syracuse Univ.-Utica College","NY","III",33900,39400,48700
+2889,"Union College","NY","II",39900,50800,63800
+2894,"University of Rochester","NY","I",43400,52000,74700
+2895,"Vassar College","NY","III",40800,51700,67400
+2899,"Wagner College","NY","III",32600,36600,45700
+2901,"Wells College","NY","III",31800,37300,46400
+2905,"North Carolina A&T St. Univ.","NC","II",40900,44800,52400
+2906,"Appalachian State University","NC","II",36600,41300,49100
+2907,"Univ. of N.C. at Asheville","NC","III",35000,43600,53300
+2908,"Barton College","NC","III",29900,31200,34800
+2909,"Barber-Scotia College","NC","III",28700,31200,35200
+2910,"Belmont Abbey College","NC","III",28100,31600,34800
+2911,"Bennett College","NC","III",30000,37700,35100
+2914,"Catawba College","NC","III",28800,32600,39500
+2918,"Davidson College","NC","III",35600,46000,62600
+2920,"Duke University","NC","I",45900,58400,85400
+2923,"East Carolina University","NC","II",37700,43000,55400
+2926,"Elizabeth City State Univ.","NC","III",33800,41500,47200
+2927,"Elon College","NC","III",33100,38800,45900
+2928,"Fayetteville State Univ.","NC","II",37500,43700,52500
+2929,"Gardner-Webb University","NC","III",29400,30500,34800
+2930,"Greensboro College","NC","III",30900,33100,37700
+2931,"Guilford College","NC","III",33800,41400,49200
+2933,"High Point University","NC","III",33000,39700,47500
+2936,"Johnson C. Smith University","NC","III",30300,35700,40800
+2941,"Lenoir-Rhyne College","NC","III",29500,32300,37700
+2942,"Livingstone College","NC","III",26300,25700,NA
+2944,"Mars Hill College","NC","III",25900,30800,35600
+2945,"Meredith College","NC","III",32800,37300,44000
+2946,"Methodist College","NC","III",29500,30900,34800
+2948,"Montreat-Anderson College","NC","III",27400,30400,NA
+2950,"North Carolina Central Univ.","NC","II",37300,44700,55100
+2951,"North Carolina Wesleyan Coll","NC","III",29900,31700,38400
+2954,"Pembroke State University","NC","II",34100,40300,53800
+2955,"Pfeiffer College","NC","III",26900,32200,39500
+2957,"Queens College","NC","III",31900,36000,42700
+2960,"Salem College","NC","III",28300,34900,37800
+2962,"Shaw University","NC","III",29300,32100,NA
+2972,"North Carolina State Univ.","NC","I",41700,47500,66500
+2974,"Univ. of N.C. at Chapel Hill","NC","I",41000,51200,70100
+2975,"Univ. of N.C. at Charlotte","NC","II",38500,44800,56800
+2976,"Univ. of N.C. at Greensboro","NC","I",37700,44300,61000
+2978,"Wake Forest University","NC","II",43300,52600,68500
+2979,"Warren Wilson College","NC","III",NA,NA,NA
+2981,"Western Carolina University","NC","II",36400,43900,51500
+2984,"Univ. of N.C. at Wilmington","NC","II",36600,41900,53300
+2985,"Wingate College","NC","III",30100,30800,38000
+2986,"Winston-Salem State Univ.","NC","III",36500,42100,48000
+2989,"Dickinson State University","ND","III",30200,34200,40200
+2993,"Mayville State University","ND","III",31300,NA,41500
+2994,"Minot State University","ND","II",33100,38300,45700
+3005,"Univ. of North Dakota-Main","ND","I",34500,39100,46000
+3008,"Valley City State University","ND","III",31300,36800,40300
+3011,"Art Academy of Cincinnati","OH","III",NA,28600,NA
+3012,"Ashland University","OH","III",32900,41800,48400
+3014,"Baldwin-Wallace College","OH","III",36000,43100,53000
+3016,"Bluffton College","OH","III",27200,30900,36800
+3018,"Bowling Green State Univ.","OH","I",39400,48100,62000
+3023,"Capital University","OH","II",33400,40500,56300
+3024,"Case Western Reserve Univ.","OH","I",47000,51800,75400
+3025,"Cedarville College","OH","III",30000,36400,41900
+3032,"Cleveland State University","OH","II",39000,45900,61100
+3033,"College of Mount St. Joseph","OH","III",33900,41200,47700
+3036,"Franciscan Univ.Steubenville","OH","III",30000,36200,44500
+3037,"College of Wooster","OH","III",34600,41100,56100
+3038,"Mount Union College","OH","III",32500,39400,47600
+3041,"Defiance College The","OH","III",27700,33300,37300
+3042,"Denison University","OH","III",34600,41400,55800
+3045,"University of Findlay","OH","III",30100,37000,41700
+3046,"Franklin University","OH","III",NA,NA,NA
+3048,"Heidelberg College","OH","III",29800,33400,39900
+3049,"Hiram College","OH","III",30200,36700,46800
+3050,"John Carroll University","OH","II",38900,47300,58700
+3051,"Kent State Univ.-Kent Campus","OH","I",38900,47300,65400
+3065,"Kenyon College","OH","III",38100,43900,60800
+3069,"Lourdes College","OH","III",28300,33000,NA
+3072,"Malone College","OH","III",30600,35200,41000
+3073,"Marietta College","OH","III",29800,36600,44500
+3084,"Muskingum College","OH","III",29000,36500,44600
+3085,"Notre Dame College of Ohio","OH","III",26900,29400,NA
+3086,"Oberlin College","OH","III",38500,45400,58800
+3089,"Ohio Northern University","OH","III",37100,43100,51100
+3092,"Ohio State Univ.-Lima","OH","III",33500,46000,NA
+3093,"Ohio State Univ.-Mansfield","OH","III",35000,39600,NA
+3094,"Ohio State Univ.-Marion","OH","III",33700,42400,50800
+3095,"Ohio State Univ.-Newark","OH","III",35300,41700,NA
+3100,"Ohio University-Athens","OH","I",39300,48600,63200
+3109,"Ohio Wesleyan University","OH","III",35400,39500,54100
+3110,"Otterbein College","OH","III",32900,37200,45900
+3121,"Tiffin University","OH","III",33400,37900,48500
+3123,"Univ. of Akron- Main Campus","OH","I",38700,44800,57700
+3125,"Univ.of Cinti.-Main Campus","OH","I",39300,48300,66600
+3127,"University of Dayton","OH","II",39200,47900,59000
+3131,"University of Toledo","OH","I",37900,45700,60800
+3133,"Urbana University","OH","III",24100,26600,33500
+3134,"Ursuline College","OH","III",29700,35000,41300
+3135,"Walsh University","OH","III",27800,34400,40700
+3142,"Wilmington College","OH","III",30300,35700,40700
+3143,"Wittenberg University","OH","III",34100,41300,54600
+3144,"Xavier University","OH","II",37800,47300,57100
+3145,"Youngstown State University","OH","II",36200,45000,59100
+3150,"Cameron University","OK","III",32900,36000,42600
+3151,"Bartlesville Wesleyan Coll.","OK","III",NA,NA,NA
+3152,"University of Central Okla.","OK","II",38400,44200,50300
+3154,"East Central University","OK","III",35200,40700,45300
+3157,"Langston University","OK","III",31300,37500,45900
+3161,"Northeastern State Univ.","OK","III",34800,37400,45500
+3163,"Northwestern Okla.State Univ","OK","III",32100,39700,43500
+3164,"Oklahoma Baptist University","OK","III",28200,33500,37900
+3165,"Okla. Christian U. of S&Arts","OK","III",31700,37200,43200
+3167,"Univ. of Sci.& Arts of Okla.","OK","III",33600,36900,42700
+3170,"Oklahoma State Univ.-Main","OK","I",37300,40900,53200
+3174,"Oklahoma Panhandle St.Univ.","OK","III",31100,36000,42700
+3175,"Phillips University","OK","III",27300,31500,36500
+3179,"Southeastern Okla. St. Univ.","OK","II",34800,40700,46400
+3181,"Sthwtrn Okl.St.U.-Weatherfrd","OK","II",38200,42900,46400
+3184,"University of Oklahoma","OK","I",36800,44500,60000
+3185,"University of Tulsa","OK","II",40400,50000,68600
+3191,"Concordia College","OR","III",30700,32900,40100
+3193,"Eastern Oregon State College","OR","III",30900,36300,47000
+3194,"George Fox College","OR","III",30200,37300,41800
+3197,"Lewis & Clark College","OR","II",36200,44200,60100
+3198,"Linfield College","OR","III",31900,37700,48100
+3208,"Northwest Christian College","OR","III",NA,NA,NA
+3209,"Western Oregon State College","OR","II",31500,35400,43900
+3210,"Oregon State University","OR","I",40000,47300,59700
+3211,"Oregon Institute of Tech.","OR","III",39100,44100,50000
+3212,"Pacific University","OR","II",34100,38100,44100
+3216,"Portland State University","OR","I",38200,43700,54400
+3217,"Reed College","OR","III",37800,44200,59600
+3219,"Southern Oregon State Coll.","OR","II",31500,37100,46000
+3223,"University of Oregon","OR","I",37500,44600,59700
+3224,"University of Portland","OR","II",38700,43700,58700
+3225,"Warner Pacific College","OR","III",21600,27900,NA
+3227,"Willamette University","OR","III",34500,39000,59600
+3229,"Albright College","PA","III",35900,39600,48800
+3230,"Allegheny College","PA","III",33200,41400,57600
+3233,"Alvernia College","PA","III",29500,31500,40200
+3235,"Beaver College","PA","II",35300,40500,49600
+3237,"Bryn Mawr College","PA","II",37900,46600,62000
+3238,"Bucknell University","PA","II",41500,49700,65800
+3241,"Cabrini College","PA","III",35400,NA,47100
+3242,"Carnegie-Mellon University","PA","I",49900,56600,82900
+3243,"Cedar Crest College","PA","III",31800,39200,47500
+3244,"Chatham College","PA","III",32300,39700,49200
+3245,"Chestnut Hill College","PA","III",27700,32200,NA
+3247,"College Misericordia","PA","III",34600,42500,49300
+3252,"Del. Valley Coll/Sci.&Agr.","PA","III",34700,41100,50400
+3253,"Dickinson College","PA","III",38000,46800,62200
+3256,"Drexel University","PA","I",45900,49600,67400
+3258,"Duquesne University","PA","II",39300,46900,60200
+3259,"Eastern College","PA","II",32900,34200,44200
+3262,"Elizabethtown College","PA","III",37100,45600,55200
+3265,"Franklin and Marshall Coll.","PA","III",38700,48100,67500
+3266,"Gannon University","PA","II",34100,37700,45300
+3267,"Geneva College","PA","III",31200,36600,41600
+3268,"Gettysburg College","PA","III",40000,47500,62700
+3270,"Gwynedd-Mercy College","PA","III",26900,31600,35600
+3274,"Haverford College","PA","III",39200,49800,65300
+3275,"Holy Family College","PA","III",33500,39500,48000
+3276,"Immaculata College","PA","III",31000,40600,45100
+3277,"Indiana University of Penn.","PA","II",42500,54100,67500
+3278,"Thomas Jefferson University","PA","II",42800,50500,NA
+3279,"Juniata College","PA","III",31600,39100,48800
+3282,"King's College","PA","III",35400,42700,49800
+3284,"Lafayette College","PA","III",41900,51700,68600
+3287,"La Salle University","PA","II",42600,48200,58500
+3288,"Lebanon Valley College","PA","III",36200,40100,47200
+3289,"Lehigh University","PA","I",44800,54300,75700
+3290,"Lincoln University","PA","III",34800,40000,51600
+3293,"Lycoming College","PA","III",35200,43600,50200
+3296,"Marywood College","PA","II",35600,42900,51400
+3297,"Mercyhurst College","PA","III",31200,39000,44400
+3298,"Messiah College","PA","III",35100,40000,48100
+3301,"Moravian College","PA","III",34300,40600,49000
+3303,"Carlow College","PA","III",31400,38300,49700
+3304,"Muhlenberg College","PA","III",35900,43200,58900
+3313,"Widener University","PA","II",43900,55600,67000
+3315,"Bloomsburg Univ. of Penn.","PA","II",42800,53800,66900
+3316,"California Univ. of Penn.","PA","II",43600,54100,67400
+3317,"Cheyney University of Penn.","PA","II",37900,55400,69200
+3320,"East Stroudsburg University","PA","II",41500,53100,67600
+3321,"Edinboro University of Penn.","PA","II",42400,54500,67600
+3322,"Kutztown Univ. of Penn.","PA","II",41800,54400,66900
+3323,"Lock Haven University","PA","III",41700,54400,67600
+3324,"Mansfield Univ. of Penn.","PA","III",42800,53200,66500
+3325,"Millersville Univ. of Penn.","PA","II",42900,55200,66000
+3326,"Shippensburg University","PA","II",42500,54500,67300
+3327,"Slippery Rock Univ. of Penn.","PA","II",43100,53200,67500
+3328,"West Chester Univ. of Penn.","PA","II",43100,54000,66700
+3354,"Phila.Coll.of Textiles&Sci.","PA","III",36200,42500,53800
+3357,"Point Park College","PA","III",29000,33100,41100
+3359,"Robert Morris College","PA","III",40600,45400,57500
+3362,"Seton Hill College","PA","III",32900,38000,48900
+3366,"Saint Francis College","PA","III",32300,39200,47200
+3367,"St. Joseph's University","PA","II",42700,48400,59400
+3368,"Saint Vincent College","PA","III",31700,39900,43600
+3369,"Susquehanna University","PA","III",35900,42000,53400
+3370,"Swarthmore College","PA","III",41700,51900,70400
+3371,"Temple University","PA","I",45400,57900,73600
+3376,"Thiel College","PA","III",28700,34200,40800
+3378,"University of Pennsylvania","PA","I",53200,62200,88100
+3379,"Univ. of Pittsburgh-Main","PA","I",42100,51600,73600
+3380,"Univ. of Pittsburgh-Bradford","PA","III",34000,41800,48900
+3381,"Univ. of Pittsburgh-Grnsburg","PA","III",31400,40100,47800
+3382,"Univ. of Pittsburgh-Johnstwn","PA","III",32200,43000,55400
+3384,"University of Scranton","PA","II",43700,47900,56500
+3385,"Ursinus College","PA","III",35400,41900,52800
+3388,"Villanova University","PA","II",43800,53500,72600
+3389,"Washington & Jefferson Coll.","PA","III",37300,48000,54900
+3391,"Waynesburg College","PA","III",29700,33200,40700
+3392,"Westminster College","PA","III",33700,41000,49700
+3394,"Wilkes University","PA","II",33800,43000,49900
+3396,"Wilson College","PA","III",26900,31400,32200
+3399,"York College of Pennsylvania","PA","III",41400,51200,61500
+3401,"Brown University","RI","I",43300,51500,75200
+3402,"Bryant College","RI","III",50200,58200,63200
+3406,"Providence College","RI","II",41800,52600,63300
+3407,"Rhode Island College","RI","II",38100,44200,51800
+3409,"Rhode Island School Design","RI","III",35100,42700,55800
+3411,"Salve Regina University","RI","II",32700,39700,49500
+3414,"University of Rhode Island","RI","I",41600,47300,63000
+3419,"Charleston Southern Univ.","SC","III",29900,35600,42900
+3420,"Benedict College","SC","III",24100,26000,32000
+3422,"Central Wesleyan College","SC","III",21400,24700,29300
+3423,"Citadel Military Coll.of SC","SC","II",33200,40500,46900
+3425,"Clemson University","SC","I",37500,44100,60200
+3427,"Coker College","SC","III",31800,35900,42500
+3428,"College of Charleston","SC","II",32000,41000,47500
+3430,"Columbia College","SC","III",33000,35500,41500
+3431,"Converse College","SC","III",31700,38400,46700
+3432,"Erskine College","SC","III",29700,NA,42000
+3434,"Furman University","SC","III",34300,41400,55100
+3435,"Lander University","SC","III",34300,38100,45300
+3436,"Limestone College","SC","III",25000,28200,27700
+3439,"Morris College","SC","III",25200,27800,NA
+3440,"Newberry College","SC","III",24300,29000,35100
+3445,"Presbyterian College","SC","III",31600,37600,50300
+3446,"South Carolina State College","SC","III",30700,37900,45800
+3448,"Univ. South Carolina-Main","SC","I",38500,43600,58500
+3449,"Univ. South Carolina-Aiken","SC","III",31700,39200,46100
+3451,"Coastal Carolina University","SC","III",31400,37700,43700
+3455,"Voorhees College","SC","III",25400,NA,NA
+3456,"Winthrop University","SC","II",32700,37800,46400
+3457,"Wofford College","SC","III",36700,41300,53700
+3458,"Augustana College","SD","III",32200,38200,43400
+3459,"Black Hills State University","SD","III",30300,34100,41000
+3461,"Dakota Wesleyan University","SD","III",24600,29000,NA
+3463,"Dakota State University","SD","III",34900,35700,46900
+3466,"Northern State University","SD","II",29700,33300,41700
+3469,"Sioux Falls College","SD","III",28900,30800,37600
+3470,"South Dakota Sch.Min.& Tech.","SD","II",36200,41400,47300
+3471,"South Dakota State Univ.","SD","II",32600,36800,44000
+3478,"Austin Peay State University","TN","II",31400,36200,48200
+3479,"Belmont University","TN","II",31500,37200,48400
+3480,"Bethel College","TN","III",25500,NA,28700
+3481,"Carson-Newman College","TN","III",28600,33400,39300
+3482,"Christian Brothers Univ.","TN","III",31200,34700,41400
+3484,"Covenant College","GA","III",31200,37100,42900
+3486,"David Lipscomb University","TN","III",30800,37400,45300
+3487,"East Tennessee State Univ.","TN","II",35800,44900,51900
+3490,"Fisk University","TN","III",26900,36900,38300
+3492,"Freed-Hardeman University","TN","III",27100,32600,38200
+3498,"Lambuth University","TN","III",28300,28800,31600
+3500,"Lee College","TN","III",28400,32000,35000
+3505,"Maryville College","TN","III",28900,35100,42900
+3509,"Memphis State University","TN","I",37600,42500,55800
+3510,"Middle Tenn. State Univ.","TN","II",33600,41800,54200
+3511,"Milligan College","TN","III",29100,33400,39800
+3518,"Southern C.Seventh-Day Advts","TN","III",24900,26100,27000
+3519,"Rhodes College","TN","III",35300,44600,57500
+3522,"Tennessee State University","TN","II",33000,41800,47700
+3523,"Tennessee Technological Univ","TN","II",34600,42400,54700
+3527,"Tusculum College","TN","III",29000,32700,35300
+3528,"Union University","TN","III",31800,36100,39600
+3529,"Univ. of Tenn.at Chattanooga","TN","II",36500,42000,49400
+3530,"Univ.of Tennessee-Knoxville","TN","I",40200,45400,60000
+3531,"Univ.of Tennessee-Martin","TN","II",33700,40900,47300
+3534,"University of the South","TN","III",34700,42700,57800
+3535,"Vanderbilt University","TN","I",43200,52200,80700
+3537,"Abilene Christian University","TX","II",33900,37500,42400
+3541,"Angelo State University","TX","III",36900,42500,48500
+3543,"Austin College","TX","III",32000,39400,50800
+3564,"East Texas Baptist Univ.","TX","III",32500,31800,37700
+3565,"East Texas State University","TX","II",35100,37800,49400
+3571,"Hardin-Simmons University","TX","II",29500,31100,37800
+3576,"Houston Baptist University","TX","II",31400,36300,40800
+3581,"Lamar University-Beaumont","TX","II",33400,38200,48200
+3584,"LeTourneau University","TX","III",31900,34300,40400
+3592,"Midwestern State University","TX","II",36200,41800,49100
+3594,"University of North Texas","TX","I",38200,44300,55100
+3598,"Our Lady of the Lake Univ.","TX","II",34600,40500,49900
+3599,"Univ. of Texas-Pan Amer.Univ","TX","II",34300,42600,50300
+3604,"Rice University","TX","I",48100,54800,80900
+3606,"Sam Houston State University","TX","II",34100,40300,49700
+3610,"Schreiner College","TX","III",25700,30000,35400
+3613,"Southern Methodist Univ.","TX","I",46300,50500,73300
+3615,"Southwest Texas State Univ.","TX","II",32800,41000,49500
+3620,"Southwestern University","TX","III",37300,47000,62700
+3621,"St. Edward's University","TX","III",33100,38500,46900
+3623,"St. Mary's University","TX","II",38300,47400,65200
+3624,"Stephen F.Austin State Univ.","TX","II",33800,37900,47300
+3625,"Sul Ross State University","TX","III",31000,36800,44000
+3630,"Prairie View A&M University","TX","II",34700,42100,48500
+3631,"Tarleton State University","TX","II",34700,39900,44600
+3636,"Texas Christian University","TX","I",42300,47700,65400
+3639,"Texas A&M Univ.-Kingsville","TX","II",34800,39300,46700
+3641,"Texas Lutheran College","TX","III",31300,37000,45800
+3642,"Texas Southern University","TX","I",36600,45500,55100
+3644,"Texas Tech University","TX","I",36300,42900,61000
+3645,"Texas Wesleyan University","TX","III",29800,53600,45600
+3646,"Texas Woman's University","TX","I",34200,40100,49900
+3647,"Trinity University","TX","II",38900,47700,69600
+3651,"University of Dallas","TX","II",36400,43200,47400
+3652,"University of Houston","TX","I",39800,46200,68100
+3656,"Univ. of Texas at Arlington","TX","I",39500,43800,58100
+3658,"Univ. of Texas at Austin","TX","I",43200,47600,73200
+3661,"Univ. of Texas at El Paso","TX","II",36500,41700,52200
+3663,"Wayland Baptist Univ.","TX","III",25200,27800,43300
+3665,"West Texas A&M University","TX","II",32600,35800,46700
+3670,"Brigham Young University","UT","I",43100,50400,66100
+3675,"University of Utah","UT","I",38300,43200,61500
+3677,"Utah State University","UT","I",36400,40300,51800
+3678,"Southern Utah University","UT","III",29000,34900,42100
+3680,"Weber State University","UT","III",34100,38800,48300
+3681,"Westminster Coll. Slt.Lke.Cy","UT","III",32500,36700,44500
+3682,"Bennington College","VT","III",NA,NA,NA
+3683,"Castleton State College","VT","III",30200,35500,43200
+3687,"Green Mountain College","VT","III",30900,35500,41600
+3688,"Johnson State College","VT","III",30300,34900,42300
+3689,"Lyndon State College","VT","III",29300,36600,43300
+3691,"Middlebury College","VT","III",39800,46900,67800
+3692,"Norwich University","VT","II",29700,35600,42300
+3694,"Saint Michael's College","VT","III",34400,41400,50100
+3695,"Trinity College of Vermont","VT","III",29900,34000,36400
+3696,"University of Vermont","VT","I",37000,45000,60600
+3702,"Averett College","VA","III",28100,31900,37200
+3704,"Bridgewater College","VA","III",33200,39000,45000
+3705,"College of William and Mary","VA","I",38200,49900,67900
+3706,"Christopher Newport Univ.","VA","III",36300,44200,50900
+3708,"Eastern Mennonite Coll.&Sem.","VA","III",28600,33500,38700
+3709,"Emory and Henry College","VA","III",29600,35800,44000
+3711,"Ferrum College","VA","III",29900,34200,41500
+3713,"Hampden-Sydney College","VA","III",33800,39700,52900
+3714,"Hampton University","VA","II",32300,37700,49400
+3715,"Hollins College","VA","III",30600,39800,49800
+3719,"Longwood College","VA","III",33600,42000,48700
+3720,"Lynchburg College","VA","II",31700,39200,46500
+3721,"James Madison University","VA","II",36600,44700,52100
+3723,"Mary Baldwin College","VA","III",31100,37000,45700
+3724,"Marymount University","VA","II",36900,41800,52400
+3728,"Old Dominion University","VA","I",37000,45100,59500
+3732,"Radford University","VA","II",35400,39300,49900
+3733,"Randolph-Macon College","VA","III",31300,39500,52200
+3734,"Randolph-Macon Woman's Coll.","VA","III",33700,41100,49500
+3735,"Virginia Commonwealth Univ.","VA","I",40400,49200,61000
+3736,"Roanoke College","VA","III",33800,40800,49400
+3737,"Shenandoah University","VA","III",33000,38700,46300
+3739,"Saint Paul's College","VA","III",27500,30900,31900
+3742,"Sweet Briar College","VA","III",37200,43300,53900
+3744,"University of Richmond","VA","II",41800,55000,71100
+3746,"Mary Washington College","VA","III",32500,39700,47500
+3747,"U. Va. Clinch Valley College","VA","III",31300,35200,44500
+3749,"George Mason University","VA","I",44500,52400,75300
+3752,"Virginia Intermont College","VA","III",27900,31800,33200
+3753,"Virginia Military Institute","VA","III",36400,44600,53200
+3754,"Virginia Poly.Inst.&St.Univ.","VA","I",40400,46700,65500
+3764,"Virginia State University","VA","II",37500,41600,45300
+3765,"Norfolk State University","VA","II",35500,42900,49200
+3766,"Virginia Union University","VA","III",26400,35100,40100
+3767,"Virginia Wesleyan College","VA","III",35600,43200,52700
+3768,"Washington & Lee University","VA","III",39700,48700,68500
+3771,"Central Washington Univ.","WA","II",29200,35500,48300
+3775,"Eastern Washington Univ.","WA","II",35200,40600,48000
+3777,"Heritage College","WA","III",31900,35900,NA
+3778,"Gonzaga University","WA","II",34500,42800,61600
+3785,"Pacific Lutheran University","WA","II",35100,40900,49400
+3788,"Seattle Pacific University","WA","II",33500,38800,45700
+3790,"Seattle University","WA","II",40800,47600,56500
+3794,"Saint Martin's College","WA","III",30300,34700,37800
+3797,"University of Puget Sound","WA","III",38900,46900,62300
+3798,"University of Washington","WA","I",42100,48500,68300
+3799,"Walla Walla College","WA","III",30000,31400,33300
+3800,"Washington State University","WA","I",39300,44700,59700
+3802,"Western Washington Univ.","WA","II",37100,44400,53700
+3803,"Whitman College","WA","III",37200,45100,56800
+3804,"Whitworth College","WA","III",27900,34900,42600
+3806,"Alderson Broaddus College","WV","III",27200,31500,38500
+3808,"Bethany College","WV","III",28600,34800,39700
+3809,"Bluefield State College","WV","III",26800,31500,40900
+3810,"Concord College","WV","III",28400,34200,40000
+3811,"Davis and Elkins College","WV","III",25900,30500,37300
+3812,"Fairmont State College","WV","III",31700,36200,43200
+3813,"Glenville State College","WV","III",27400,32500,39600
+3815,"Marshall University","WV","II",30900,39000,47700
+3818,"University of Charleston","WV","III",32400,34700,38500
+3820,"Salem-Teikyo University","WV","III",30500,35300,42200
+3823,"West Liberty State College","WV","III",23500,32700,41700
+3825,"West Virginia Inst. of Tech.","WV","III",29700,34000,40800
+3827,"West Virginia University","WV","I",36100,43100,53500
+3830,"West Virginia Wesleyan Coll.","WV","III",33900,38300,44100
+3831,"Wheeling Jesuit College","WV","III",28200,34800,40300
+3832,"Alverno College","WI","III",28200,35200,43800
+3835,"Beloit College","WI","III",35700,40900,52100
+3839,"Carthage College","WI","III",31900,37400,43400
+3842,"Concordia Univ. Wisconsin","WI","III",34000,39100,41600
+3854,"Lakeland College","WI","III",32100,NA,40600
+3856,"Lawrence University","WI","III",36400,42500,57000
+3861,"Marian Coll.of Fond du Lac","WI","III",30200,37100,44000
+3863,"Marquette University","WI","I",42600,52100,70500
+3868,"Milwaukee School of Engrg.","WI","III",35300,41100,48400
+3869,"Mount Mary College","WI","III",28200,32700,39300
+3875,"Northland College","WI","III",27100,29600,37500
+3884,"Ripon College","WI","III",32000,38000,49100
+3892,"St. Norbert College","WI","III",35300,44500,54600
+3895,"Univ. Wisconsin-Madison","WI","I",43900,49800,66600
+3896,"Univ. Wisconsin-Milwaukee","WI","I",42100,46500,60400
+3899,"Univ. Wisconsin-Green Bay","WI","II",35600,41700,49800
+3911,"Viterbo College","WI","III",31600,36600,44800
+3915,"Univ. Wisconsin-Stout","WI","II",34900,39400,50200
+3917,"Univ. Wisconsin-Eau Claire","WI","II",37200,41000,48900
+3919,"Univ. Wisconsin-La Crosse","WI","II",38400,42400,51100
+3921,"Univ. Wisconsin-Platteville","WI","II",35700,41700,51700
+3923,"Univ. Wisconsin-River Falls","WI","II",34000,39900,48500
+3924,"Univ. Wisconsin-Stevens Pnt.","WI","II",35300,42300,51600
+3925,"Univ. Wisconsin-Superior","WI","II",34800,41000,50100
+3926,"Univ. Wisconsin-Whitewater","WI","II",36800,43400,52500
+3932,"University of Wyoming","WY","I",37400,41000,53900
+3948,"San Francisco State Univ.","CA","II",39700,48300,59900
+3954,"University Central Florida","FL","II",36900,42000,56000
+3955,"University of West Florida","FL","II",35000,39100,48900
+3969,"Univ. Minnesota-Twin Cities","MN","I",41800,46800,66200
+3970,"Parks Coll.of St.Louis Univ.","IL","III",39600,54000,57600
+3986,"Alltwn.Coll.St.Francis Sales","PA","III",34200,41500,48600
+3987,"La Roche College","PA","III",30200,36400,43300
+3988,"Neumann College","PA","III",29600,32800,NA
+4509,"Univ. of Colo. at Colo.Sprgs","CO","II",38500,42200,52200
+4673,"Baker College of Flint","MI","III",37000,NA,NA
+4741,"Rutgers State Univ.-Camden","NJ","II",51000,63300,86000
+4779,"Long Island University","NY","II",40800,51300,63100
+4804,"New York Inst. of Technology","NY","II",41000,49200,56900
+4917,"Roger Williams University","RI","III",NA,NA,NA
+5015,"Univ. Wisconsin-Parkside","WI","II",39100,42700,53500
+6725,"Univ. of Tennessee- Memphis","TN","I",40300,46100,60500
+6740,"Univ. of Colorado at Denver","CO","II",40800,45300,59600
+6771,"Center for Creative Studies","MI","III",26300,33300,40100
+6791,"SUNY College at Purchase","NY","III",36200,43200,53400
+6792,"SUNY Coll.Tech. Utica-Rome","NY","II",41400,45700,53600
+6858,"Unity College","ME","III",26100,26100,35500
+6883,"Ohio State Univ.-Main campus","OH","I",41500,49100,70300
+6951,"Univ. South Carolina-Sprtbrg","SC","III",30300,36800,43300
+6964,"Rutgers State Univ.-N.Brswck","NJ","I",47800,61100,84600
+6965,"Penn State Univ.-Main Campus","PA","I",41700,50900,72100
+6967,"Baylor University","TX","I",39700,47400,61900
+6968,"University of Virginia","VA","I",43000,51700,77700
+7032,"Mid-America Nazarene College","KS","III",26500,30500,37100
+7104,"Miami University","OH","I",37600,47400,61600
+7109,"SUNY College at Old Westbury","NY","III",37400,48000,59200
+7540,"Missouri Baptist College","MO","III",28100,29400,NA
+7993,"Cal.St.Univ-Bakersfield","CA","II",37700,48200,59700
+8155,"Evergreen State College","WA","III",NA,NA,NA
+8310,"Auburn Univ. at Montgomery","AL","II",34300,42200,51900
+8770,"Fairleigh Dickinson Univ.","NJ","II",40400,44000,53000
+8795,"Antioch University","OH","II",30000,34800,44100
+8849,"Palm Beach Atlantic College","FL","III",33300,36900,41300
+9058,"Bethel College","MN","III",31300,35600,43000
+9089,"Hannibal-LaGrange College","MO","III",24800,28400,NA
+9092,"Univ.of Michigan-Ann Arbor","MI","I",46000,57700,77700
+9168,"Wright State University-Main","OH","II",38500,46800,64200
+9226,"Francis Marion University","SC","III",32800,39400,47600
+9235,"Clarion University of Penn.","PA","II",41900,53900,64900
+9265,"North Dakota State Univ.","ND","II",35300,39100,47300
+9275,"Northern Kentucky University","KY","II",35000,42700,50600
+9333,"Sangamon State University","IL","II",37000,43700,49900
+9344,"Ramapo College of New Jersey","NJ","III",40700,52700,64500
+9345,"Stockton State College","NJ","III",39300,49600,65600
+9401,"Colorado Christian Univ.","CO","III",25100,28400,NA
+9554,"SUNY at Buffalo","NY","I",42300,54800,76200
+9563,"Indiana State University","IN","I",34300,39400,50000
+9630,"Univ. Wisconsin-Oshkosh","WI","II",37400,43500,54100
+9635,"Florida Internat'l Univ.","FL","II",39500,42300,55800
+9636,"Southern Univ.A&M Coll.-Main","LA","II",33600,39200,45500
+9651,"Texas A&M Internat'l Univ.","TX","III",38000,43200,44500
+9741,"Univ. of Texas at Dallas","TX","I",45100,50500,66100
+9743,"Bellevue College","NE","III",28900,34000,37900
+9762,"Univ.of Maine at Southern","ME","II",36200,43900,58400
+9841,"University of North Florida","FL","III",34300,40500,49800
+9862,"Clarkson College","NE","III",37700,40700,NA
+9930,"Univ. of Texas -Permian Bsn.","TX","III",34800,39300,45700
+10115,"Univ. of Texas -San Antonio","TX","II",37900,44100,54600
+10256,"Benedictine College","KS","III",27800,31600,33500
+10286,"SUNY Empire State College","NY","III",36100,43700,54300
+10298,"Texas A&M Univ.at Galveston","TX","III",37600,36800,57000
+10300,"University of South Dakota","SD","I",34000,36400,48000
+10311,"Harding University","AR","III",33500,37400,42400
+10313,"Univ. New Mexico-Albuquerque","NM","I",37900,43100,57900
+10366,"Texas A & M University-Main","TX","I",39400,46000,64500
+10392,"Liberty University","VA","II",27900,34100,40100
+10395,"University of San Diego","CA","II",45200,53300,71900
+11161,"Texas A&M U.-Corpus Christi","TX","II",33400,39600,47500
+11163,"Univ. of Texas at Tyler","TX","II",35900,42100,52200
+11462,"Univ.Alaska-Anchorage","AK","II",41400,50700,61200
+11649,"Loyola Marymount University","CA","II",41400,55800,72200
+11711,"Univ. of Houston-Clear Lake","TX","II",40900,47900,55800
+11854,"University of Central Texas","TX","III",27900,32100,NA
+12748,"Shawnee State University","OH","III",36800,43900,51000
+12826,"Univ. of Houston-Downtown","TX","III",33600,40400,50300
+13231,"Univ. of Houston-Victoria","TX","III",31900,38900,NA
+21078,"Univ. of Hawaii-West Oahu","HI","III",39600,NA,51300
+29020,"Univ. of Hawaii at Hilo","HI","III",41400,46100,57600
+29100,"Univ.of District Columbia","DC","II",39000,47600,55900
+29261,"Christendom College","VA","III",27900,NA,NA
+29269,"East Texas State U-Texarkana","TX","III",NA,37300,48000

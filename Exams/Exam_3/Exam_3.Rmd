@@ -1,0 +1,73 @@
+# Data Analysis - Exam 3
+
+|File | Description                                     |
+|:----  |:----------------------------------------------------------------|
+|Exam_3.html |This HTML file                            |
+|exam3_metadata.csv  |CSV file containing information about bacterial metagenome samples|
+|exam3_otu_table.csv |The "species" abundances for each bacterial metagenome sample in the metadata file|
+|Exam_3.Rmd  |The Rmarkdown file used to "knit" this HTML file of exam prompts|
+|Sample1.fastq |The fastq reads found in Sample1        |
+|Sample2.fastq |The fastq reads found in Sample2        |
+
+
+### Two parts:
++ **Part 1** - Mess about with some sequence data ... convert formats, count sequences, etc.
++ **Part 2** - Mess about with some already processed sequence data ... use the vegan package to do some analyses on a table
++ **Bonus points** (up tp 20) if you submit your exam script as an HTML file knit from an Rmarkdown document!
+
+
+#### You can use command line for some of this if you want, but be sure to include that code as well. Example below:
+
+
+```{bash}
+ls
+```
+
+```{bash include=FALSE}
+fastq_to_fasta -i Sample1.fastq -o Sample1.fasta
+```
+
+Here's another helpful example:
+```{bash}
+grep -c "^>" *.fasta
+```
+
+```{bash include=FALSE}
+rm *.fasta
+```
+
+##### Yes, Rmarkdown can run Bash commands*
+
+*Some restrictions apply. Windows users may experience feelings of disappointment or rage upon trying this. If this occurs, please talk to your doctor and just use the ShortRead package in R, or copy and paste the command-line code you used into your final document.
+
+***
+
+### Part 1 (50 points): You have two fastq files in the Exam3 directory.
+1. Convert these fastq reads to fasta reads.  These new fasta reads should be named "Sample1.fasta" and "Sample2.fasta"
+2. How many DNA reads were detected in each sample?
+3. Trim the original fastq files so that only the first 100 bases are included from each DNA read within.
+4. Save these trimmed fastq files as "Sample1.fastq.trim" and "Sample2.fastq.trim"
+
+***
+
+### Part 2 (50 points): There are two csv files in the Exam3 directory.
++ The file "exam3_otu_table.csv" is a "species" abundance table like we've seen before. It has the number of times a given DNA sequence was found in a given sample.
++ The file "exam3_metadata.csv" has information about the samples in the species abundance table.
+
+I'm curious about whether the bacterial communities found in Soil are statistically different from those found in the Rhizosphere, **and** whether "Location" makes a difference (*i.e.*, is interactive).
+I'm **not** interested in whether the host plant Species or Season are important
+
+1. Import these files into R objects
+2. Subset both objects to include only samples where SampleType is either "Soil" or "rhizosphere"
+3. Perform a PermANOVA to determine whether there are significant differences in bacterial community composistion between these two sample types
+4. Determine which bacterial *genus* is the **most abundant** for each of those sample types as a whole
+
+Note: Genus is denoted by "g__" in the "Consensus.lineage" column of the species abundance table
+
+***
+***
+
+* Hints: 
+    + Part 1 can be done in the terminal and/or in R with the dada2 and/or shortreads package(s)
+    + You'll probably want to use the vegan package for Part 2
+    + Vegan wants a data frame to be a particular way, and it really hates it if there are columns in the "char" class!

@@ -1,0 +1,103 @@
+# Part 1
+
+## Convert from fastq to fasta
+#### I will do this in the terminal
+```{bash}
+cd ~/Desktop/GIT_REPOSITORIES/Data_Course/instructor/Exam3/
+fastq_to_fasta -i Sample1.fastq -o Sample1.fasta
+fastq_to_fasta -i Sample2.fastq -o Sample2.fasta
+```
+
+## How many DNA reads in each sample?
+#### I will use grep, like in the exam prompt HTML file
+```{bash}
+cd ~/Desktop/GIT_REPOSITORIES/Data_Course/instructor/Exam3/
+echo "Sample 1 has $(grep -c "^>" Sample1.fasta) reads."
+echo "Sample 2 has $(grep -c "^>" Sample2.fasta) reads."
+```
+
+
+
+# Part 2
+
+## Read in files as R objects
+```{r}
+otu = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/instructor/Exam3/exam3_otu_table.csv")
+meta = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/instructor/Exam3/exam3_metadata.csv")
+```
+
+
+## Subset metadata ... just "Soil" and "rhizosphere" samples
+```{r}
+meta2 = subset(meta, meta$SampleType %in% c("Soil","rhizosphere"))
+```
+
+
+##### Use subsetted metadata SampleID column to select columns from OTU table
+```{r}
+soil_and_rhiz_samples = meta2$SampleID
+otu2 = otu[,names(otu) %in% soil_and_rhiz_samples] # This removes taxonomy column too!
+```
+
+
+#### Load vegan package
+```{r}
+library(vegan)
+```
+## Permutational ANOVA
+
+### Transpose OTU table so samples are rows and "species" are columns
+```{r}
+t_otu = t(otu2)
+```
+### PermANOVA function
+##### Formula is: OTU_Table ~ SampleType * Location
+```{r}
+adonis(t_otu ~ meta2$SampleType * meta2$Location)
+```
+##### Looks like SampleType isn't important, but Location is. There is no interaction between the two factors.
+
+#### I'll plot an NMDS of this for fun...
+
+```{r}
+library(ggplot2) # Load ggplot
+NMDS = metaMDS(t_otu) # Run NMDS with defaults
+MDS1 = NMDS$points[,1] # Extract points
+MDS2 = NMDS$points[,2] # Extract points
+df = data.frame(MDS1 = MDS1, MDS2 = MDS2, SampleType = meta2$SampleType, Location = meta2$Location)
+```
+
+#### Use new data frame to make plot
+```{r}
+ggplot(df, aes(x=MDS1,y=MDS2, color = Location)) +
+  geom_point() +
+  stat_ellipse() + theme_bw() + ggtitle("NMDS Plot by Location")
+```
+
+## Find most abundant genus in each SampleType
+
+##### Need to pull in taxonomy from original OTU table
+
+##### Make new subsets...one for Soil, one for rhizosphere
+```{r}
+meta_soil = subset(meta2, SampleType == "Soil")
+meta_rhiz = subset(meta2, SampleType == "rhizosphere")
+
+otu_soil = otu2[,names(otu2) %in% meta_soil$SampleID]
+otu_rhiz = otu2[,names(otu2) %in% meta_rhiz$SampleID]
+```
+##### find max row sums
+```{r}
+max_soil = max(rowSums(otu_soil))
+max_rhiz = max(rowSums(otu_rhiz))
+```
+##### find which rows have the max
+```{r}
+max_soil_taxonomy = which(rowSums(otu_soil) == max_soil)
+max_rhiz_taxonomy = which(rowSums(otu_rhiz) == max_rhiz)
+
+# Use this to pull out taxonomic assignments from original OTU table
+otu$Consensus.lineage[max_soil_taxonomy]
+otu$Consensus.lineage[max_rhiz_taxonomy]
+```
+

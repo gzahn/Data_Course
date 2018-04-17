@@ -151,3 +151,48 @@ library(ggthemes)
 plot2 + theme_fivethirtyeight()
 plot2 + theme_few()
 plot2 + theme_wsj()
+
+plot(x=df$State,y=df$Home.Value)
+plot(x=reorder(x = df$State, X = df$Home.Value),y=df$Home.Value)
+library(gapminder)
+plot(gapminder)
+?geom_histogram
+
+
+
+library(purrr)
+?map
+mtcars %>%
+  split(.$cyl) %>% # from base R
+  map(~ lm(mpg ~ wt, data = .)) %>%
+  map(summary) %>%
+  map_dbl("r.squared")
+
+
+1:10 %>%
+  map(rnorm, n = 10) %>%
+  map_dbl(mean)
+
+
+
+
+list(c(3:30),c(1:10),c(5:55)) %>% 
+  map(1)
+levels(model_mush2$Species)
+
+cornucopiae = model_mush2 %>% filter(Species == "P.cornucopiae")
+ostreotus = model_mush2 %>% filter(Species == "P.ostreotus")
+
+p1 = ggplot(ostreotus, aes(x=Nitrogen, y=GrowthRate, col = Humidity)) +
+  geom_point() +
+  stat_smooth() + ggtitle("P. ostreotus")
+
+p2 = ggplot(cornucopiae, aes(x=Nitrogen, y=GrowthRate, col = Humidity)) +
+  geom_point() +
+  stat_smooth() + ggtitle("P. cornucopiae")
+
+gridExtra::grid.arrange(p1,p2)
+?grid.arrange
+
+
+library(patchwork)
