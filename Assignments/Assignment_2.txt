@@ -1,0 +1,36 @@
+## Shell practice tasks:
+
+1. For each of the filenames that begin with "M" in the directory "~/Desktop/Data_Course/data/data-shell/data/pdb" list the number of lines in each file.
+
+2. Redirect the output from the previous task to a new file named "m_lines.txt" in "~/Desktop/Data_Course_YOUR_LAST_NAME/"
+
+3. For the file "animals.txt" in "~/Desktop/Data_Course/data/data-shell/data/" get an alphabetical list of the unique animal types that were observed and redirect this list to "unique_animals.txt" in "~/Desktop/Data_Course_YOUR_LAST_NAME/"
+
+4. In the directory "~/Desktop/Data_Course/data/" there is a file named "BioLog_Plate_Data.csv"
+Write a command that gives a list of the unique carbon substrates the biolog plate measured, and which saves this list as "unique_C-substrates.txt" in "~/Desktop/Data_Course_YOUR_LAST_NAME/" 
+
+5. In the directory "~/Desktop/Data_Course/data/data-shell/data/" write a command that finds the longest .txt file (by number of lines)
+	Hint: wc, sort, tail, head
+
+6. In the directory "~/Desktop/Data_Course/data/data-shell/many_files/" there are a large number of subdirectories. Buried inside these subdirectories are some .txt files that all contain a list of numbers (one interger per line). 
+There is a shell script in the directory "~/Desktop/Data_Course/data/data-shell/scripts" called "sum_lines.sh"
+
+Your task is to run this script on ALL the .txt files buried within the "many_files/" directory to output the sums of all the lines in each file. This output (on all those files) should be saved in a single file named "file_sums.txt" in "~/Desktop/Data_Course_YOUR_LAST_NAME/"
+	This is a tough one. Remember that to run a shell script you need to type "bash PATH_TO_SCRIPT"
+	Hint: find -exec, for loop
+
+for loop reminder:
+
+# this will cycle through the values 1 through 10
+# with each new value, it will pause for 1 second, and then echo the current value to the screen
+
+for i in {1..10}
+ do
+ sleep 1
+ echo $i
+ done
+
+On one line, it would look like this:
+for i in {1..10};do sleep 1;echo $i;done
+
+

@@ -1,0 +1,11 @@
+File	Header	Units	Definition
+traitdatabygenus	wd	g.cm3	Mean wood density per genera extracted from the Global Wood Density database (Chave et al., 2009, Zanne et al., 2009) ; average values calculated following Baker et al., 2004
+traitdatabygenus	MaxD	cm	Potential tree size estimated as the 95th percentile of the size distribution of all trees within each genus
+traitdatabygenus	Maxgr	cm yr-1	Maximum growth rate per generta estimated as the 95th percentile of growth rates within each genus using the maximum growth rate per year calculated across multiple censuses for each stem
+traitdatabygenus	Meangr	cm yr-1	Mean growth rate per genera estimated as the average of mean growth per year across multiple censuses
+traitdatabygenus	Mort	% yr-1	Mortality rate per genera following Lines etal., 2010 and Baker et al., 2014
+traitdatabysp	wd	g.cm3	Wood density per specie extracted from the Global Wood Density database (Chave et al., 2009, Zanne et al., 2009) - values averaged across multiple individuals
+traitdatabysp	MaxD	cm	Potential tree size estimated as the 95th percentile of the size distribution of all trees within each specie
+traitdatabysp	Maxgr	cm yr-1	Maximum growth rate per specie estimated as the 95th percentile of growth rates within each specie using the maximum growth rate per year calculated across multiple censuses for each stem
+traitdatabysp	Meangr	cm yr-1	Mean growth rate per specie estimated as the average of mean growth per year across multiple censuses
+traitdatabysp	Mort	% yr-1	Mortality rate per specie following Lines etal., 2010 and Baker et al., 2014
