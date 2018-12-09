@@ -1,0 +1,165 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# **Assignment 1**
+
+In this assignment, you will:
+
++ install the main programs we will use in the course
+
++ download a local copy of all course materials to an updatable directory on your computer Desktop
+
++ create your own GitHub account and start a "repository" that is available for everyone to see
+
+________________
+
+#### First, read the following document. It will set the stage for version control and why we will be using it.
+
+https://peerj.com/preprints/3159/
+
+________________
+
+## **Installing the programs we will use in the course...**
+
+#### **Install R**
+Use the following link to download R for your particular computer system:
+https://cran.cnr.berkeley.edu/
+
+---
+
+#### **Install R-Studio**
+Make sure you install R before installing R-Studio
+https://www.rstudio.com/products/rstudio/download/#download
+
+---
+
+#### **Install Git**
+
+Here's the download page:
+https://git-scm.com/downloads
+
+If you are on a Windows computer, click the "Windows" button and your download should start automatically.
+Run the .exe file to install "Git Bash"
+
+If you are on a Mac, click the "Mac" button and the .dmg file should download automatically. 
+This will open in your software center and install.
+
+If you are on Linux, here are the instructions, depending on your version:
+https://git-scm.com/download/linux
+
+---
+
+#### **Copy course materials to your own computer**
+
+Once you have Git installed, open it up (in Windows this will be a shortcut called "Git Bash", 
+in Mac or Linux, just open your terminal -that scary command prompt- and it will be working in the background)
+You will see a simple command line interface.
+
+
+Navigate to your computer Desktop using the command-line. 
+If you've never done this before, here's a nice introduction:
+https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855
+
+Basically, you can enter commands to move into or out of directories and look at what files are present.
+
++ the command "ls" lists the files in your current directory
++ the command "pwd" shows you the PATH and name of your current directory
++ the command "cd" stands for 'change directory'
+
+Here's an example output from those first two commands:
+
+```{bash}
+ls #this lists files in my current directory
+```
+
+```{bash}
+pwd #this tells me what my current directory is
+```
+
+The "cd" command requires a bit more. You have to tell it what directory to change to...
+
+Mac and Linux users can probably just type "cd ~/Desktop" and they will instantly be on their Desktop folder
+Windows file paths are a bit different, but it's probably something like this:
+
+```{bash, eval=FALSE, include=TRUE}
+cd C:\Users\YOUR_NAME\Desktop
+```
+
+Once you're in your Desktop folder (you can check with "pwd")
+copy and paste the following into your terminal:
+
+```{bash, eval=FALSE, include=TRUE}
+git clone https://github.com/gzahn/Data_Course.git
+```
+---
+
+This will download a folder of files onto your computer. It will be found wherever you were when you 
+entered the previous command....so hopefully your Desktop. I'm having you put it there because we will 
+be accessing it a LOT during this course.
+This folder has all the stuff we will use in class. Code examples, data sets, assignments, readings, 
+even exams are found in this new directory 
+
+That takes care of the software installation and course materials. Now, you need to set up your own 
+GitHub account online.
+
+________________
+
+
+## Your GitHub account
+
+1.  Navigate online to https://github.com/ and sign up for a free account.
+Please choose a professional-sounding username. Don't sign up as "PukeMonster55" or anything like that.
+This GitHub account is a way for you to store version-controlled code and data. It's something that you 
+can put on your CV/Resume to demonstrate coding ability.
+Save your password someplace safe. Don't give it to anyone, including me.
+
+2.  Create a new repository on your GitHub page called "Data_Course_YOUR-LAST-NAME" 
+(your last name, in all-caps, no spaces)
+  + Look for the "+" in the very top-right of the web page
+  + Enter the name "Data_Course_YOUR_LAST_NAME" where prompted (last name in all-caps, no spaces)
+  + Leave the "Public" option checked
+  + Be sure to check the box "Initialize this repository with a README"
+
+3.  Back in your terminal, navigate to your Desktop with the command-line again
+
+4.  Now clone the github page you created (The one called Data_Course_YOUR-LAST-NAME)
+  + Hint: use the same "git clone" command as above, but modify the web address to your new GitHub repository 
+    (Copy and paste from the web browser)
+	This will import the website repository onto your personal computer (as a git repository)
+  + You now have two folders on your desktop. One called "Data_Course" and one called "Data_Course_YOURLASTNAME"
+8.  Navigate into this new repository (The one called Data_Course_YOUR-LAST-NAME) and type the following commands in order:
+
+    (actually, cut-paste is better than typing. Coders use CTRL-C / CTRL-V more than anything else!)
+
+    (What?! It's not pasting text into your terminal? Ah, use CTRL-SHIFT-V to paste into your terminal!)
+
+```{bash, eval=FALSE, include=TRUE}
+echo "This README file contains information about my uploaded assignments" >> README.md
+git add README.md
+git commit -m "1st commit"
+git push
+```
+	(Here it will ask for your GitHub userID and password....enter those when asked)
+	This series of commands commits your changes (Adding that text to the README.md file) 
+	and pushes the changes back onto the website version
+
+
+9. Check back on your GitHub page online...if you see that new text 
+("This README file contains information about my uploaded assignments") then you are finished!
+
+10. To get credit, upload a link to your GitHub repository to "Assignment 1" in Canvas. 
+I'll click on that and see whether your README.md file is correct.
+
+**You now have a copy of all the current course materials along with your own personal repository**
+**This GitHub repository is where you should keep projects you're working on, notes, examples, data sets, etc.**
+
+**Warning: I will be cloning all of your repositories onto my own computer to keep track of your course work**
+**So don't write hate mail about me in files in that directory.**
+
+
+#### We will discuss what is actually going on with all of this in class, but this is to test whether you can follow precise instructions and troubleshoot.
+
+
+#### **Don't be afraid to ask others/instructor/Google for help with this!**

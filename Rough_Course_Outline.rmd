@@ -35,8 +35,23 @@ help()
 ```
 
 ---------------------------------------------------------------------------
-  
+
 ### WEEK 2
+
+* Command-line tools
+* BASH
+* compression
+* grep, sed, find, |, gzip/gunzip, tar, mv, cp, mkdir, etc.
+
+```{bash}
+# count the number of DNA sequences in a set of fasta files
+grep -c "^>" ./Data/Fastq_16S/*.fasta
+```
+
+
+---------------------------------------------------------------------------
+  
+### WEEK 3
 
 * Assigning things to objects
 * Get familiar with object types and basic functions
@@ -66,7 +81,7 @@ mean(vector) # calculate the mean of the numbers in that object
 
 ---------------------------------------------------------------------------
   
-### WEEK 3
+### WEEK 4
 
 * Importing data
 * Useful data formats
@@ -95,7 +110,7 @@ summary(co2) # generate statistical summaries of those data
 
 ---------------------------------------------------------------------------
   
-### WEEK 4
+### WEEK 5
 
 * Finding/Installing/Loading packages
 * Extending functionality of R
@@ -134,7 +149,7 @@ data[data$Type == "Quebec",] # subset data to only include samples from "Quebec"
   
 ---------------------------------------------------------------------------  
 
-### WEEK 5
+### WEEK 6
 
 * Data estimations
     * point estimates
@@ -144,11 +159,10 @@ data[data$Type == "Quebec",] # subset data to only include samples from "Quebec"
     * chi-square
     * ANOVA
     * LM/GLM
-<<<<<<< HEAD
+    * HEAD
     * Mixed-effect models (lme4)
-=======
     * rpart
->>>>>>> b26891862de9aa2558f6ee907eaa18f7dfea92a5
+
 
 ```{r eval=FALSE, include=TRUE}
 # Functions covered (parital list):
@@ -157,13 +171,17 @@ t.test()    chisq.test()  rpart()     gmodel()
 ```
 
 ```{r}
-ANOVA = aov(uptake ~ conc, data = CO2) # define an analysis of variance model CO2 uptake by plants, predicted by CO2 concentration in atmosphere
+ANOVA = aov(uptake ~ conc, data = CO2) # model CO2 uptake by plants, predicted by CO2 concentration
 summary(ANOVA) # show summary ANOVA table and P-value
 ```
 
+```{r}
+# T-test comparing mean CO2 uptake in two groups
+t.test(CO2$uptake[CO2$Type == "Quebec"],CO2$uptake[CO2$Type == "Mississippi"])
+```
 ---------------------------------------------------------------------------  
 
-### WEEK 6
+### WEEK 7
 
 * Experimental design
 * Common designs and analysis options
@@ -196,7 +214,7 @@ denscomp(fit.logistic) # Plot comparison between logistic distribution and actua
 
 ---------------------------------------------------------------------------  
 
-### WEEK 7
+### WEEK 8
 
 * Non-parametric alternatives
 * Mann-Whitney-Wilcoxin
@@ -219,7 +237,7 @@ apply(data[,4:5], 2, sum) # Apply the 'sum' function to those columns
 
 ---------------------------------------------------------------------------  
 
-### WEEK 8
+### WEEK 9
 
 * Other peoples' data
 * Principles of tidy data
@@ -271,7 +289,7 @@ as.data.frame(group.summaries) # display summary info for different locations (g
     
 ---------------------------------------------------------------------------        
 
-### WEEK 9
+### WEEK 10
 * Predicting data
 * Intro to ggplot	
 
@@ -299,7 +317,7 @@ points(x=c(1500,2000),y=predicted[1:2],pch=20,col="Red") # Add our predicted upt
     
 ---------------------------------------------------------------------------  
 
-### WEEK 10
+### WEEK 11
 * Figure generation
 * Figure export
 
@@ -334,7 +352,7 @@ CO2.plot
 
 ---------------------------------------------------------------------------  
 
-### WEEK 11
+### WEEK 12
 * Figure generation continued
 
 ```{r eval=FALSE, include=TRUE}
@@ -372,7 +390,7 @@ grid.arrange(CO2.plot.1, CO2.plot.2, nrow = 1)
 
 ---------------------------------------------------------------------------  
 
-### WEEK 12
+### WEEK 13
 * Data standardization / normalization
 * Ecology examples
     * Ordinations / NMDS
@@ -428,7 +446,7 @@ plot(beta_disp)
 
 ---------------------------------------------------------------------------  
 
-### WEEK 13
+### WEEK 14
 
 * Importing and manipulating DNA sequence data
     * Bioconductor
@@ -459,20 +477,13 @@ library(msa)
 
 ```{r}
 # Assign a DNA sequence to a special DNAString object
-Seq_1 = DNAString("TCTCTTCGCCGCCGCTGGCCTTGCCGCTGCTGCTCCTCTCGAGTCTCGCCAGGACACCGCATCCTGCCCTGTCACCACTGAGGGTGACTACGTCTGG")
+Seq_1 = DNAString("TCTCTTCTGCCCTGTCACCACTGAGGGTGACTACGTCTGG")
 
 reverseComplement(Seq_1) # Gives reverse-compliment of a DNA sequence
 
 ```
 
----------------------------------------------------------------------------  
 
-### WEEK 14
-
-* Command-line tools
-* BASH
-* compression
-* grep, sed, find, |, gzip/gunzip, tar, mv, cp, mkdir, etc.
 
 ---------------------------------------------------------------------------  
 
