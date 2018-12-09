@@ -1,0 +1,131 @@
+
+
+
+===============================================
+KEYWORDS FOR DATASET: Insect, Biology, Foraging
+===============================================
+
+===============================================================
+ACCOMPANYING DATA PROVIDED BY: Peter Nonacs, PhD
+                               UCLA, Department of OBEE
+===============================================================
+
+================================
+GENERAL EXPLANATION OF THE STUDY
+================================
+The two accompanying data files are from a study on the foraging habits
+of two species of ants: thatch ants (Formica planipilis) and seed 
+harvester ants (Pogonomyrmex salinus). The study was concerned
+with the ant colonies' different "strategies" for optimizing the balance 
+between collecting food and exposure to risk. The idea, in its simplest
+form, is that sending more ants to look for food farther away from the 
+colony is more likely to increase the colony's food supply; traveling 
+away from the colony, however, exposes ants to the risk of death by 
+starvation and predation. Natural selection suggests that colonies will
+develop foraging strategies that maximize the colony's net gain, defined as
+how much the colony grows--this depends primarily on its food supply--minus 
+how many ants die. A variety of different maximizing strategies exist, and
+different species often have different strategies. Some colonies develop
+"worker-conservative" foraging strategies, in which ants foraging at 
+greater distances consume relatively more food: this minimizes the risk of
+starvation and leads to fewer deaths. Other colonies use strategies that
+conserve energy (the colonies overall supply of food). In this case long
+distance foragers, who are more likely to die, will consume less food so
+that their deaths will not be as much of a strain on the colony's food 
+supply. 
+
+More specifically, this study investigated the relationship between the 
+size of the ants and the distance at which they foraged. Other studies have 
+shown that larger ants use energy more efficiently than smaller ones, and 
+this suggests that larger ants would be more likely to forage at greater 
+distances. Thus ants were collected at various distances from the colony, 
+weighed, and measured. Because an ant's weight provides a measure 
+of how much food, or energy, it carries, and because headwidth measurements 
+allow the ants to be classified by size, the data provides detailed 
+information on the correlations among ant size, foraging distance, and 
+energy supply. This information, in turn, gives insight into foraging 
+strategies: we can, for example, determine whether a colony's strategy is
+"worker-conservative" or "energy-conservative," or a more complex 
+combination of the two. We might find, for example--by analyzing the 
+relationships among size, foraging distance, and energy supply both for the
+colony as a whole and within the separate size classes--that a colony's 
+overall strategy is "worker-conservative," but that within size classes the
+strategy is "energy-conservative." These analyses, finally, illuminate the 
+colony's survival strategies and provide evidence for or against competing 
+evolutionary theories. 
+
+This study has not yet been published (11/29/99). 
+    
+=============================
+BRIEF DESCRIPTION OF THE DATA          
+=============================
+The data for both files was collected at the Sierra Nevada Aquatic 
+Research Laboratory (SNARL) in the Great Basin Desert Province. Collection 
+trays were placed into the ground at different distances from the entrance 
+to the ant colonies' mounds, and any ants walking into them were trapped. 
+Thus the data may be considered as random samples of ants at various 
+distances. 
+
+The data on the thatch ants contains a total of 1199 samples, taken from a 
+total of 11 different colonies. 
+
+The data on the seed harvester ants contains a total of 577 samples, taken 
+from 8 different colonies. 
+
+=========================
+HOW TO USE THE DATA FILES
+=========================
+The actual data files are comma delimited text files. The first rows contain
+the abbreviations for the information recorded for each sample. The 
+remaining rows each represent a single ant's corresponding information. 
+
+There are five variables in both files. The variables are the same in both
+files, although the values they may assume are not always the same. 
+Here is a brief explanation of each one:
+ 
+
+COLONY: ............This is a number or letter that identifies which colony
+                    the sample was taken from. It is important only for 
+                    distinguishing between ants from the same colony and ants 
+                    from different colonies. 
+
+DISTANCE: ..........Tells how far from the mound's entrance the sample
+		    was taken. Given in meters. 
+
+MASS or WT. (MG): ..How much the sample weighed in milligrams. This 
+		    variable is used as a measure of how much food
+		    (energy) each sample had. 
+
+HEADWIDTH: .........A measure of the sample's maximum headwidth. The units
+                    here are basically arbitrary, and correspond to ruled
+                    increments that can be seen in the microscope with which
+                    the sample is measured. Headwidth is a good indicator 
+                    of an ant's size, and can be used to classify the ants 
+                    by size.    
+
+HEADWIDTH (MM): ....Same as "headwidth," only given in millimeters. 
+
+WORKER CLASS: ......A size classification. In the thatch ant data there are 
+                    five possible classes: "<30", "30-34", "35-39", "40-43", 
+                    and ">43". In the seed harvester data there are four size
+		    classes: "<37", "37-38", "39-40", and ">40". 
+
+================================================
+STATISTICAL TESTS AND ANALYSES USED IN THE STUDY
+================================================
+1) ANOVA (two-way layout)
+2) Scheffe-S post hoc test
+3) Residuals analysis
+4) Linear Regression
+5) One sample t-test
+
+
+    Go To Raw Data:
+        Thatch Ant
+        Seed Harvester Ant 
+    Download the Stata File:
+        Thatch Ant
+        Seed Harvester Ant 
+    Return to Previous Page 
+
+

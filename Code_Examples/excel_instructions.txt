@@ -1,0 +1,20 @@
+1. Import dataset into Excel: https://github.com/gzahn/Data_Course/blob/master/data/wingspan_vs_mass.csv
+
+2. Sort by mass (decreasing)
+
+3. Summarize wingspan and mass values to get min, mean, max
+
+4. Plot wingspan vs mass (Scatterplot)
+
+5. Get slope of linear relationship between wingspan and mass
+
+6. Create a file that has the measured mass values, ordered from highest to lowest (one value per line)
+   Name the file "excel_mass_ordered.txt"
+
+7. Create a file that has the slope of our linear model fit (cofficient of mass for linear model) along with summary stats for each variable. 
+   Name the file "excel_summary_and_slope.txt"
+
+8. Create a .jpg image file of your scatterplot
+   Name the file "excel_scatterplot.jpg"
+
+9. All files should be in a subdirectory called "output" within your Data_Course directory

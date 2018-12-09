@@ -1,0 +1,43 @@
+## Assignment 1
+
+________________
+#### First, read the following document. It will set the stage for version control and why we will be using it.
+
+https://github.com/gzahn/Data_Course/blob/master/readings/Bryan_2017_Excuse_me%2C_do_you_have_a_moment_to_talk_about_vers.pdf
+
+________________
+
+1.  If you do not have R installed on your computer, install it. Google "how to install R" for instructions.
+2.  Install RStudio on your computer. [https://www.rstudio.com/products/rstudio/download/#download]
+3.  Download and install git and create an account on github.com. Choose a professional-sounding username!
+4.  Create a new repository on your GitHub page called "Data_Course_YOUR-LAST-NAME"
+  + Look for the "+" in the top menu
+  + Enter the name "Data_Course_YOUR_LAST_NAME" where prompted
+  + Leave the "Public" option checked
+  + Be sure to check the box "Initialize this repository with a README"
+
+5.  Back in your terminal, navigate to your Desktop
+
+6.  Clone the course materials onto your desktop by typing: git clone "https://github.com/gzahn/Data_Course"
+	This will directly create a new folder on your desktop called "Data_Course"
+	This directory will contain everything that I have uploaded onto the course github repository
+
+7.  Make sure you're still in your Desktop directory and now clone the github page you created (The one called Data_Course_YOUR-LAST-NAME)
+  + Hint: use the same git clone command as above, but modify the web address to your new GitHub repository (Copy and paste from the web browser)
+	This will import the website repository onto your personal computer (as a git repository)
+
+8.  Navigate into this new repository (The one called Data_Course_YOUR-LAST-NAME) and type the following commands:
+  + echo "This README file contains information about my uploaded assignments" >> README.md
+  + git add README.md
+  + git commit -m "1st commit"
+  + git push
+	(Here it will ask for your GitHub userID and password....enter those when asked)
+	This series of commands commits your changes (Adding that text to the README.md file) and pushes the changes back onto the website version
+
+9. Check back on your GitHub page online...if you see that new text ("This README file contains information about my uploaded assignments") then you are finished!
+
+10. To get credit, upload a link to your GitHub repository to "Assignment 1" in Canvas. I'll click on that and see whether your README.md file is correct.
+
+#### We will discuss what is actually going on with all of this in class, but this is to test whether you can follow precise instructions and troubleshoot.
+
+#### **Don't be afraid to ask others/instructor/Google for help with this!**

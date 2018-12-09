@@ -1,0 +1,18 @@
+Assignment 4 - Turn in on Canvas
+
+The data set we will use is called /data/mushroom_growth.csv
+
+
+This was a fully-factorial experiment designed to find optimal temperatures for growing two 
+species of mushrooms. I varied the levels of nitrogen (mg/g soil), light (hours per day),
+humidity (ambient vs high), and temperature (deg C).
+
+The response variable was growth rate (g/day).
+
+Submit an R script that imports and analyzes this data, 
+include code for a predictive model and meaningful plots.
+
+Look for what factors best predict high mushroom growth rates and back up your figures with
+statistical signifigance tests.
+
+Upload your .R script to canvas.
