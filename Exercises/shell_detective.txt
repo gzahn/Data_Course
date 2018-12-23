@@ -1,0 +1,28 @@
+What's this series of shell commands do?
+(starting in "Data_Course" base directory)
+
+cd ./Data/
+cat mushroom_growth.csv | cut -f1,3 -d "," | sort | uniq > mushrooms.txt
+sed 's/"//g' mushrooms.txt | sed 's/,/\t/g' > mushrooms_edited.txt
+
+
+-------------------------------------------
+
+What about this one?
+
+grep -c "ostreotus" mushrooms.txt
+
+-------------------------------------------
+
+And, finally....
+
+cd data-shell/data
+for fn in *.txt; do echo "------"; echo $fn; head -2 $fn; echo "------";done
+
+
+
+
+
+
+
+
