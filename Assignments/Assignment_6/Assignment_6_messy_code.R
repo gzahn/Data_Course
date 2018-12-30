@@ -17,10 +17,6 @@ utah = read.csv("Data/Utah_Religions_by_County.csv")
 # subset to only counties with buddhists observed
 buddhist = utah[utah$Buddhism.Mahayana > 0,]
 
-# remove any columns (religions) that have fewer than 1% observed adherents in this subset
-rel.to.keep = colSums(buddhist[,-c(1:3)]) >= 0.01
-buddhist = buddhist[,c(rep(TRUE,3),rel.to.keep)]
-
 # order rows by population (descending)
 buddhist = buddhist[order(buddhist$Pop_2010, decreasing = TRUE),]
 
