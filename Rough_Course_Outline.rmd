@@ -71,7 +71,8 @@ data.frame()  as.factor()   as.numeric()    as.character()    as.POSIXct()    as
 ==    <   >   <=    >=
 +     -   *   /     
 which()   signif()    ceiling()     floor()       round()    
-c()       list()      cbind()       rbind()       sum()         mean()        sd()        
+c()       list()      cbind()       rbind()       sum()         mean()        sd()       
+tiff/jpeg/png() / dev.off()
 ```
 
 ```{r}
@@ -122,7 +123,7 @@ summary(co2) # generate statistical summaries of those data
 install.packages()      
 library()
 cor()
-write.table()       sink()        tiff/jpeg/png() / dev.off()
+write.table()       sink()        
 ```
 
 ```{r include=FALSE}
@@ -150,94 +151,6 @@ data[data$Type == "Quebec",] # subset data to only include samples from "Quebec"
 ---------------------------------------------------------------------------  
 
 ### WEEK 6
-
-* Data estimations
-    * point estimates
-    * interval estimates
-* Hypothesis testing / Model fitting
-    * t-test (paired/unpaired)
-    * chi-square
-    * ANOVA
-    * LM/GLM
-    * HEAD
-    * Mixed-effect models (lme4)
-    * rpart
-
-
-```{r eval=FALSE, include=TRUE}
-# Functions covered (parital list):
-lm()        glm()         aov()
-t.test()    chisq.test()  rpart()     gmodel()
-```
-
-```{r}
-ANOVA = aov(uptake ~ conc, data = CO2) # model CO2 uptake by plants, predicted by CO2 concentration
-summary(ANOVA) # show summary ANOVA table and P-value
-```
-
-```{r}
-# T-test comparing mean CO2 uptake in two groups
-t.test(CO2$uptake[CO2$Type == "Quebec"],CO2$uptake[CO2$Type == "Mississippi"])
-```
----------------------------------------------------------------------------  
-
-### WEEK 7
-
-* Experimental design
-* Common designs and analysis options
-* Quantitative vs qualitative data
-* Probability distributions
-* Fitting distributions
-* Type I and Type II errors
-* Post-hoc tests
-
-```{r eval=FALSE, include=TRUE}
-# Packages used (partial list):
-fitdistrplus
-MASS
-# Functions covered (parital list):
-plotdist()      descdist()
-fitdist()       denscomp()        cdfcomp()
-TukeyHSD()      
-```
-
-```{r include=FALSE}
-library(fitdistrplus)
-```
-
-
-```{r fig.height=3,fig.width=4}
-# Fit CO2 uptake data from Quebec samples to a logistic probability distribution
-fit.logistic = fitdist(CO2$uptake[CO2$Type == "Quebec"], distr = "logis") 
-denscomp(fit.logistic) # Plot comparison between logistic distribution and actual data
-```
-
----------------------------------------------------------------------------  
-
-### WEEK 8
-
-* Non-parametric alternatives
-* Mann-Whitney-Wilcoxin
-* Kruskal-Wallace
-* Apply functions
-
-```{r eval=FALSE, include=TRUE}
-# Packages used (partial list):
-
-# Functions covered (parital list):
-wilcox.test()     kruskal.test()
-
-apply()     sapply()      lapply()      tapply()
-```
-
-```{r}
-data[,4:5] # look at columns 4 and 5 from object called "data"
-apply(data[,4:5], 2, sum) # Apply the 'sum' function to those columns
-```
-
----------------------------------------------------------------------------  
-
-### WEEK 9
 
 * Other peoples' data
 * Principles of tidy data
@@ -277,6 +190,93 @@ as.data.frame(group.summaries) # display summary info for different locations (g
 
 ```
 
+---------------------------------------------------------------------------  
+
+### WEEK 7
+
+* Data estimations
+    * point estimates
+    * interval estimates
+* Hypothesis testing / Model fitting
+    * t-test (paired/unpaired)
+    * chi-square
+    * ANOVA
+    * LM/GLM
+    * HEAD
+    * Mixed-effect models (lme4)
+    * rpart
+
+
+```{r eval=FALSE, include=TRUE}
+# Functions covered (parital list):
+lm()        glm()         aov()
+t.test()    chisq.test()  rpart()     gmodel()
+```
+
+```{r}
+ANOVA = aov(uptake ~ conc, data = CO2) # model CO2 uptake by plants, predicted by CO2 concentration
+summary(ANOVA) # show summary ANOVA table and P-value
+```
+
+```{r}
+# T-test comparing mean CO2 uptake in two groups
+t.test(CO2$uptake[CO2$Type == "Quebec"],CO2$uptake[CO2$Type == "Mississippi"])
+```
+---------------------------------------------------------------------------  
+
+### WEEK 8
+
+* Experimental design
+* Common designs and analysis options
+* Quantitative vs qualitative data
+* Probability distributions
+* Fitting distributions
+* Type I and Type II errors
+* Post-hoc tests
+
+```{r eval=FALSE, include=TRUE}
+# Packages used (partial list):
+fitdistrplus
+MASS
+# Functions covered (parital list):
+plotdist()      descdist()
+fitdist()       denscomp()        cdfcomp()
+TukeyHSD()      
+```
+
+```{r include=FALSE}
+library(fitdistrplus)
+```
+
+
+```{r fig.height=3,fig.width=4}
+# Fit CO2 uptake data from Quebec samples to a logistic probability distribution
+fit.logistic = fitdist(CO2$uptake[CO2$Type == "Quebec"], distr = "logis") 
+denscomp(fit.logistic) # Plot comparison between logistic distribution and actual data
+```
+
+---------------------------------------------------------------------------  
+
+### WEEK 9
+
+* Non-parametric alternatives
+* Mann-Whitney-Wilcoxin
+* Kruskal-Wallace
+* Apply functions
+
+```{r eval=FALSE, include=TRUE}
+# Packages used (partial list):
+
+# Functions covered (parital list):
+wilcox.test()     kruskal.test()
+
+apply()     sapply()      lapply()      tapply()
+```
+
+```{r}
+data[,4:5] # look at columns 4 and 5 from object called "data"
+apply(data[,4:5], 2, sum) # Apply the 'sum' function to those columns
+```
 
       Skills Test 2: 	
       
