@@ -43,10 +43,11 @@ for(i in religions){
 }
 
 # Browse through those plots and answer the following questions:
-#   Which religious group correlates most strongly in a given area with the proportion of non-religious people
-#   What is the direction of that correlation
-#   Which religious group has the second stronglest correlation, as above?
-#   What is the direction of THAT correlation
+# 1.  Which religious group correlates most strongly in a given area with the proportion of non-religious people?
+# 2.  What is the direction of that correlation?
+# 3.  Which religious group has the second stronglest correlation, as above?
+# 4.  What is the direction of THAT correlation?
+# 5.  What can you say about these relationships?
 
 # UPLOAD YOUR ANSWERS TO CANVAS
 # DON'T FORGET TO PUSH YOUR TIDY CODE TO GITHUB AS WELL!
