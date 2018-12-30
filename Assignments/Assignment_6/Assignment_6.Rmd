@@ -31,10 +31,11 @@ In this assignment, you will use R (within R-Studio) to:
 
 ____________
 
-# Your task:
+# Your tasks:
 
-Using the dplyr verbs, change the code found in PART 1 of the file "Assignment_6_messy_code.R" into a version with improved readibility.
+  + Using the dplyr verbs, change the code found in PART 1 of the file "Assignment_6_messy_code.R" into a version with improved readibility.
 
+  + Run the code in PART 2 of the same R script to generate correlation plots and answer the 5 questions (on Canvas)
 
 _____________
 
