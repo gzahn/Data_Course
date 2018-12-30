@@ -1,40 +1,50 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 
 # **Introduction to Data Analysis in R**
-## Course Syllabus - Spring 2018
+## Course Syllabus - Spring 2019
 
 _____________________________
 
 ### Instructor: Dr. Geoff Zahn
-### Office: SB243c  -- Hours by appointment
-### Email: gzahn@uvu.edu
+### Office: SB243c  -- Hours: Mon 10:00 - 10:50 ; Tue 8:00 - 9:50 ; or by appointment
+### Email: zahn.geoff@gmail.com
 ### Course GitHub Repository: https://github.com/gzahn/Data_Course
 
+This class works best if you can bring your own laptop to class every day. That way you have installation priveleges and you will be set up for the future as you continue to analyze data.
+
 _____________________________
+
 
 ## **Course Description**
 
 This course provides an introduction to analyzing data in the R software environment, assuming no previous R experience. 
 We cover:
 
-*  the justification of using code to explore and analyze data
-*  best practices for dealing with data
-*  experimental design, modeling, and hypothesis testing
-*  how to create publication-quality figures that show interesting relationships in our data sets
-*  how to deal with common genetic sequence data types
-*  command-line computing skills and proper reporting
++ the justification of using code to explore and analyze data
++ best practices for dealing with data
++ experimental design, modeling, and hypothesis testing
++ how to create publication-quality figures that show interesting relationships in our data sets
++ how to deal with common genetic sequence data types
++ command-line computing skills and proper reporting
 
-### Pre-requisites: BIOL1620
+### Pre-requisites: Advanced standing or instructor permission
 
-**Learning goals**
+**Learning outcomes**
 Students completing this course should be able to:
 
-1.  Understand the basic principles of exploratory data analyses within R
-2.  Import and clean up a variety of data types
-3.  Select and apply appropriate hypothesis tests and statistical models
-4.  Create high-quality visualizations 
-5.  Generate reports that knit code and output for reproducible research
-6.  Have basic command-line skills used for processing biological data
+1.  Demonstrate proficiency in proper data entry, management, and storage for scientific research with an emphasis on reproducibility.
+2.  Convert untidy data to “tidy data” for analyses. 
+3.  Understand the basic principles of exploratory data analyses within a computational software environment.
+4.  Evaluate the rationale behind using code to analyze data and present results.
+5.  Develop computational skills for processing common biological data formats, such as DNA sequences.
+6.  Create appropriate and meaningful data visualizations using the R software environment.
+7.  Integrate principles of experimental design, statistical modeling, hypothesis testing, and data visualization to critically analyze a unique data set and present a fully-reproducible report.
 
+ 
 _____________________________
 
 **Americans with Disabilities Act:**
@@ -73,13 +83,15 @@ _____________________________
 
 ## **Grading**
 
+We will use a point system. The points you have accumulated by the end of the course determine your grade as follows:
+
 | Points | Letter Grade |
 |-------:|:------------:|
 | 700-800 | A |
 | 640-699 | B |
 | 560-639 | C |
 | 480-559 | D |
-| <480 | F |
+| <480 | E |
 
 #### Points are based on:
 * 10 Weekly Assignments - 20 pts each
@@ -92,10 +104,10 @@ _____________________________
 These will be announced in class and detailed instructions will be posted on the course GitHub repository. They will generally consist of requiring you to complete a task using R and to upload your code as an R script to Canvas and/or GitHub. Some may vary. Any data sets required for the assignment will be on the GitHub repository as well. These assignments will not be accepted for credit after the due date.
 
 ### **Skills Tests**
-These will take place during class time. They will be similar to the sorts of tasks on the precedent Weekly Assignments, and they will be "open book," but they will be timed.
+These will take place during class time. They will be similar to the sorts of tasks on the precedent Weekly Assignments, and they will be open-source (you can use notes, internet, etc.) but they will be timed.
 
 ### **Final Project**
-Beginning early in the semester, we will decide on individual projects based on personal interest. Working with instructor feedback, you will come up with a question that interests you and will identify a data set that can address that question. You will then apply the data exploration and visualization skills you learn in class to prepare a well-formatted report that contains all the code and results of your analyses. **Most importantly this project will require you to teach yourself new R skills using the resources we learn about (or any others). You will be required to learn analyses explicitly not covered in this course (Check the course schedule to see what we are covering), and to apply them correctly to your analysis and report.**
+Beginning early in the semester, we will decide on individual projects based on personal interest. Working with instructor feedback, you will come up with a question that interests you and will identify a data set that can address that question. You will then apply the data exploration and visualization skills you learn in class to prepare a well-formatted report that contains all the code and results of your analyses. You are encouraged to use your own data if you have any. **Most importantly this project will require you to teach yourself new R skills using the resources we learn about (or any others). You will be required to learn analyses explicitly not covered in this course (Check the course schedule to see what we are covering), and to apply them correctly to your analysis and report.**
 
 Examples of unique topics could include, but are not limited to:
 
@@ -104,12 +116,13 @@ Examples of unique topics could include, but are not limited to:
 * New statistical testing methods
 * Metagenomic assembly
 * Learning a new R package
+* Unique visualization methods
 * Etc.
 
 
 **Your topic/question is due before Skills Test 1**
 
-**Soon after, you will work with the instructor to identify a suitable publicly-available data set**
+**Soon after, you will work with the instructor to identify a suitable publicly-available data set (or use your own)**
 
 **An initial draft of your exploratory code is due before Skills Test 2**
 
@@ -120,7 +133,7 @@ Examples of unique topics could include, but are not limited to:
 ______________________________
 
 ### The tentative course schedule can be found at: 
-https://github.com/gzahn/Data_Course/blob/master/Course_Schedule.pdf
+https://github.com/gzahn/Data_Course/blob/master/Rough_Course_Outline.pdf
 
 #### This course schedule document also serves as a template for proper reporting (for final project).
 
