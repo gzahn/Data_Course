@@ -17,7 +17,6 @@ In this assignment, you will use R (within R-Studio) to:
 + Explore parameters available for customizing the way data is read from a file
 + Use base R tools to view attributes of data sets
 + Perform simple summary statistics
-+ Begine to do basic data set manipulations such as transposing and subsetting
 + Use the built-in visualization methods to quickly look at relationships in your data
 + Demonstrate one method for saving visualizations to an image file
 
