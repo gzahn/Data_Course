@@ -1,0 +1,14 @@
+Rules for using Excel
+
+1. Be consistent
+2. Choose good names for things
+3. Write dates as YYYY-MM-DD (as text!)
+4. No empty cells
+5. Put just one thing per cell
+6. Make it a rectangle
+7. Create a data dictionary
+8. No calculations in the raw data
+9. Don't use highlighting or color as data
+10. Make backups
+11. Use data validation to avoid errors
+12. Save the data as plain text files

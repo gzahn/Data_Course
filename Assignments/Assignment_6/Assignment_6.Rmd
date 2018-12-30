@@ -1,0 +1,54 @@
+---
+title: "Assignment 6"
+author: "gzahn"
+date: "December 30, 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Assignment 6**
+
+In this assignment, you will use R (within R-Studio) to:
+
++ Use the tidyr package to convert "wide" data to "long" data using a simple example
++ Do the same for a more complex data set
++ Use the tidyr package to convert the instructor's base R code into tidy format, making it more readible
++ Begin to look at correlations and causations using a real data set of religious identity from Utah in 2010
+
+**All file paths should be relative, starting from the Assignment_5 directory!! (where you found this file)**
+
+**This means that you need to create a new R-Project named "Assignment_5.Rproj" in your Assignment_5 directory, and work from scripts within that.**
+
+
+## **For credit...**
+
+1.  Push a completed version of your Rproj and R-script (details at end of this assignment) to GitHub
+2.  Your score will also depend on whether any files generated in this workflow are found in your repository
+3.  Submit your answers to the questions in part 2 of Assignment_6_messy_code.R as plain text in Canvas
+
+____________
+
+# Your task:
+
+Using the dplyr verbs, change the code found in PART 1 of the file "Assignment_6_messy_code.R" into a version with improved readibility.
+
+
+_____________
+
+
+
+Here's a reminder of how gather() can be used...
+
+
+```{r, eval=FALSE, include=TRUE}
+library(tidyr)
+library(dplyr)
+utah <- read.csv("Data/Utah_Religions_by_County.csv")
+names(utah)
+utah_long = gather(utah,key = Religion, value = Proportion, -c(1:3) )
+
+```
+

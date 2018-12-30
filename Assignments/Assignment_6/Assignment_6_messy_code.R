@@ -1,0 +1,52 @@
+# Assignment 6 messy code
+# Change this to "tidy" format using dplyr verbs
+
+# There's an intuitive dplyr version for everything you see here.
+
+# Note: Do not erase the original code, just comment it out and put your own equivalent code below each section
+
+
+
+##########################
+#        Part 1          #
+##########################
+
+# load data (wide format)
+utah = read.csv("Data/Utah_Religions_by_County.csv")
+
+# subset to only counties with buddhists observed
+buddhist = utah[utah$Buddhism.Mahayana > 0,]
+
+# remove any columns (religions) that have fewer than 1% observed adherents in this subset
+rel.to.keep = colSums(buddhist[,-c(1:3)]) >= 0.01
+buddhist = buddhist[,c(rep(TRUE,3),rel.to.keep)]
+
+# order rows by population (descending)
+buddhist = buddhist[order(buddhist$Pop_2010, decreasing = TRUE),]
+
+# write this new dataframe to a file
+write.csv(buddhist, file = "./buddhist_counties.csv", row.names = FALSE, quote = FALSE)
+
+
+#####################################
+#              Part 2               #
+# Beginning to look at correlations #
+#####################################
+
+# Look for correlations between certain religious groups and non-religious people
+religions = names(utah)[-c(1:4)]
+
+for(i in religions){
+  rsq = signif(summary(lm(utah[,i] ~ utah$Non.Religious))$r.squared, 4)
+  plot(utah[,i] ~ utah$Non.Religious, main = paste(i,"RSq.Val=",rsq), xlab = "Non_Religious",ylab=i)
+  abline(lm(utah[,i] ~ utah$Non.Religious), col="Red")
+}
+
+# Browse through those plots and answer the following questions:
+#   Which religious group correlates most strongly in a given area with the proportion of non-religious people
+#   What is the direction of that correlation
+#   Which religious group has the second stronglest correlation, as above?
+#   What is the direction of THAT correlation
+
+# UPLOAD YOUR ANSWERS TO CANVAS
+# DON'T FORGET TO PUSH YOUR TIDY CODE TO GITHUB AS WELL!
