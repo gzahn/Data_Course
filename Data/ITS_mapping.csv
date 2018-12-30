@@ -1,4 +1,4 @@
-#SampleID	BarcodeSequence	LinkerPrimerSequence	Run	Ecosystem	Island	Lat	Lon	Collection_Date	F_Primer	R_Primer	Ecosys_Type	Host_Type	Host	InputFileName	Description
+SampleID	BarcodeSequence	LinkerPrimerSequence	Run	Ecosystem	Island	Lat	Lon	Collection_Date	F_Primer	R_Primer	Ecosys_Type	Host_Type	Host	InputFileName	Description
 SP.1			Snails_Lau_AJJ	Plant_Epiphyte	Oahu	21.51189297	-158.136407	42244	ITS1F	ITS2	Terrestrial			SP.1.fasta	Snails_Lau_AJJ_SP.1
 SP.2			Snails_Lau_AJJ	Plant_Epiphyte	Oahu	21.51189297	-158.136407	42244	ITS1F	ITS2	Terrestrial			SP.2.fasta	Snails_Lau_AJJ_SP.2
 SP.3			Snails_Lau_AJJ	Plant_Epiphyte	Oahu	21.51189297	-158.136407	42244	ITS1F	ITS2	Terrestrial			SP.3.fasta	Snails_Lau_AJJ_SP.3
