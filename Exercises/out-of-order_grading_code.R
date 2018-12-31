@@ -5,7 +5,7 @@
 # It's the end of the semester and I need to assign letter grades to all of you
 # I've got your assignment, exam, and project scores in a .csv file
 # I need to total up the points for each student
-# I wrote code for this but my dog came along and mixed it all up
+# I wrote code for this but my dog came along and mixed it all up...again.
 
 # Please reorder the lines of code so it will run.
 

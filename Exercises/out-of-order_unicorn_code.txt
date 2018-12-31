@@ -1,0 +1,25 @@
+# Command-line code to find all the unique 2-base-pair starting values in ../Data/data-shell/creatures/unicorn.dat 
+
+# It could be done more efficiently, sure, but I wrote 6 lines of code that would show me each unique combination 
+# of the first 2 base-pairs of every sequence in that file. Don't ask me why I wanted to see that. It's personal.
+
+# The problem is, though, that my dog was mad at me for not feeding him enough breakfast and he mixed up all the code.
+
+# Can you please put it back into a logical order?
+
+
+
+# Here's the out-of-order code:
+
+cat first_2_unique
+
+tail -160 unicorn.dat > just_seqs
+
+cd ./Data/data-shell/creatures
+
+cut -c 1,2 just_seqs > first_2_bases
+
+cp unicorn.dat unicorn.dat.backup
+
+sort first_2_bases | uniq > first_2_unique
+
