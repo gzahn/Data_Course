@@ -33,7 +33,8 @@ ____________
 
 # Your tasks:
 
-  + Using the dplyr verbs, change the code found in PART 1 of the file "Assignment_6_messy_code.R" into a version with improved readibility.
+  + Using the dplyr verbs, change the code found in PART 1 of the file "Assignment_6_messy_code.R" into a version with improved readibility. Some of the code will stay the same as the original "messy" version, but most of the code chunks can be done better using dplyr in a "tidy framework."
+  + use things like: arrange() desc() group_by() summarize() filter() select() %>%
 
   + Run the code in PART 2 of the same R script to generate correlation plots and answer the 5 questions (on Canvas)
 
@@ -53,3 +54,4 @@ utah_long = gather(utah,key = Religion, value = Proportion, -c(1:3) )
 
 ```
 
+And don't forget about the amazing combination of group_by() %>% summarize()
