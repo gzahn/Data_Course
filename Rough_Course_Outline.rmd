@@ -197,20 +197,25 @@ as.data.frame(group.summaries) # display summary info for different locations (g
 * Data estimations
     * point estimates
     * interval estimates
+* Exploring data sets
+    * lattice package
+    * autocorrelation
+    * 
 * Hypothesis testing / Model fitting
     * t-test (paired/unpaired)
     * chi-square
     * ANOVA
     * LM/GLM
-    * HEAD
-    * Mixed-effect models (lme4)
-    * rpart
+    * Mixed-effect models (lme4) ...maybe
+    * rpart ...maybe
 
 
 ```{r eval=FALSE, include=TRUE}
 # Functions covered (parital list):
 lm()        glm()         aov()
 t.test()    chisq.test()  rpart()     gmodel()
+cor()       xyplot()      dotplot()
+
 ```
 
 ```{r}
