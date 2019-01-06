@@ -2,43 +2,43 @@
 
 #Load package(s)
 library(readr)
+library(tidyverse)
 
 #look at working directory
 getwd()
-
+setwd("~/Desktop/GIT_REPOSITORIES/Data_Course/Code_Examples/")
 # Import dataset
-wingspan_vs_mass <- read_csv("./wingspan_vs_mass.csv", col_types = cols(X1 = col_skip()))
+wingspan_vs_mass <- read_csv("../Data/wingspan_vs_mass.csv", col_types = cols(X1 = col_skip()))
 
 # Sort by mass (decreasing)
 wingspan_vs_mass = wingspan_vs_mass[order(wingspan_vs_mass$mass, decreasing = TRUE),]
 
-# Summarize wingspan and mass values to get min, mean, max
-summary(wingspan_vs_mass$wingspan)[c(1,3,6)]
-summary(wingspan_vs_mass$mass)[c(1,3,6)]
-
-# Plot wingspan vs mass and save to file
-jpeg("./output/scatterplot.jpg")
-plot(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass, xlab="Mass",ylab="Wingspan")
-dev.off()
-
-# Get linear model fit
 fit = lm(wingspan_vs_mass$wingspan ~ wingspan_vs_mass$mass)
 # Get slope (coefficient of mass)
+
+
+# Summarize wingspan and mass values to get min, mean, max
+sink("./Example_day1/summary_and_slope.txt")
+print("Wingspan")
+summary(wingspan_vs_mass$wingspan)[c(1,3,6)]
+print("Mass")
+summary(wingspan_vs_mass$mass)[c(1,3,6)]
+print("Slope")
 fit$coefficients[2]
+sink(NULL)
+
+
+mod1 = summary(lm(wingspan~mass, data = wingspan_vs_mass))
+
+# Plot wingspan vs mass and save to file
+ggplot(wingspan_vs_mass, aes(x=mass,y=wingspan)) +
+  geom_point(alpha=.5) +
+  stat_smooth() +
+  annotate("text",x=40,y=35, label = paste0("R-sq= ",mod1$r.squared)) +
+  theme_bw()
+ggsave("./Example_day1/scatterplot_example.jpg")
 
 # Print a file that contains the measured mass values, ordered from highest to lowest (one value per line)
-sink("./output/mass_ordered.txt")
+sink("./Example_day1/mass_ordered.txt")
 cat(wingspan_vs_mass$mass, sep = "\n")
 sink(NULL)
-
-# Print a file that has the slope of our linear model fit (cofficient of mass for linear model) 
-# along with summary stats for each variable
-sink("./output/summary_and_slope.txt")
-print("Wingspan",quote = FALSE)
-summary(wingspan_vs_mass$wingspan)[c(1,3,6)]
-print("Mass",quote = FALSE)
-summary(wingspan_vs_mass$mass)[c(1,3,6)]
-print("Slope of linear model fit",quote = FALSE)
-fit$coefficients[2]
-sink(NULL)
-

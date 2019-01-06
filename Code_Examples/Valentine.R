@@ -8,4 +8,5 @@ data_frame(t=seq(-pi, 0, .001),
   ggplot(aes(x,y)) +
   geom_polygon(fill="red") +
   coord_fixed() +
-  theme_minimal() 
+  theme_minimal() +
+  annotate("text",x=0,y=0,label="Happy Valentine's Day")
