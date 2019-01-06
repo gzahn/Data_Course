@@ -32,9 +32,9 @@ mod1 = summary(lm(wingspan~mass, data = wingspan_vs_mass))
 
 # Plot wingspan vs mass and save to file
 ggplot(wingspan_vs_mass, aes(x=mass,y=wingspan)) +
-  geom_point(alpha=.5) +
+  geom_point(alpha=.5,aes(color=variety)) +
   stat_smooth() +
-  annotate("text",x=40,y=35, label = paste0("R-sq= ",mod1$r.squared)) +
+  annotate("text",x=40,y=35, label = paste0("R-sq= ",signif(mod1$r.squared,4))) +
   theme_bw()
 ggsave("./Example_day1/scatterplot_example.jpg")
 
@@ -42,3 +42,8 @@ ggsave("./Example_day1/scatterplot_example.jpg")
 sink("./Example_day1/mass_ordered.txt")
 cat(wingspan_vs_mass$mass, sep = "\n")
 sink(NULL)
+
+
+
+
+
