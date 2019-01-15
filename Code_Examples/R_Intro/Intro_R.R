@@ -157,9 +157,9 @@ summary(glm(data[,3] ~ data[,2])) # this gives a summary table of a general line
 # of the variables sepal length and width and petal length and width, respectively, for 50 
 # flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
 
-read.csv("~/Desktop/iris.csv") # this prints it directly to the screen. we want to save it to an object
+read.csv("Code_Examples/R_Intro/iris.csv") # this prints it directly to the screen. we want to save it to an object
 
-iris = read.csv("~/Desktop/iris.csv")
+iris = read.csv("Code_Examples/R_Intro/iris.csv")
 
 # Since this data table has more than just one type of entry (numeric columns AND a character column), it isn't
 # strictly a matrix, which consists of only numeric data
@@ -215,7 +215,7 @@ plot(virginica$Sepal.Length, virginica$Petal.Length)
 #  Messing around with data frames #
 ####################################
 
-# Let's load a really large data set
+# Let's load a larger data set
 # This data set is of fungal species abundances found in various sites in Hawaii, from both leaf surfaces 
 # and deep mesophotic coral reef algae.  The "species" are actually just similar DNA reads so we call them 
 # "operational taxonomic units" (OTUs), since they are only hypothesized to be species.
@@ -223,9 +223,9 @@ plot(virginica$Sepal.Length, virginica$Petal.Length)
 # The first file is the species observation table
 # The second file is information about each sampling site (metadata)
 
-otus = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/code_examples/R_Intro/otu_table.csv", as.is = TRUE, stringsAsFactors = FALSE,
+otus = read.csv("Code_Examples/R_Intro/otu_table.csv", as.is = TRUE, stringsAsFactors = FALSE,
          check.names = FALSE)
-metadata = read.csv("~/Desktop/GIT_REPOSITORIES/Data_Course/code_examples/R_Intro/otu_mapping.csv", as.is = TRUE, stringsAsFactors = TRUE,
+metadata = read.csv("Code_Examples/R_Intro/otu_mapping.csv", as.is = TRUE, stringsAsFactors = TRUE,
          check.names = FALSE)
 
 # The object "otus" is a data frame with species as rows, and sites as columns
@@ -341,7 +341,7 @@ otu_pa[otu_pa>0] = 1
 # and REPRODUCIBLE
 
 
-densityplot(otus$`69CV.1`)
+
 
 
 library(ggplot2) # library() loads a given package
