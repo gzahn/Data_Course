@@ -20,9 +20,9 @@ In this assignment, you will use R (within R-Studio) to:
 + Use the built-in visualization methods to quickly look at relationships in your data
 + Demonstrate one method for saving visualizations to an image file
 
-**All file paths should be relative, starting from the Assignment_3 directory!! (where you found this file)**
+**All file paths should be relative, starting from the Assignment_4 directory!! (where you found this file)**
 
-**This means that you need to create a new R-Project named "Assignment_3.Rproj" in your Assignment_3 directory, and work from scripts within that.**
+**This means that you need to create a new R-Project named "Assignment_4.Rproj" in your Assignment_4 directory, and work from scripts within that.**
 
 
 ## **For credit...**
