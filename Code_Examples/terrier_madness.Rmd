@@ -1,0 +1,71 @@
+---
+title: "test markdown"
+author: "gzahn"
+date: "February 5, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Live coding demo
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+
+
+```
+
+```{r, include=FALSE}
+df = read.csv("./Data/nyc_license.csv")
+glimpse(df)
+df$license_issued_date = as.POSIXct(df$license_issued_date, format = "%Y-%m-%d")
+df$license_expired_date = as.POSIXct(df$license_expired_date, format = "%Y-%m-%d")
+```
+
+
+```{r, include=FALSE}
+df = read.csv("./Data/nyc_license.csv")
+glimpse(df)
+df$license_issued_date = as.POSIXct(df$license_issued_date, format = "%Y-%m-%d")
+df$license_expired_date = as.POSIXct(df$license_expired_date, format = "%Y-%m-%d")
+
+breedcount = table(df$breed_rc)
+
+df2 = as.data.frame(table(df$borough, df$breed_rc))
+df2 = df2[df2$Freq > 1,]
+big_boroughs = c("Queens","Staten Island","Bronx","Brooklyn","Manhattan")
+
+df2 = df2[df2$Var1 %in% big_boroughs,]
+
+
+df2$Var2 = str_replace(df2$Var2," Crossbreed","")
+df2$Var2 = str_replace(df2$Var2," Mix","")
+
+df2 = df2[grep("Terrier",df2$Var2),]
+df2 = df[grep("Terrier",df$breed_rc),]
+
+dfterrier = as.data.frame(table(df2$license_issued_date, df2$breed_rc))
+dfterrier = dfterrier[dfterrier$Freq > 1,]
+dfterrier$Var1 = as.POSIXct(dfterrier$Var1,format="%Y-%m-%d")
+
+year = unlist(map(str_split(dfterrier$Var1,"-"),1))
+month = unlist(map(str_split(dfterrier$Var1,"-"),2))
+
+dfterrier$Year = year
+dfterrier$Month = month
+dfterrier$Var2 = factor(dfterrier$Var2)
+
+
+
+```
+
+## We **toto**ally care about terriers over time.
+```{r}
+ggplot(dfterrier,aes(x=Month,y=Freq)) +
+  geom_jitter(aes(color=Var2),alpha=.5) +
+  geom_smooth() + facet_wrap(~Year) +
+  theme_bw() + ggtitle("Terrier madness") +
+  theme(legend.position = "none")
+
+```
