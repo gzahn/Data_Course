@@ -1,5 +1,5 @@
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
+
 data_frame(t=seq(-pi, 0, .001),
            x1=16*(sin(t))^2,
            x2=-x1,

@@ -1,7 +1,7 @@
 
-setwd("~/Desktop/GIT_REPOSITORIES/Data_Course/data/")
-df = read.csv("MLO_OTU_Table.csv", row.names = 1)
-meta = read.csv("MLO_Metadata.csv")
+# load data
+df = read.csv("./Data/MLO_OTU_Table.csv", row.names = 1)
+meta = read.csv("./Data/MLO_Metadata.csv")
 
 #look at df
 df
