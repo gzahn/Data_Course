@@ -1,0 +1,60 @@
+A case study in data entry:
+
+Let's say you sampled the relative abundance of coliform bacteria from two streams every week for four weeks. At each stream, you selected 3 sites a few meters apart from each other.
+
+On each sampling trip, you took a sample from each of the 3 nearby sites at each stream and measured the relative abundance of coliform bacteria from each water sample. 
+
+The idea was to observe changes in coliform bacteria relative abundance over time during the rainy season for these two streams.
+
+Here's your information (below). Enter this into Excel so we can analyze it later.
+
+
+Sampling locations:
+Sewage Effluent Pool (SEP)
+Hatchery (HAT)
+
+Weeks:
+1
+2
+3
+4
+
+Sites (from each stream):
+1
+2
+3
+
+
+For week 1, your coliform relative abundances (for each sample taken) are as follows:
+SEP-1	0.02
+SEP-2	0.08
+SEP-3	0.06
+HAT-1	0.00
+HAT-2	0.01
+HAT-3	0.00
+
+For week 2:
+SEP-1	0.08
+SEP-2	0.10
+SEP-3	0.06
+HAT-1	0.03
+HAT-2	0.00
+HAT-3	0.02
+
+For week 3:
+SEP-1	0.12
+SEP-2	0.16
+SEP-3	0.16
+HAT-1	0.02
+HAT-2	0.08
+HAT-3	0.07
+
+For week 4:
+SEP-1	0.22
+SEP-2	0.24
+SEP-3	0.18
+HAT-1	0.05
+HAT-2	0.09
+HAT-3	0.10
+
+
