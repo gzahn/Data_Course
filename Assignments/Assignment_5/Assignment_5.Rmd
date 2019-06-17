@@ -1,92 +1,54 @@
 ---
-title: "Assignment 5"
+title: "Assignment_5"
 author: "gzahn"
-date: "December 30, 2018"
+date: "June 17, 2019"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # **Assignment 5**
 
-In this assignment, you will use R (within R-Studio) to:
+In this assignment you will:
 
-+ Load a built-in data set that comes with R
-+ Subset and access discrete elements of that data set
-+ Load a package and use a function from it to manipulate data
-+ Write edited data set to a new file
-+ Create and save simple data visualizations to image files
-
++ Work through the introduction to the *ggplot2* package found in the R-script "Assignment_5.R"
++ Learn how to set up and modify a ggplot figure
++ Learn how to save your image to a custom file
++ Practice using ggplot to explore a data set by completing the assigned tasks below
 
 **All file paths should be relative, starting from the Assignment_5 directory!! (where you found this file)**
 
 **This means that you need to create a new R-Project named "Assignment_5.Rproj" in your Assignment_5 directory, and work from scripts within that.**
 
-
-## **For credit...**
-
-1.  Push a completed version of your Rproj and R-script (details at end of this assignment) to GitHub
-2.  Your score will also depend on whether any files generated in this workflow are found in your repository
-3.  Upload a copy of your hp_maximums.txt file to Canvas (see task 11 below)
-
-____________
+__________
 
 
-First, we can use the data() function to access and load a data set that comes with R.
+## **For credit ...**
 
-```{r, echo=TRUE}
-data("mtcars")
-str(mtcars)
-```
+1.  Upload an r-script named LASTNAME_ggplot.R to Canvas
+2.  Push that same file to your GitHub repository along with any generated image files
 
-As you might be able to tell from the column names, this data set is all about fuel efficiency. 32 cars' fuel efficiency was measured along with 10 other variables. You can see what these are all about by using ? in front of the dataset name.
+__________
 
-```{r, echo=TRUE}
-?mtcars
-```
+We will work through an R script called "Assignment_5.R"
 
-# Motor Trend Car Road Tests
+We will work through this script in class, pausing to understand what's going on at each point.
 
-### Description
+After you have grasped the basics of ggplot, complete the following tasks, generating nice-looking figures as directed:
 
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+1.  Load the "iris" data set
+2.  Duplicate the following 3 figures (on next 3 pages) and save them in your Assignment_5 directory as "iris_fig1.png", "iris_fig2.png", "iris_fig3.png", respectively.
+3.  Keep in mind that by default, I make most of my figures with theme_minimal() 
+4.  Read through the different plot types on this website 
 
-### Format
-```{r, echo=FALSE, results='asis'}
-library(knitr)
-kable(c("Column     Name      Description",
-  "[, 1]	      mpg     	 Miles/(US) gallon",
-"[, 2]	      cyl     	 Number of cylinders",
-"[, 3]	      disp     	 Displacement (cu.in.)",
-"[, 4]	      hp     	 Gross horsepower",
-"[, 5]	      drat     	 Rear axle ratio",
-"[, 6]	      wt     	 Weight (1000 lbs)",
-"[, 7]	      qsec     	 1/4 mile time",
-"[, 8]	      vs     	 V/S",
-"[, 9]	      am     	 Transmission (0 = automatic, 1 = manual)",
-"[,10]	      gear     	 Number of forward gears",
-"[,11]	      carb     	 Number of carburetors"))
-```
+<http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html> 
 
-### Source
+and use the info to reproduce the fourth figure below. Save it as "iris_fig4.png"
+This last task requires you to use the internet to solve a tricky R task.  This is the most important skill you can learn in this course!
+You'll probably have to figure out some functions you've not seen before and reconfigure them to the iris data.
 
-Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.
+![](i1.png)
+![](i2.png)
 
-________________
+![](i3.png)
 
-
-# Your task is to Write an R script that:
-
-1.  loads the mtcars data set
-2.  subsets the mtcars dataframe to include only **automatic transmissions**
-3.  saves this new subset as a new file called "automatic_mtcars.csv" in your Assignment_5 directory
-4.  plots the effect of horsepower on miles-per-gallon (update plot to have meaningful labels and title)
-5.  saves this plot as a png image called "mpg_vs_hp_auto.png" in your Assignment_5 directory
-6.  plots the effect of weight on miles-per-gallon (with improved labels, again)
-7.  saves this second plot as a **tiff** image called "mpg_vs_wt_auto.tiff" in your Assignment_5 directory
-8.  subsets the original mtcars dataframe to include only cars with displacements less than or equal to 200 cu.in.
-9.  saves that new subset as a csv file called mtcars_max200_displ.csv
-10. includes code to calculate the maximum horsepower for each of the three dataframes (original, automatic, max200)
-11. prints these calculations (from task 10) in a readable format to a new plaintext file called hp_maximums.txt
+![](i4.png)
