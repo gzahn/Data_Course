@@ -1,0 +1,24 @@
+---
+title: "Exam 4"
+author: "gzahn"
+date: "April 9, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# This is Exam 4
+## You can do this on your own time, at home, if you prefer.
+
+## The instructions are simple:
++ Pick an exam to re-do
++ Re-do that exam
++ Push that exam to GitHub under the *Exam_4* directory (i.e., don't overwrite the exam you are re-doing)
++ That is all
+
+**Note: The grade you earn on your re-do will also be earned for Exam 4.**
+
+**So, if you bring your Exam 1 score up to 100, you will also get 100 on Exam 4**
+

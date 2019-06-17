@@ -38,6 +38,12 @@ jane <- 5*2 # This assigns the value of 5 times 2 to an object called "jane" - E
 # R can process a host of logical evaluations.  For example we can ask whether bob or jane is greater...
 bob > jane # This gives us the value "FALSE" - bob is 7, jane is 10
 bob < jane # This gives the value "TRUE"
+bob %in% c(1,2,3,4,5,6,7)
+c(1,2,3,4,5,6,7) %in% bob
+bob >= jane
+bob == jane
+jane == 10
+(jane == 10) + 1   #!???
 
 # The values "TRUE" and "FALSE" are special reserved values. You should never use them as a name for an object!!!
 # This goes for numbers as well. The number "3" cannot be assigned to any other value, for obvious reasons.
