@@ -14,12 +14,9 @@ vector2 = c(5,6,7,8,4,3,2,1,3,10)
 
 vector1*vector2
 
-
-
-setwd("~/Desktop/GIT_REPOSITORIES/Data_Course/data/")
 list.files()
 
-dat = read.csv("thatch_ant.csv")
+dat = read.csv("./Data/thatch_ant.csv")
 names(dat)
 
 #why are these plots different???

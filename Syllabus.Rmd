@@ -5,16 +5,16 @@ output:
 ---
 
 # **Introduction to Data Analysis in R**
-## Course Syllabus - Spring 2019
+## Course Syllabus - Fall 2019
 
 _____________________________
 
 ### Instructor: Dr. Geoff Zahn
-### Office: SB243c  -- Hours: Mon 10:00 - 10:50 ; Tue 8:00 - 9:50 ; or by appointment
+### Office: SB243c  -- Hours: Mon 11:00 - 11:50 ; Tue 8:00 - 8:50 ; or by appointment
 ### Email: zahn.geoff@gmail.com
 ### Course GitHub Repository: https://github.com/gzahn/Data_Course
 
-This class works best if you can bring your own laptop to class every day. That way you have installation priveleges and you will be set up for the future as you continue to analyze data.
+You need to bring your own laptop to class every day. That way you have installation priveleges and you will be set up for the future as you continue to analyze data.
 
 _____________________________
 
@@ -36,7 +36,7 @@ We cover:
 **Learning outcomes**
 Students completing this course should be able to:
 
-1.  Demonstrate proficiency in proper data entry, management, and storage for scientific research with an emphasis on reproducibility.
+1.  Demonstrate proficiency in proper data entry, management, and storage with an emphasis on reproducibility.
 2.  Convert untidy data to “tidy data” for analyses. 
 3.  Understand the basic principles of exploratory data analyses within a computational software environment.
 4.  Evaluate the rationale behind using code to analyze data and present results.
@@ -44,42 +44,17 @@ Students completing this course should be able to:
 6.  Create appropriate and meaningful data visualizations using the R software environment.
 7.  Integrate principles of experimental design, statistical modeling, hypothesis testing, and data visualization to critically analyze a unique data set and present a fully-reproducible report.
 
- 
-_____________________________
+  
+                                              ...  
+                                              ...
+                                              ...
+  
+ _____________________________
 
-**Americans with Disabilities Act:**
-Students with disabilities that may negatively impact their ability to successfully complete this course
-should let the instructor know as soon as possible, with documentation from the ASD.
-"Students who need accommodations because of a disability should contact the UVU Accessibility
-Services Department (ASD), located on the Orem Campus, in LC 312. To schedule an appointment, or
-speak with a counselor, call the ASD office at 801-863-8747, or for Deaf/Hard of Hearing individuals,
-use the video phone number, 886-760-1819."
+## **Advice**
+This course requires significant outside work... meaning that if you aren't practicing at least 6 hours a week *outside of class*, then you are going to have a really rough time of it. Like, you'll fall behind and will be frustrated and scared and sad. Don't let this happen. Practice! Come to office hours! Ask questions!  And spend time **every day** using R.  Seriously. Every day.
 
-_____________________________
-
-**Biology Department Policy**
-Students in this class are expected to understand and use proper English grammar, sentence structure,
-and spelling. Use of dictionaries during quizzes and exams is NOT allowed. Students are also expected
-to have basic calculating skills that include fractions, decimals, exponents (e.g., squares & square roots,
-powers of ten) and the ability to solve simple algebraic expressions. In addition, they must be able to
-add, subtract, multiply, and divide small numbers without a calculator. Understanding of logarithms
-(logs) will be helpful. Course rigor level should be such that the average grade is about a C.
-
-**Student Responsibility**
-It is up to you to see that the requirements for this course are completed. This syllabus is your guide to
-those requirements. Make certain that you understand what is expected of you. It is up to you to attend
-class and arrange for time to complete the readings, assignments, and exams. This course is designed
-for biology majors. If you are not reading at a college level, you WILL have difficulty with this course.
-There is only one type of “excused” absence, and that is an absence for an official University activity,
-such as participation in athletics, not just watching but doing, field trip for another course, etc.
-Make-up exams will NOT be given except for a situation beyond your control for which you provide
-verifiable (I will verify), written documentation. Family vacations, Illness, family crises, vehicle
-problems, legal problems, weddings, not studying, or forgetting to take an exam are NOT valid excuses
-or excused absences, even if you tell me beforehand; emergencies are. If such difficulties require asignificant number of absences during the semester, you are advised to drop the course and take it at
-another time. You do not need to call me if you will not be in class, I don’t take roll. Class attendance
-and obtaining the information for the tests is your responsibility.
-
-_____________________________
+ _____________________________
 
 ## **Grading**
 
@@ -94,17 +69,17 @@ We will use a point system. The points you have accumulated by the end of the co
 | <480 | E |
 
 #### Points are based on:
-* 10 Weekly Assignments - 20 pts each
+* 10 Assignments - 20 pts each
 * 4 Skills Tests - 100 pts each
 * 1 Final Project - 200 pts
 
 _____________________________
 
-### **Weekly Assignments**
+### **Assignments**
 These will be announced in class and detailed instructions will be posted on the course GitHub repository. They will generally consist of requiring you to complete a task using R and to upload your code as an R script to Canvas and/or GitHub. Some may vary. Any data sets required for the assignment will be on the GitHub repository as well. These assignments will not be accepted for credit after the due date.
 
 ### **Skills Tests**
-These will take place during class time. They will be similar to the sorts of tasks on the precedent Weekly Assignments, and they will be open-source (you can use notes, internet, etc.) but they will be timed.
+These will take place during class time. They will be similar to the sorts of tasks on the precedent assignments, and they will be open-source (you can use notes, internet, etc.) but they will be timed.
 
 ### **Final Project**
 Beginning early in the semester, we will decide on individual projects based on personal interest. Working with instructor feedback, you will come up with a question that interests you and will identify a data set that can address that question. You will then apply the data exploration and visualization skills you learn in class to prepare a well-formatted report that contains all the code and results of your analyses. You are encouraged to use your own data if you have any. **Most importantly this project will require you to teach yourself new R skills using the resources we learn about (or any others). You will be required to learn analyses explicitly not covered in this course (Check the course schedule to see what we are covering), and to apply them correctly to your analysis and report.**
@@ -120,11 +95,11 @@ Examples of unique topics could include, but are not limited to:
 * Etc.
 
 
-**Your topic/question is due before Skills Test 1**
+**Your topic/question is due before Skills Test 2**
 
 **Soon after, you will work with the instructor to identify a suitable publicly-available data set (or use your own)**
 
-**An initial draft of your exploratory code is due before Skills Test 2**
+**An initial draft of your exploratory code is due before Skills Test 3**
 
 **Then you will work with the instructor to identify a new skill to be applied for your project**
 
@@ -133,16 +108,26 @@ Examples of unique topics could include, but are not limited to:
 ______________________________
 
 ### The tentative course schedule can be found at: 
-https://github.com/gzahn/Data_Course/blob/master/Rough_Course_Outline.pdf
+<https://github.com/gzahn/Data_Course/blob/master/Rough_Course_Outline.pdf>
 
 #### This course schedule document also serves as a template for proper reporting (for final project).
 
 **It (along with this syllabus) was created in R, and it integrates explanatory text, code, and results into a single document.**
 
-You can see the raw R code used to generate the document at: https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd
+You can see the raw R code used to generate the document at: <https://raw.githubusercontent.com/gzahn/Data_Course/master/Rough_Course_Outline.rmd>
 
 ______________________________
 
+## Important legal stuff, etc.:
+
+
+**Americans with Disabilities Act:**
+Students with disabilities that may negatively impact their ability to successfully complete this course
+should let the instructor know as soon as possible, with documentation from the ASD.
+"Students who need accommodations because of a disability should contact the UVU Accessibility
+Services Department (ASD), located on the Orem Campus, in LC 312. To schedule an appointment, or
+speak with a counselor, call the ASD office at 801-863-8747, or for Deaf/Hard of Hearing individuals,
+use the video phone number, 886-760-1819."
 
 ### Academic Honesty and Integrity
 Utah Valley University expects all students to maintain integrity and high standards of individual
@@ -276,6 +261,7 @@ http://www.uvu.edu/veterans/, ext. 8212, WB100.
 • EOAA or Student Ombuds - ext. 7237, SC 107
 • Student Health Services, if Anonymity is desired- ext. 8876, SC 221
 • UVUPD, if you wish to press criminal charges - ext. 5555, GT 331
+
 ### Information about gender neutral facilities or gender personal pronouns: 
 You may ask your professor/supervisor to use your personal name and pronouns. If you are unclear about pronouns or
 identifiers, you may request clarification. If you have questions or concerns contact LGBT Student
@@ -293,3 +279,25 @@ support services from the Veterans Success Center and may be eligible for Post-9
 For help receiving your benefits, please contact the Veterans Success Center in the Woodbury Business
 Building, room 100, via email at veterans@uvu.edu or by calling 801-863-8212. Learn
 more: http://www.uvu.edu/veterans/
+
+**Biology Department Policy**
+Students in this class are expected to understand and use proper English grammar, sentence structure,
+and spelling. Use of dictionaries during quizzes and exams is NOT allowed. Students are also expected
+to have basic calculating skills that include fractions, decimals, exponents (e.g., squares & square roots,
+powers of ten) and the ability to solve simple algebraic expressions. In addition, they must be able to
+add, subtract, multiply, and divide small numbers without a calculator. Understanding of logarithms
+(logs) will be helpful. Course rigor level should be such that the average grade is about a C.
+
+**Student Responsibility**
+It is up to you to see that the requirements for this course are completed. This syllabus is your guide to
+those requirements. Make certain that you understand what is expected of you. It is up to you to attend
+class and arrange for time to complete the readings, assignments, and exams. This course is designed
+for biology majors. If you are not reading at a college level, you WILL have difficulty with this course.
+There is only one type of “excused” absence, and that is an absence for an official University activity,
+such as participation in athletics, not just watching but doing, field trip for another course, etc.
+Make-up exams will NOT be given except for a situation beyond your control for which you provide
+verifiable (I will verify), written documentation. Family vacations, Illness, family crises, vehicle
+problems, legal problems, weddings, not studying, or forgetting to take an exam are NOT valid excuses
+or excused absences, even if you tell me beforehand; emergencies are. If such difficulties require asignificant number of absences during the semester, you are advised to drop the course and take it at
+another time. You do not need to call me if you will not be in class, I don’t take roll. Class attendance
+and obtaining the information for the tests is your responsibility.
