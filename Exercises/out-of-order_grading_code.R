@@ -45,7 +45,7 @@ df$Final.Points <- totals
 data_course_letter_grades(df)
 
 
-# Define a grading function. Need to give it a data.frame object
+# Define a grading function. Need to give it a data.frame object with "Final.Points" column
 data_course_letter_grades = function(x, a.cutoff = 700, 
                                      b.cutoff = c(640,699), 
                                      c.cutoff = c(560,639), 

@@ -1,0 +1,113 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### This will use the tidyverse package and the "gapminder" data set
+
+```{r}
+library(tidyverse)
+library(gapminder)
+data("gapminder")
+df = gapminder
+head(gapminder)
+```
+## Exercise 1
+
+```{r}
+levels(df$continent)
+```
+**Add "Antarctica" to the levels of possible continents**
+
+## Exercise 2
+**Add 3 more continents to the factor levels: "North America", "South America", and "Central America"**
+
+## Exercise 3
+
+**Consider the following groupings of countries**
+```{r}
+south <- c("Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador",
+           "Paraguay","Peru","Uruguay","Venezuela")
+north <- c("United States","Canada","Mexico")
+central <- c("Costa Rica","El Salvador","Guatemala","Honduras","Nicaragua","Panama")
+```
+**Currently, they are all in the "Americas" continent group.**
+**Write some code to move them into their new respective continents**
+
+## Exercise 4
+**Clean up the "Continent" categories to remove "Americas" and "Antarctica"**
+```{r}
+levels(df$continent)
+```
+
+## Exercise 5
+**Statistical models often use the FIRST level of a factor as a reference group**
+**Reorder the levels of the "Continent" factor so that "North America" will be the reference group**
+
+
+## Exercise 6
+
+Ordered Factors:
+```{r}
+status <- c("Lo", "Hi", "Med", "Med", "Hi","Lo", "Hi", "Med", "Med", "Hi")
+status <- factor(status)
+ordered.status <- factor(status, levels = c("Lo","Med","Hi"), ordered = TRUE)
+
+table(status)
+table(ordered.status)
+```
+**Some functions in R treat ordered factors differently than unordered factors**
+**What is different about an ordered factor?**
+
+
+
+## Exercise 7
+
+```{r}
+as.numeric(status) + 1
+```
+**Figure out what is going on with the expression above.**
+
+
+## Exercise 8
+
+
+```{r}
+sub_status <- status[status %in% c("Lo","Hi")] # extract only the "Lo" and "Hi" values
+sub_status
+```
+**Re-factor "sub_status" to remove the "Med" level**
+
+
+## Exercise 9
+
+```{r}
+status2 <- factor(c("Med", "Hi","Lo", "Hi", "Medium High"))
+c(status,status2)
+```
+**Find a way to properly combine the two factored vectors "status" and "status2"**
+**Make sure the resulting vector is a factor as well**
+
+## Exercise 10
+
+Look at the following plot:
+```{r,fig.height=3,fig.width=3}
+ggplot(df,aes(x=continent,y=lifeExp)) + geom_boxplot()
+```
+**Re-make the plot so that the bars are in descending order**
+
+
+## Exercise 11
+
+#### If:
+```{r,fig.height=3,fig.width=3}
+ggplot(df, aes(x=year,y=pop)) + geom_point()
+```
+
+#### And ...
+```{r,fig.height=3,fig.width=3}
+df$PopFactor <- cut(df$pop,5,labels = c("Really Low","Low","Med","High","Really High"))
+ggplot(df, aes(x=year,y=PopFactor)) + geom_point()
+```
+
+**Convert the gdpPercap to an ordered factor with 6 levels and plot it against year**

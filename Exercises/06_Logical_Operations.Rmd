@@ -1,0 +1,62 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+### For the following data frame:
+```{r}
+data("mtcars")
+head(mtcars)
+```
+# Keep in mind the following...
+```{r}
+
+x <- 1:10 # create vector
+x >= 3 # greater than or equal to
+x < 9 # less than 9
+x > 3 & x < 7 # greater than 3 AND less than 7
+x >= 9 | x <= 2 # greater than or equal to 9 OR less than or equal to 2
+x %in% 5:10 # present in a given set
+x == 3 # equal to 3
+x != 3 # not equal to 3
+x %% 2 == 0 # modulo division (does remainder equal 0 when divided by 2)
+xor(x == 3, x > 1) # matches ONLY ONE of the conditions...NOT BOTH
+```
+
+
+## Exercise 1
+Use logical operators to output only those rows of  mtcars  where column  mpg  is between 15 and 20 (excluding 15 and 20).
+
+## Exercise 2
+Use logical operators to output only those rows of  mtcars  where column  cyl  is equal to 6 and column  am  is not 0.
+
+## Exercise 3
+Use logical operators to output only those rows of  mtcars  where column  gear  or  carb  has the value 4.
+
+## Exercise 4
+Use logical operators to output only the even rows of  mtcars.
+
+## Exercise 5
+Use logical operators and change every fourth element in column  mpg  to 0.
+
+## Exercise 6
+Output only those rows of  mtcars  where columns  vs  and  am  have the same value 1, solve this without using  ==  operator.
+
+## Exercise 7
+(TRUE + TRUE) * FALSE , what does this expression evaluate to and why?
+
+## Exercise 8
+Output only those rows of  mtcars  where at least  vs  or  am  have the value 1, solve this without using  ==  or  !=.
+
+## Exercise 9
+Explain the difference between  | ,  || ,  &  and  &&.
+
+## Exercise 10
+Change all values that are 0 in the column  am  in  mtcars  to 2.
+
+## Exercise 11
+Add 2 to every element in the column  vs  without using numbers.
+
+## Exercise 12
+Output only those rows of  data  where  vs  and  am  have different values, solve this without using  ==  or  !=.

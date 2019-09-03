@@ -1,0 +1,99 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## Exercise 1
+
+If:
+```{r}
+X = c(NA,3,14,NA,33,17,NA,41)
+is.na(X)
+!is.na(X)
+```
+
+**Then what will be the value of:**
+```{r,include=TRUE,eval=FALSE}
+X[!is.na(X)]
+```
+
+
+## Exercise 2
+
+If:
+```{r}
+Y = 21:28
+Z=data.frame(X,Y)
+Z
+Z[is.na(Z)] <- 0
+Z
+```
+
+**Then write an expression that will replace all instances of "NA" with the number 10 in the following vector "P":**
+
+```{r}
+P = c(X,33,NA,400,12,0,15)
+P
+```
+
+
+## Exercise 3
+
+Consider the following vector:
+```{r}
+W <- c (11, 3, 5, NA, 6)
+```
+**Write some R code that will return TRUE for the missing element in the vector W.**
+
+
+## Exercise 4
+
+
+Given the vector A:
+```{r}
+A <- c (33, 21, 12, NA, 7, 8)
+```
+**Write some code that will calculate the mean of A.**
+
+
+## Exercise 5
+
+Load ‘Orange’ dataset...
+```{r}
+data(Orange) 
+head(Orange) # Take a look at first 6 rows
+```
+**Replace all values of age=118 with NA.**
+
+
+## Exercise 6
+
+For the following data frame X:
+```{r}
+c1 <- c(1,2,3,NA)
+c2 <- c(2,4,6,89)
+c3 <- c(45,NA,66,101)
+X <- data.frame(c1,c2,c3) 
+```
+
+If:
+
+```{r}
+X
+complete.cases(X)
+```
+**Write some code that will display only the rows with missing values.**
+
+
+## Exercise 7
+
+Given the following data frame:
+```{r}
+df <- data.frame (Name = c("NA", "Joseph", "Martin", NA, "Andrea"), 
+                  Sales = c(15, 18, 21, 56, 60), 
+                  Price = c(34, 52, 21, 44, 20), 
+                  stringsAsFactors = FALSE) 
+df
+```
+**Write some code to remove rows where "Name" is missing.**
+

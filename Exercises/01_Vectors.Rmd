@@ -1,0 +1,147 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## Exercise 1
+
+**Consider a vector:**
+  
+  x <- c(4,6,5,7,10,9,4,15)
+
+**What is the value of:**
+  
+  c(4,6,5,7,10,9,4,15) < 7
+
+a. TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE
+
+b. TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE
+
+c. FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE
+
+d. TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE
+
+e. TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE
+
+
+
+## Exercise 2
+
+**Consider two vectors:**
+  
+p <- c (3, 5, 6, 8)
+
+and
+
+q <- c (3, 3, 3)
+
+**What is the value of:**
+  
+  p+q
+
+a. 6, 8, 6, 8
+
+b. 6, 8, 0, 0
+
+c. 6, 8, NA, NA
+
+d. 3, 5, 6, 8 Warning message: In p+q : longer object length is not a multiple of shorter object length
+
+e. 6, 8, 9, 11
+
+
+
+## Exercise 3
+
+**Consider two vectors**
+
+a = c(1,3,4,7,10,0)
+
+b = c(1,2)
+
+**what is the value of a+b ?**
+
+
+## Exercise 4
+
+**If**
+
+z <- 0:9
+
+**then what is the output from the following R-statements:**
+  
+digits <- as.character(z)
+
+as.integer(digits)
+
+a. Error in subset. object 'z' not found
+
+b. 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+c. "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"
+
+d. "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+
+e. 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+
+## Exercise 5
+
+**Consider the vector:**
+  
+  x <- c(1,2,3,4)
+
+**What is the value of k for:**
+  
+  (x+2)[(!is.na(x)) & x > 0] -> k
+
+a. 1, 2, 3, 4
+
+b. 1, 4, 9, 16
+
+c. Error: object 'k' not found
+
+d. 3, 4, 5, 6
+
+e. numeric(0)
+
+
+## Exercise 6
+
+**Consider the following vectors:**
+
+s = c("a","b",'c',"d","e")
+
+t = c("f","g","h","i","j")
+
+**What is the value of s+3 ?**
+
+**What command would you use to combine them into a single vector in alphabetical order?**
+
+
+## Exercise 7
+
+**Consider the following vectors:**
+
+s = c("a","b",'c',"d","e")
+
+v = 1:5
+
+**if:**
+
+z = c(s,v)
+
+**What is the value of z[5:10] ?**
+
+a.
+1,2,3,4,5
+
+b.
+"a","b","c","d","e"
+
+c.
+"1","2","3","4","5"
+
+d.
+"e","1","2","3","4"
+

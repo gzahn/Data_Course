@@ -1,0 +1,68 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## Exercise 1
+
+If:
+```{r}
+x = c("ss", "aa", "ff", "kk", "bb")
+x[1]
+```
+
+Then what will be the value of:
+```{r,include=TRUE,eval=FALSE}
+x[c(1,3)]
+```
+
+
+## Exercise 2
+
+If:
+```{r}
+d = data.frame(Name = c("Betty","Bob","Susan"),
+               Age = seq(20,30,length.out = 3),
+               Height_cm = c(490,22,0))
+d
+```
+
+What will be the value of:
+```{r,include=TRUE,eval=FALSE}
+d[c("Name","Age")]
+```
+What about this one:
+```{r,include=TRUE,eval=FALSE}
+d[c("Age","Name","Height_cm")][1,]
+```
+
+## Exercise 3
+
+If:
+```{r}
+d$Name
+```
+Then what is the value of:
+```{r,eval=FALSE,include=TRUE}
+d$Age[2]
+```
+
+## Exercise 4
+
+If:
+```{r}
+d$Age > 20
+```
+
+...And:
+```{r}
+d[d$Age > 20,]
+```
+Then what is the value of:
+```{r,eval=FALSE,include=TRUE}
+d[d$Height_cm < 100,]
+```
+...And what is the value of:
+```{r,eval=FALSE,include=TRUE}
+d[1,c("Name","Age")]
+```

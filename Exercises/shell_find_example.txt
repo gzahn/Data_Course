@@ -1,0 +1,11 @@
+# In the directory: ./Data/data-shell/names, there are 100 subdirectories.
+# Each one of those subdirectories is the output of some software that automatically calculates client price adjustments
+# Each timepoint (out of 100 total) in which a client's price adjustment was changed, their name and their new price adjustment
+# value have been recorded.  This sort of output is not uncommon. Your job, as the person tasked with data mining, is to do a few 
+# things:
+
+# 1) Find the timepoints during which the client Adrian Clapp had adjustments made to his pricing value.
+# 2) Get a list of unique client names that had any price adjustments during the past 100 timepoints.
+# 3) Merge all these disparate files into one master list so we can make graphs from it.
+
+

@@ -1,0 +1,128 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### This will use the "tidyverse" suite of packages
+```{r}
+library(tidyverse)
+```
+
+
+## Exercise 1
+
+Consider the following:
+```{r,include=TRUE,eval=FALSE}
+vector = "Good morning! "
+```
+**How many characters are in "vector" ?**
+
+
+## Exercise 2
+
+If:
+```{r}
+x <- c("Open", "Sesame ")
+y <- c("You","Suck.")
+nchar(x)
+```
+
+**Then, what is the value of:**
+```{r,include=TRUE,eval=FALSE}
+nchar(c(x,y))
+```
+
+
+## Exercise 3
+
+If:
+```{r}
+m <- "The capital of the United States is Washington, D.C."
+unlist(str_split(m," "))
+```
+
+...And:
+```{r}
+str_trunc(m,11, ellipsis = "")
+```
+
+...And:
+```{r}
+str_sub(m,start = 13,end = 25)
+```
+
+
+**Come up with a way to extract "Washington" from m.**
+
+
+## Exercise 4
+
+If:
+```{r}
+paste(m,", you idiot!", sep = "")
+```
+
+**Then come up with a way to use the vector "m" to paste together "United States, you idiot!"**
+
+
+## Exercise 5
+
+If:
+```{r}
+q = "What is the capital of the United States?"
+c(q, paste0(m,", you idiot!"))
+```
+
+**Then, what will be the value of "d" for:**
+```{r, include=TRUE}
+
+d = str_split(c(q, paste0(m,", you idiot!")), pattern = " ")
+```
+
+## Exercise 6
+
+If:
+```{r}
+c(unlist(map(d,1)),"Heck!?")
+```
+
+And:
+```{r}
+unlist(map(d,2))
+```
+**Then what does map(d,1) do?**  **...And why did I wrap it in unlist()**
+
+
+## Exercise 7
+
+If:
+```{r}
+t = c("a","ab","c","d","e","fa")
+grep("a",t)
+grepl("a",t)
+```
+...And:
+```{r}
+f = c("b","ca","at","c","e","aa")
+v = list(f,t)
+v
+grep("a",v)
+grepl("a",v)
+```
+
+
+**Then what will be the values of the following two expressions?**
+```{r,include=TRUE,eval=FALSE}
+grep("What",d)
+grepl("What",d)
+```
+
+
+## Exercise 8
+
+If:
+```{r}
+q
+str_replace(q,"a","A")
+```
+**Then write some code to change ALL spaces to underscores "_" in the vector q**
