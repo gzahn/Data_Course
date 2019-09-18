@@ -162,6 +162,9 @@ ggplot(MplsStops, aes(x=lat,y=long,color=race)) + geom_point() + theme_minimal()
 
 ggplot(MplsStops, aes(x=lat,y=long,color=race)) + geom_point() + theme_minimal() + facet_wrap(~race) # "overplotting!?"
 
+
+ggplot(MplsStops,)
+
 # Check out the issue with some random data
 random_data = data.frame( x=rnorm(20000, 10, 1.9), y=rnorm(20000, 11, 4.5) )
 
@@ -188,8 +191,21 @@ ggplot(MplsStops, aes(x=lat,y=long)) + geom_bin2d()
 ggplot(MplsStops, aes(x=lat,y=long)) + geom_bin2d() + facet_wrap(~race)
 
 
+# try faceting by month
+MplsStops$Month <- months(MplsStops$date)
+(MplsStops$date)
+
+ggplot(MplsStops, aes(x=lat,y=long)) + geom_bin2d() + facet_wrap(~Month)
+
+library(gganimate)
+library(gifski)
+ggplot(MplsStops, aes(x=lat,y=long)) + geom_bin2d() +
+  labs(title = "Month: {frame_state}") +
+  transition_time(date) +
+  ease_aes('linear')
 
 
+gganimate::
 # More advanced understanding of R functions will be required to replicate the following section, but it
 # is included as an example follow-up analysis
 
