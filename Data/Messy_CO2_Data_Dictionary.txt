@@ -1,0 +1,48 @@
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers.  Times and dates are UTC. Time-averaged values are reported at the beginning of the averaging interval.
+# value:_FillValue : -999.999
+# value:long_name : measured_mole_fraction_of_trace_gas_in_dry_air
+# value:units : micromol mol-1
+# value:comment : Mole fraction reported in units of micromol mol-1 (10-6 mol per mol of dry air); equivalent to ppm (parts per million).
+# value_std_dev:_FillValue : -99.99
+# value_std_dev:long_name : standard_deviation_in_reported_value
+# value_std_dev:units : micromol mol-1
+# value_std_dev:comment : This is the standard deviation of the reported mean value when nvalue is greater than 1. See provider_comment if available.
+# nvalue:_FillValue : -9
+# nvalue:long_name : number_of_measurements_contributing_to_reported_value
+# nvalue:comment : Number of individual measurements used to compute reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# qcflag:_FillValue : NA
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample.

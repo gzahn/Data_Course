@@ -1,0 +1,19 @@
+
+In files 12 and 13, SST for 18000 BP, there is one corrupt record.  It
+is in the record labelled  66S and 90W (-66 -90). This record is shown
+below with it's adjacent records.  The 72W value appears to be missing
+and the 70W value seems to be shifted left one character.  A good
+estimate is -444 (sea ice) at 72W and -555 (glacial ice) at 70W.  Steve
+Worley, April 1993.
+
+
+ (longitude) -90 -88 -86 -84 -82 -80 -78 -76 -74 -72 -70 -68 -66 -64 -62
+              --  --  --  --  --  --  --  --  --  --  --  --  --  --  --
+PA 8 -64 -90-444-444-444-444-444-444-444-444-444-444-444-444-444-555-555
+PA 8 -66 -90-444-444-444-444-444-444-444-444-444   -555 -555-555-555-555
+PA 8 -68 -90-444-444-444-444-444-444-444-444-444-555-555-555-555-555-555
+
+PA 2 -64 -90-444-444-444-444-444-444-444-444-444-444-444-444-444-555-555
+PA 2 -66 -90-444-444-444-444-444-444-444-444-444   -555 -555-555-555-555
+PA 2 -68 -90-444-444-444-444-444-444-444-444-444-555-555-555-555-555-555
+
