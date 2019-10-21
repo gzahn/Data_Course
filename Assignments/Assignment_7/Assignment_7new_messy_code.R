@@ -4,8 +4,10 @@
 # There's an intuitive dplyr version for everything you see here.
 
 # Note: Do not erase the original code, just comment it out and put your own equivalent code below each section
+# i.e., change each line of indicated code to a tidy version that does the same thing.
 
 
+library(tidyverse)
 
 ##########################
 #        Part 1          #
@@ -20,9 +22,9 @@ buddhist = utah[utah$Buddhism.Mahayana > 0,]
 # order rows by population (descending)
 buddhist = buddhist[order(buddhist$Pop_2010, decreasing = TRUE),]
 
+
 # write this new dataframe to a file
 write.csv(buddhist, file = "./buddhist_counties.csv", row.names = FALSE, quote = FALSE)
-
 
 ## get group summaries of religiousity based on population ##
 
@@ -53,10 +55,14 @@ religiosity = data.frame(Pop.Group = c("group1","group2","group3","group4","grou
            Mean.Religiosity = c(group1,group2,group3,group4,group5,group6),
            Mean.Pop = c(group1.pop,group2.pop,group3.pop,group4.pop,group5.pop,group6.pop))
 
+
+
+
 religiosity # take quick look at resulting table
 
 # order by decreasing population
 religiosity = religiosity[order(religiosity$Mean.Pop, decreasing = TRUE),]
+
 
 religiosity # take quick look at resulting table
 
@@ -64,6 +70,7 @@ religiosity # take quick look at resulting table
 #####################################
 #              Part 2               #
 # Beginning to look at correlations #
+# run this code without changing it #
 #####################################
 
 # Look for correlations between certain religious groups and non-religious people
