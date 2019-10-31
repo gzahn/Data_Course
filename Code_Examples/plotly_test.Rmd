@@ -1,0 +1,102 @@
+
+```{r}
+library(tidyverse)
+library(gganimate) 
+library(gapminder)
+library(plotly)
+
+data("gapminder")
+glimpse(gapminder)
+
+hist(gapminder$year)
+hist(gapminder$lifeExp)
+hist(gapminder$pop,breaks=100)
+hist(gapminder$gdpPercap,breaks = 50)
+
+
+table(gapminder$country,gapminder$continent)
+
+xtabs(~ gapminder$continent + gapminder$country)
+
+uniqcountries <- function(x){gapminder %>%
+  filter(continent == x) %>%
+  select(country) %>% unique()
+}
+
+
+
+names(gapminder)
+ggplot(gapminder,aes(x=country,y=lifeExp)) +
+  geom_boxplot() + facet_wrap(~continent)
+
+ggplot(gapminder,aes(x=year,y=lifeExp)) +
+  geom_point() + facet_wrap(~continent) +
+  geom_smooth(se=FALSE,aes(color=country),show.legend = FALSE)
+
+
+# africa by itself
+
+fig1 <- gapminder %>% filter(continent == "Africa") %>%
+  ggplot(aes(x=year,y=lifeExp)) +
+  geom_point() + 
+  geom_smooth(se=FALSE,aes(color=country),show.legend = TRUE)
+
+# neato!
+ggplotly(fig1)
+
+# oceania
+
+fig2 <- gapminder %>% filter(continent == "Oceania") %>%
+  ggplot(aes(x=year,y=lifeExp)) +
+  geom_point() + 
+  geom_smooth(se=FALSE,aes(color=country),show.legend = TRUE)
+
+fig2 + lims(y=c(0,100))
+ggplotly(fig2)
+
+
+p1 = ggplot(gapminder, aes(x=year,y=lifeExp,color=continent)) +
+  geom_smooth(se=FALSE)
+
+
+p2 = ggplot(gapminder, aes(x=gdpPercap,y=lifeExp,color=continent,size=pop)) +
+  geom_point()
+
+gridExtra::grid.arrange(p1,p2)
+
+
+ggplot(gapminder, aes(y=gdpPercap,x=year,color=continent)) +
+  geom_smooth(se=FALSE)
+
+p2 + facet_wrap(~year) + scale_x_log10()
+
+
+
+ggplot(gapminder,aes(x=year,y=pop,color=continent)) +
+  geom_point() + geom_smooth(se=FALSE)
+
+
+p3 = gapminder %>% filter(continent=="Asia") %>%
+  ggplot(aes(x=year,y=pop,color=country)) +
+  geom_point() + geom_smooth(se=FALSE)
+
+# neato zoom!
+ggplotly(p3)
+
+
+```
+
+```{r}
+ggplot(gapminder, aes(x=gdpPercap, y=lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) + labs(subtitle = "Points scaled to country population") +
+
+  # Here comes the gganimate specific bits
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+```
+
