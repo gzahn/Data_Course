@@ -1,5 +1,5 @@
 ---
-title: "Assignment 7"
+title: "Assignment 8"
 author: "gzahn"
 date: "December 30, 2018"
 output: pdf_document
@@ -9,7 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# **Assignment 7**
+# **Assignment 8**
 
 In this assignment, you will use R (within R-Studio) to load a data set and perform:
 
@@ -18,9 +18,9 @@ In this assignment, you will use R (within R-Studio) to load a data set and perf
 + Hypothesis testing / Model fitting (with linear models and ANOVA)
 
 
-**All file paths should be relative, starting from the Assignment_6 directory!! (where you found this file)**
+**All file paths should be relative, starting from the Assignment_8 directory!! (where you found this file)**
 
-**This means that you need to create a new R-Project named "Assignment_6.Rproj" in your Assignment_6 directory, and work from scripts within that.**
+**This means that you need to create a new R-Project named "Assignment_8.Rproj" in your Assignment_8 directory, and work from scripts within that.**
 
 
 ## **For credit...**

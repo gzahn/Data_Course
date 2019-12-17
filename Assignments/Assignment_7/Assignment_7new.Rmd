@@ -18,9 +18,9 @@ In this assignment, you will use R (within R-Studio) to:
 + Use the tidyr package to convert the instructor's base R code into tidy format, making it more readible
 + Begin to look at correlations and causations using a real data set of religious identity from Utah in 2010
 
-**All file paths should be relative, starting from the Assignment_5 directory!! (where you found this file)**
+**All file paths should be relative, starting from the Assignment_7 directory!! (where you found this file)**
 
-**This means that you need to create a new R-Project named "Assignment_5.Rproj" in your Assignment_5 directory, and work from scripts within that.**
+**This means that you need to create a new R-Project named "Assignment_7.Rproj" in your Assignment_7 directory, and work from scripts within that.**
 
 
 ## **For credit...**
