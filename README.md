@@ -2,7 +2,7 @@
 
 This site serves as a repository for all class material.
 
-The file *Rough_Course_Outline.pdf* gives a tentative outline of the weekly topics to be covered.
+The course [*website*](https://gzahn.github.io/data-course/) gives a tentative outline of the weekly topics to be covered. It also has assignments and plentiful links to outside resources to help you learn.
 
 The code and data we use in class will be posted here so you have access to it.
 Additionally, detailed assignment instructions will be here as they become available (see the Assignments directory).
@@ -10,4 +10,3 @@ Additionally, detailed assignment instructions will be here as they become avail
 
 The file *Syllabus.pdf* is the official course syllabus.
 
-Some materials from the Readings directory will be assigned, but mostly it is for you to browse as you find the time.

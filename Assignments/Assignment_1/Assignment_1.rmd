@@ -13,11 +13,6 @@ In this assignment, you will:
 
 + create your own GitHub account and start a "repository" that is available for everyone to see
 
-________________
-
-#### First, read the following document. It will set the stage for version control and why we will be using it.
-
-https://peerj.com/preprints/3159/
 
 ________________
 
