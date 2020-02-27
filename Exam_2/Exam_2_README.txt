@@ -54,6 +54,7 @@ V.      Re-create the graph shown in fig4.png
         This is a scatterplot, faceted by region
         Export it to your Exam_2 folder as LASTNAME_Fig_3.jpg (note, that's a jpg, not a png)
 
+VI.		Commit and push all your code and files to GitHub. I'll pull your repository at 9:30pm sharp and grade what I find.
 
 
 ## Grading ##
