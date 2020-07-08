@@ -1,0 +1,61 @@
+
+### The gapminder package has interesting chronological data of life expectancy, GDP, etc.
+
+#### Let's look at it over time
+
+```{r,echo=TRUE,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(gganimate)
+library(gapminder)
+```
+
+```{r}
+names(gapminder)
+p1 = ggplot(gapminder, aes(x=gdpPercap,y=lifeExp,color=continent,group=country)) +
+  geom_point() 
+p1
+```
+
+#### Let's change that x-axis scale
+
+```{r}
+p1 + scale_x_log10()
+```
+
+
+Let's make point size reflect country population...
+
+```{r}
+p2 = ggplot(gapminder, aes(x=gdpPercap,y=lifeExp,color=continent)) +
+  geom_point(aes(size=pop),alpha=.5) +
+  scale_x_log10() + geom_smooth(se=FALSE)
+p2
+```
+
+#### But what about the "time" component?
+##### Can we add "year" as color maybe?
+
+```{r}
+ggplot(gapminder, aes(x=gdpPercap,y=lifeExp,color=year)) +
+  geom_point(alpha=.2) + scale_x_log10() +
+  geom_smooth(se=FALSE,method="lm",aes(group=year))
+
+```
+
+### Animations can help us get around trying to show too many things at once.
+
+#### They aren't always a great idea, but can be handy.
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+
+ggplot(gapminder, aes(x=gdpPercap, y=lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) + labs(subtitle = "Points scaled to country population") 
+  # Here comes the gganimate specific bits
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+```

@@ -1,0 +1,14 @@
+aliuhafflihafflkj
+alpha: 0.5
+beta: 0.2
+gamma: off
+- finish experiments
+- write thesis
+- get post-doc position (pref. with Dr. Horrible)
+alpha: 0.5
+beta: 0.2
+gamma: off
+- finish experiments
+- write thesis
+- get post-doc position (pref. with Dr. Horrible)
+13 newfile.txt

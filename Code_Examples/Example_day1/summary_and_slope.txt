@@ -1,0 +1,12 @@
+                [,1]     [,2]    
+variety         African  European
+N               498      502     
+Wingspan.mean   27.9147  27.8861 
+Wingspan.median 28.00988 27.81896
+Wingspan.max    37.86447 39.42312
+Mass.mean       64.66844 64.52848
+Mass.median     64.67205 64.28883
+Mass.max        106.7154 108.5158
+[1] "Slope"
+wingspan_vs_mass$mass 
+            0.2536246 

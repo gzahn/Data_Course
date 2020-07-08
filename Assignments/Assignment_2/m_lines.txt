@@ -1,0 +1,8 @@
+   49 ../../Data/data-shell/data/pdb/maltose.pdb
+   35 ../../Data/data-shell/data/pdb/menthol.pdb
+    9 ../../Data/data-shell/data/pdb/methane.pdb
+   10 ../../Data/data-shell/data/pdb/methanol.pdb
+   36 ../../Data/data-shell/data/pdb/mint.pdb
+   44 ../../Data/data-shell/data/pdb/morphine.pdb
+   41 ../../Data/data-shell/data/pdb/mustard.pdb
+  224 total
