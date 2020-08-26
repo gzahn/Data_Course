@@ -1,9 +1,9 @@
 Assignment_1.html
-.Rproj.user
+*.Rproj.user
 output/
 instructor/
 StudentRepos/
 Exams/
-.Rhistory
+*.Rhistory
 Student_Repos/
 Previous_Student_Repos/

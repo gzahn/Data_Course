@@ -1,8 +1,8 @@
 ---
-title: "Assignment 4"
-author: "gzahn"
-date: "December 30, 2018"
-output: pdf_document
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_4
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +20,7 @@ In this assignment, you will use R (within R-Studio) to:
 + Use the built-in visualization methods to quickly look at relationships in your data
 + Demonstrate one method for saving visualizations to an image file
 
-**All file paths should be relative, starting from the Assignment_4 directory!! (where you found this file)**
+**All file paths should be relative, starting from *your* Assignment_4 directory!!**
 
 **This means that you need to create a new R-Project named "Assignment_4.Rproj" in your Assignment_4 directory, and work from scripts within that.**
 
@@ -29,7 +29,7 @@ In this assignment, you will use R (within R-Studio) to:
 
 1.  Push a completed version of your Rproj and R-script (details at end of this assignment) to GitHub
 2.  Your score will also depend on whether any files generated in this workflow are found in your repository
-3.  Upload a copy of a plaintext file with numbered answers to the **bolded** assignment questions to Canvas. This shows that you worked through the assignment and lets me know to pull a fresh copy of your GitHub repo to grade.
+3.  There are 7 questions scattered through this walkthrough. Upload a plaintext file with numbered answers to the **bolded** assignment questions to Canvas. This shows that you worked through the assignment and lets me know to pull a fresh copy of your GitHub repo to grade.
 
 
 ____________
@@ -46,15 +46,15 @@ We will use the built-in function read.table() to load some data.
 
 ```{r, echo=TRUE}
 ?read.table() #This brings up the help file
-df = read.csv("../../Data/landdata-states.csv") # why did I change to read.csv ???
+df <-  read.csv("../../Data/landdata-states.csv") # why did I change to read.csv ???
 class(df) # what type of object is df?
 head(df) # shows the first 6 elements of an object (first 6 rows if you give it a data frame)
 ```
 
 
-Now, we have a data frame loaded into R as an object called "df."
+Now, we have a data frame loaded into R and stored as an object called "df."
 If you open that same file with a plain text editor you'd see a bunch of values separated by commas.
-The read.csv() function is a convenient way to tell R that those commas represent different values and each "\\n" (newline) character means a new row. It automatically treats the first row as column headers.  
+The read.csv() function is a convenient way to tell R that those commas separate different values and each "\\n" (newline) character means a new row. It automatically treats the first row as column headers.  
 
 **Questions:**
 
@@ -117,9 +117,9 @@ _______________
 
 1.  Create a new R script as part of your Assignment 4 R-project. Name it "Assignment_4.R"
 2.  That script should do the following:
-    + Read in the file: "/Data/ITS_mapping.csv"   ...good luck with that, hahaha!
+    + Read in the file: "/Data/ITS_mapping.csv" (filepath starts in *your* Data_Course main directory)  ...good luck with that, hahaha!
     + Somehow summarize all of the columns and do a bit of additional exploration (play with some functions)
-    + Make a boxplot where "Ecosystem"" is on the x-axis and "Lat" is on the y-axis
+    + Make a boxplot where "Ecosystem" is on the x-axis and "Lat" is on the y-axis
     + Write code to export this boxplot to a new file in your Assignment_4 directory called "silly_boxplot.png"
       Hints on below ...
 3.  Make sure to save your completed script and Rproject and make sure your png file is saved correctly

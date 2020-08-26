@@ -1,9 +1,14 @@
-# ggplot2 intoduction 
+# ggplot2 intoduction ... Here, we're just looking at what ggplot2 can do and learning about the basic format
+# of how to build a plot with this powerful package.
 
-# Load ggplot2 (it is included in the tidyverse package) ####
+# Load packages we will use
 library(tidyverse)
+library(carData)
+library(RColorBrewer)
+library(colorblindr)
 
-# Load the data we will work with (built-in to ggplot)
+
+# Load the first data set we will work with (built-in to ggplot)
 data("midwest", package = "ggplot2")
 
 # Intro to ggplot syntax
@@ -93,11 +98,9 @@ p3
 p3 + scale_color_brewer(palette = "Set1")
 
 # Want more color choices? You can check them out in the RColorBrewer package, or even make your own
-library(RColorBrewer)
 brewer.pal.info
 
 # Make your own and take a peek at it:
-library(colorblindr)
 pal = c("#c4a113","#c1593c","#643d91","#820616","#477887","#688e52",
         "#12aa91","#705f36","#8997b2","#753c2b","#3c3e44","#b3bf2d",
         "#82b2a4","#894e7d","#a17fc1","#262a8e","#abb5b5","#000000")

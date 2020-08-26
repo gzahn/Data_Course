@@ -1,0 +1,43 @@
+---
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_9
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Assignment 9**
+
+In this assignment, you will use R (within R-Studio) to:
+  
++ Load and clean a real data set
++ Conduct exploratory analyses, including informative figures
++ Build and test appropriate models
++ Draw conclusions about your data
++ Combine all of the above into a well-documented R-Markdown report and export (knit) it into an HTML file
+
+**All file paths should be relative, starting from *your* Assignment_9 directory!!**
+
+**This means that you need to create a new R-Project named "Assignment_9.Rproj" in your Assignment_9 directory, and work from scripts within that.**
+
+
+## **For credit...**
+
+1.  Push a completed version of your Rproj and R-markdown file (details at end of this assignment) to GitHub
+2.  Your score will also depend on your analyses and presentation of your final report
+
+____________
+
+# Your tasks:
+
++ Use the data set "/Data/GradSchool_Admissions.csv"
++ You will explore and model the predictors of graduate school admission
+  - the "admit" column is coded as 1=success and 0=failure
+  - the other columns are the GRE score, the GPA, and the rank of the undergraduate institution, where I is "top-tier."
++ Document your data explorations, figures, and conclusions in a reproducible R-markdown report
++ Upload your **self-contained** R project, including knitted HTML report, to GitHub in *your* Assignment_9 directory
+

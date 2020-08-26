@@ -1,11 +1,11 @@
 ---
-title: "Assignment_2"
-author: "gzahn"
-date: "December 9, 2018"
-output: pdf_document
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_2
 ---
 
-# **Assignment 2**
+# **Assignment 2 - Learning about file paths via the command line**
 
 In this assignment, you will use the command-line of your computer to:
 
@@ -16,9 +16,25 @@ In this assignment, you will use the command-line of your computer to:
 + Use the programs "wc" "ls" "sort" "uniq" "head" "tail" "find" "mkdir" 
 + Create a "for-loop" that combines all of the above skills to run an existing script on many files and summarize the output
 
-This assignment will be completed using the Shell terminal in the "Data_Course" directory.
+**We will cover the commands used here, along with file paths, during class**
 
-**All file paths should be relative, starting from the Assignment_2 directory!! (where you found this file)**
+___
+
+## First things first, if you haven't done this already...
+
+You need to clone another GitHub repository to your computer. This repository contains all the files (except exams) that we will use for the course. It has several subdirectories, lots of data files, exercises, etc. Most of these can be found on the course website as well, but I want you to have a local copy of everything on your own computer so you can get practice using the command line. 
+
+So, open your terminal and navigate to your Desktop. Then copy/paste the following line to clone our "Data_Course" repository.
+
+```{bash,include=TRUE,eval=FALSE}
+git clone https://github.com/gzahn/Data_Course.git
+```
+
+This assignment will be completed using the command line in this new "Data_Course" directory.
+
+**All file paths should be relative, starting from the main Data_Course directory**
+
+___
 
 ## **For credit...**
 
@@ -32,29 +48,29 @@ ____________
 
 ## Complete the following 6 tasks:
 
-1.  For each of the filenames that begin with "M" in the directory "../../Data/data-shell/data/pdb" list the number of lines in each file.
+1.  For each of the filenames that begin with "M" in the directory "./Data/data-shell/data/pdb" list the number of lines in each file.
 
 
 2.  Redirect the output from the previous task to a new file named "m_lines.txt" in
 
-    "../../../Data_Course_YOUR_LAST_NAME/Assignments/Assignment_2/"
+    "../Data_Course_YOURLASTNAME/Assignments/Assignment_2/"
 (note that all new files in your personal repository will be checked by the instructor...also, you will need to create that directory)
 
 
-3.  For the file "animals.txt" in "../../Data/data-shell/data/" get an alphabetical list of the unique animal types that were observed and redirect this list to a new file called "unique_animals.txt" in "../../../Data_Course_YOUR_LAST_NAME/Assignments/Assignment_2/"
+3.  For the file "animals.txt" in "./Data/data-shell/data/" get an alphabetical list of the unique animal types that were observed and redirect this list to a new file called "unique_animals.txt" in "../Data_Course_YOURLASTNAME/Assignments/Assignment_2/"
 
 
-4.  In the directory "../../Data/" there is a file named "BioLog_Plate_Data.csv"
-Write a command that gives a list of the unique carbon substrates the biolog plate measured, and which saves this list as a new file named "unique_C-substrates.txt" in "../../../Data_Course_YOUR_LAST_NAME/Assignments/Assignment_2/" 
+4.  In the directory "./Data/" there is a file named "BioLog_Plate_Data.csv"
+Write a command that gives a list of the unique carbon substrates the biolog plate measured, and which saves this list as a new file named "unique_C-substrates.txt" in "../Data_Course_YOURLASTNAME/Assignments/Assignment_2/" 
 
 
-5.  Write a command that finds the longest .txt file (by number of lines) in the directory "../../Data/data-shell/data/"
+5.  Write a command that finds the longest .txt file (by number of lines) in the directory "../Data/data-shell/data/"
 	
 	Hint: wc, sort, tail, head
 
 
-6. In the directory "../../Data/data-shell/many_files/" there are a large number of subdirectories. Buried annoyingly inside these subdirectories are some .txt files that all contain a list of numbers (one interger per line). 
-There is a shell script in the directory "../../Data/data-shell/scripts" called "sum_lines.sh"
+6. In the directory "../Data/data-shell/many_files/" there are a large number of subdirectories. Buried annoyingly inside these subdirectories are some .txt files that all contain a list of numbers (one interger per line). 
+There is a shell script in the directory "../Data/data-shell/scripts" called "sum_lines.sh"
 
 
   Your task is to run this script on **ALL** the .txt files buried within the "many_files/" directory to output the

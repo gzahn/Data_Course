@@ -1,8 +1,8 @@
 ---
-title: "Assignment_3"
-author: "gzahn"
-date: "December 9, 2018"
-output: pdf_document
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_3
 ---
 
 
@@ -10,12 +10,12 @@ output: pdf_document
 
 In this assignment you will:
 
-+ Complete the work we start in class by filling in the "Assignment_3" script
-+ Work with vectors and type conversions
-+ Begin to clean messy data with code
-+ Make simple scatterplots and export them to files
-+ Subset a raw data file and save the subset to a new data file
-+ Build data frames from scratch using vectors
++ Complete the work we start in class by filling in the [Assignment_3 R script](https://gzahn.github.io/data-course/Repository/Assignments/Assignment_3/Assignment_3.R){target="_blank"} 
+  + Work with vectors and type conversions
+  + Begin to clean messy data with code
+  + Make simple scatterplots and export them to files
+  + Subset a raw data file and save the subset to a new data file
+  + Build data frames from scratch using vectors
 
 __________
 
@@ -31,5 +31,5 @@ We will be using an R script called "Assignment_3.R"
 
 We will work through this script in class, pausing to understand what's going on at each point.
 
-**Some of the script is intentionally left blank. You will work with a partner to fill in the gaps.**
+**Some of the script is intentionally left blank. You will fill in the gaps as we go and finish it on your own.**
 
