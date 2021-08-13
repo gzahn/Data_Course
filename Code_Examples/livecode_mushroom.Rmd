@@ -1,0 +1,66 @@
+---
+title: "Mushroom Growth"
+author: "Zahn"
+date: "3/12/2020"
+output: html_document
+---
+
+
+### This experiement was one that I did during grad school when I was growing shrooms for the Farmers' Market.
+
+
+First step is to load data (code not shown)
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
+library(tidyverse)
+dat <- read_csv("../Data/mushroom_growth.csv")
+
+```
+
+Quick look at our data set:
+```{r}
+glimpse(dat)
+```
+
+
+### Here's a plot showing Nitrogen effect on two species of oyster mushrooms:
+```{r,echo = FALSE}
+ggplot(dat, aes(x=Nitrogen,y=GrowthRate,color=Species)) +
+  geom_point() + geom_smooth(method = "lm", formula = y ~ poly(x,3)) + theme_bw()
+
+```
+
+#### I'd like to model this, but include Light and Humidity, etc.
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+mod1 <- glm(data = dat, GrowthRate ~ (poly(Nitrogen,3) * Species) + Light + Humidity + Temperature)
+
+MASS::stepAIC(mod1)
+
+goodmodel <- glm(GrowthRate ~ poly(Nitrogen, 3) + Species + Light + 
+    Humidity + Temperature, data = dat)
+
+
+```
+
+
+#### Our best model wound up being:
+GrowthRate ~ poly(Nitrogen, 3) + Species + Light + 
+    Humidity + Temperature
+    
+```{r}
+summary(goodmodel)
+```
+
+
+#### Which combo of factors leads to highest growth rate???
+
+
+```{r}
+
+ggplot(dat,aes(x=Humidity,y=GrowthRate,fill=Species)) + geom_violin()
+```
+
+### For future projects, use *P. cornucopiae* at high humidity for best chance of fastest growth!
+___
+
+The end

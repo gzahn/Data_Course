@@ -1,0 +1,104 @@
+---
+title: "Untitled"
+author: "gzahn"
+date: "March 14, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
+```
+
+# This is an awesome way to make plots.
+
+```{r, echo=FALSE}
+library(tidyverse)
+
+# Data
+a <- data.frame( x=rnorm(20000, 10, 1.9), y=rnorm(20000, 10, 1.2) )
+b <- data.frame( x=rnorm(20000, 14.5, 1.9), y=rnorm(20000, 14.5, 1.9) )
+c <- data.frame( x=rnorm(20000, 9.5, 1.9), y=rnorm(20000, 15.5, 1.9) )
+data <- rbind(a,b,c)
+```
+
+### Basic scatterplot
+```{r, echo=FALSE}
+ggplot(data, aes(x=x, y=y) ) +
+  geom_point(alpha=.25)
+```
+
+### Density plot, instead
+```{r,echo=FALSE}
+ggplot(data, aes(x=x, y=y) ) +
+  geom_bin2d() +
+  theme_bw()
+```
+
+### Correlation plot
+This is a correlation plot, that looks at multiple variables at the same time. Making it easy to get started analyzing your data.
+
+```{r, echo=FALSE}
+# Data example
+data=mtcars[ , c(1,3:6)]
+
+#Make the plot
+plot(data , pch=20 , cex=1.5 , col=rgb(0.5, 0.8, 0.9, 0.7))
+```
+
+### This is a fancier version using the "car" package.
+It's *basically* the same thing, but let's us add color groupings automatically.
+
+```{r,echo=FALSE,fig.width=50,warning=FALSE}
+library(car)
+library(RColorBrewer)
+
+data=mtcars
+
+# Make the plot
+my_colors <- brewer.pal(nlevels(as.factor(data$cyl)), "Set2")
+scatterplotMatrix(~mpg+disp+drat|cyl, data=data , reg.line="" , 
+                  smoother="", col=my_colors , smoother.args=list(col="grey"), 
+                  cex=1.5 , pch=c(15,16,17) , main="Scatter plot with Three Cylinder Options")
+```
+
+
+
+
+### Density plot...
+... for when a histogram is too blah.
+
+```{r,echo=FALSE,warning=FALSE}
+ggplot(data, aes(x=mpg,fill=factor(am))) +
+  geom_density(alpha=.5)
+```
+
+
+# Testing the fancy animations
+
+```{r,echo=FALSE,warning=FALSE}
+library(gganimate)
+library(gapminder)
+data("gapminder")
+data = gapminder
+
+p1 = ggplot(data,aes(x=year,y=lifeExp,color=continent,frame=year)) +
+  geom_point() + geom_smooth()
+
+
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) +
+  # Here comes the gganimate specific bits
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', 
+       y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+```
+
+
+
+
+

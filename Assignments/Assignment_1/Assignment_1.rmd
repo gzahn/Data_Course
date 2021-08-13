@@ -1,18 +1,19 @@
 ---
-output:
-  pdf_document: default
-  html_document: default
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_1
 ---
-# **Assignment 1**
+
+# **Assignment 1 - Getting set up to use the command line and R**
 
 In this assignment, you will:
 
 + install the main programs we will use in the course
 
-+ download a local copy of all course materials to an updatable directory on your computer Desktop
-
 + create your own GitHub account and start a "repository" that is available for everyone to see
 
++ learn to "commit" and "push" changes on your local computer to your online GitHub repository
 
 ________________
 
@@ -25,7 +26,7 @@ https://cran.cnr.berkeley.edu/
 ---
 
 #### **Install R-Studio**
-Make sure you install R before installing R-Studio
+It's a good idea to install R before installing R-Studio
 https://www.rstudio.com/products/rstudio/download/#download
 
 ---
@@ -46,11 +47,15 @@ https://git-scm.com/download/linux
 
 ---
 
-#### **Copy course materials to your own computer**
+#### **Copy a test github repository to your own computer**
 
 Once you have Git installed, open it up (in Windows this will be a shortcut called "Git Bash", 
 in Mac or Linux, just open your terminal -that scary command prompt- and it will be working in the background)
-You will see a simple command line interface.
+You will see a simple command line interface that looks something like this:
+
+```{r, out.width = "600px",echo=FALSE}
+knitr::include_graphics("../../../media/CLI.png")
+```
 
 
 Navigate to your computer Desktop using the command-line. 
@@ -86,18 +91,16 @@ Once you're in your Desktop folder (you can check with "pwd")
 copy and paste the following into your terminal:
 
 ```{bash, eval=FALSE, include=TRUE}
-git clone https://github.com/gzahn/Data_Course.git
+git clone https://github.com/gzahn/test.git
 ```
 ---
 
-This will download a folder of files onto your computer. It will be found wherever you were when you 
-entered the previous command....so hopefully your Desktop. I'm having you put it there because we will 
-be accessing it a LOT during this course.
-This folder has all the stuff we will use in class. Code examples, data sets, assignments, readings, 
-even exams are found in this new directory 
+This will download a folder onto your computer. **It will be found wherever you were when you entered the previous command**....so hopefully your Desktop. 
+This new folder has only one file in it called "README.md"
 
-That takes care of the software installation and course materials. Now, you need to set up your own 
-GitHub account online.
+If you have it, that means you successfully "cloned" my online repository onto your local computer.  This "git clone WHATEVER_WEBSITE_ADDRESS" will be very useful to you in this class. It's how you will access other materials from my GitHub repositories, including exams!
+
+That takes care of the software installation and course materials. Now, you need to set up your own GitHub account online.
 
 ________________
 
@@ -106,29 +109,35 @@ ________________
 
 1.  Navigate online to https://github.com/ and sign up for a free account.
 Please choose a professional-sounding username. Don't sign up as "PukeMonster55" or anything like that.
-This GitHub account is a way for you to store version-controlled code and data. It's something that you 
-can put on your CV/Resume to demonstrate coding ability.
+This GitHub account is a way for you to store version-controlled code, data, and even your personal website that you will build by the end of the semester. It's something that you can put on your CV/Resume to demonstrate coding and data analysis ability.
 Save your password someplace safe. Don't give it to anyone, including me.
 
-2.  Create a new repository on your GitHub page called "Data_Course_YOUR-LAST-NAME" 
-(your last name, in all-caps, no spaces)
+**I made a short video walkthrough of the following steps here:** https://youtu.be/M9430_eGttI
+
+2.  Create a new repository on your GitHub page called "Data_Course_YOURLASTNAME" 
+(Not literally "YOURLASTNAME," but your actual last name, in all-caps, no spaces)
   + Look for the "+" in the very top-right of the web page
-  + Enter the name "Data_Course_YOUR_LAST_NAME" where prompted (last name in all-caps, no spaces)
+  + Enter the name "Data_Course_YOURLASTNAME" where prompted (last name in all-caps, no spaces)
   + Leave the "Public" option checked
   + Be sure to check the box "Initialize this repository with a README"
+  
+```{r, out.width = "600px",echo=FALSE}
+knitr::include_graphics("../../../media/newrepo.png")
+```
+  
 
 3.  Back in your terminal, navigate to your Desktop with the command-line again
 
-4.  Now clone the github page you created (The one called Data_Course_YOUR-LAST-NAME)
+4.  Now clone the github page you created (The one called Data_Course_YOURLASTNAME)
   + Hint: use the same "git clone" command as above, but modify the web address to your new GitHub repository 
     (Copy and paste from the web browser)
 	This will import the website repository onto your personal computer (as a git repository)
-  + You now have two folders on your desktop. One called "Data_Course" and one called "Data_Course_YOURLASTNAME"
-8.  Navigate into this new repository (The one called Data_Course_YOUR-LAST-NAME) and type the following commands in order:
+  + You now have two new folders on your desktop. One called "test" and one called "Data_Course_YOURLASTNAME"
+8.  Navigate into this new repository (The one called Data_Course_YOURLASTNAME) and type the following commands in order:
 
-    (actually, cut-paste is better than typing. Coders use CTRL-C / CTRL-V more than anything else!)
+    (actually, copy-paste is better than typing. Coders use CTRL-C / CTRL-V more than anything else!)
 
-    (What?! It's not pasting text into your terminal? Ah, use CTRL-SHIFT-V to paste into your terminal!)
+    (What?! It's not pasting text into your terminal? Ah, use CTRL-SHIFT-V or SHIFT-INS to paste into your terminal!)
 
 ```{bash, eval=FALSE, include=TRUE}
 echo "This README file contains information about my uploaded assignments" >> README.md
@@ -140,6 +149,7 @@ git push
 	This series of commands commits your changes (Adding that text to the README.md file) 
 	and pushes the changes back onto the website version
 
+* Note that by "navigate" I mean in your terminal using the "cd" command
 
 9. Check back on your GitHub page online...if you see that new text 
 ("This README file contains information about my uploaded assignments") then you are finished!
@@ -148,13 +158,17 @@ git push
 I'll click on that and see whether your README.md file is correct.
 
 **You now have a copy of all the current course materials along with your own personal repository**
-**This GitHub repository is where you should keep projects you're working on, notes, examples, data sets, etc.**
+**This GitHub repository is where you will keep projects you're working on, notes, examples, data sets, etc.**
 
 **Warning: I will be cloning all of your repositories onto my own computer to keep track of your course work**
 **So don't write hate mail about me in files in that directory.**
 
+11. To get *FULL* credit, I want you to make 10 separate changes to this README file and commit and push each one in turn. You can use a basic text editor to make additional changes if you like. Add whatever you want to it 10 times, saving and committing and pushing between each change.
+The point of this is that this workflow (save, add, commit, push) needs to be muscle memory for you as we progress in the course. Doing it 40 times is much better than 10 times, but 10 is all I am *requiring* at this point.
 
 #### We will discuss what is actually going on with all of this in class, but this is to test whether you can follow precise instructions and troubleshoot.
 
 
 #### **Don't be afraid to ask others/instructor/Google for help with this!**
+
+

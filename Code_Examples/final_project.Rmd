@@ -1,0 +1,84 @@
+---
+title: "Final Project"
+author: "gzahn"
+date: "April 4, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Script "01_clean_data.R" is for cleaning the raw data and making it tidy.
+
+```{r, include=FALSE}
+# Load packages ####
+library(tidyverse)
+
+# Load data ####
+dat = read.csv("./data/raw/BioLog_Plate_Data.csv")
+
+# Inspect data set ####
+glimpse(dat)
+levels(dat$Sample.ID)
+names(dat)
+
+# Data is in "wide" format - convert to long ####
+dat_long = gather(dat, key = Hour, value = Absorbance, c("Hr_24","Hr_48","Hr_144"))
+
+# Inspect "long" data
+glimpse(dat_long)
+unique(dat_long$Hour)
+
+# Convert "Hr_24" to 24, etc ####
+hours = plyr::mapvalues(dat_long$Hour, from = unique(dat_long$Hour), to = c(24,48,144))
+hours = as.numeric(hours)
+dat_long$Hour = hours
+
+# Add soil/water variable
+table(dat_long$Sample.ID) # 864 reps of each sample ID
+type = rep(c("Water","Soil","Soil","Water"), each = table(dat_long$Sample.ID)[1])
+dat_long$SampleType = type
+
+# Save cleaned data ####
+write.csv(dat_long, "./data/cleaned_BioLog_plate_data.csv", quote = FALSE, row.names = FALSE)
+```
+
+## Now that the data is clean, we can do some exploration...
+
+
+
+# Load packages ####
+library(tidyverse)
+
+# Load custom R function(s) ####
+source("./R/01_functions.R") 
+
+# Load cleaned data ####
+dat = read.csv("./data/cleaned_BioLog_plate_data.csv")
+
+# Explore data ####
+
+# Glimpse data 
+glimpse(dat)
+
+# Summary stats of absorbance by sample
+Site.Summary = dat %>%
+  group_by(Sample.ID) %>%
+  summarise(N=n(), Min.Abs = min(Absorbance), Mean.Abs = mean(Absorbance), Max.Abs = max(Absorbance))
+
+Site.Summary
+
+# Quick plot of absorbance values across all substrates
+ggplot(dat, aes(x=Absorbance)) +
+  geom_histogram() +
+  facet_grid(~Sample.ID) +
+  ggtitle("Distribution of Absorbance for All Substrates")
+
+# Which carbon substrates had highest absorbance in each sample type?
+maxwater = getmax.byType("Water")
+maxsoil = getmax.byType("Soil")
+
+dat[maxwater,"Substrate"] # water
+dat[maxsoil,"Substrate"] # soil

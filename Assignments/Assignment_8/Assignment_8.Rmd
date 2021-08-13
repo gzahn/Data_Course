@@ -1,0 +1,224 @@
+---
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_8
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Assignment 8**
+
+In this assignment, you will use R (within R-Studio) to load a data set and perform:
+
++ point estimates (e.g., mean())
++ interval estimates (e.g., confidence intervals)
++ Hypothesis testing / Model fitting (with linear models and ANOVA)
+
+
+**All file paths should be relative, starting from *your* Assignment_8 directory!!**
+
+**This means that you need to create a new R-Project named "Assignment_8.Rproj" in your Assignment_8 directory, and work from scripts within that.**
+
+
+## **For credit...**
+
+1.  Push a completed version of your Rproj and R-script (details at end of this assignment) to GitHub
+2.  Submit a plaintext file to Canvas answering the questions at the end of the assignment.
+
+____________
+
+
+# Your tasks:
+
+  + This has a lesson summary of modeling from what we discuss in class
+  + At the end of the document are instructions for what you need to do
+  + Essentially, you will be loading a new data set, finding the best model, and then making predictions
+  + Your R code should be readible and well-documented
+
+______________
+
+
+# Models
+
+### A statistical model is a simple (hopefully) equation that *explains* trends in your data
+### "In what way does variable Y (The response) depend on other variables (X1 .... Xn) in the study?
+### The model attempts to approximate this relationship
+
+
+### Decisions, decisions...
+
++ Which variable is your response?
++ Which variables are explanatory?
++ Are the explanatory variables continuous, categorical, or both?
+
+        1. All continuous: Regression
+        2. All categorial: ANOVA
+        3. Mix:            ANCoVA
+
+### Is the response variable continuous, a count, a proportion, a category????
+
++ Continuous:     Regression, ANOVA, ANCoVA
++ Catergorical:   ANOVA
++ Proportion:     Logistic regression
++ Count:          Log-Linear model
++ Binary:         Binary logistic
+
+Here's a handy website:   https://stats.idre.ucla.edu/other/mult-pkg/whatstat/
+
+
+_____________
+
+
+## What models look like in R (the very basics)
+
+**Y ~ X**                     This means "Y, is modeled as a function of X"
+
+**Y ~ X1 + X2**               This means "Y, is modeled as a function of X1 AND X2" (two explanatory variables)
+
+**Y ~ X1:X2**                 This means "Y, is modeled as a function of THE INTERACTION BETWEEN X1 AND X2 (only the interaction term)
+
+**Y ~ X1\*X2**                 This means "Y, is modeled as a function of X1 AND X2 AND THE INTERACTION BETWEEN X1 AND X2
+
+
+______________
+
+
+R comes with a large variety of models you can choose from. Other packages provide hundreds more. Or you could write you own, if you are some sort of maniac!
+
+The basic idea though, is to try to fit your data to a given model and then see how well it fits. If the fit is good, you can use that model to make meaningful (but not perfect) predictions.
+
+
+## Let's look at an example:
+
+____________
+
+### First, load some useful packages...
+```{r, eval=TRUE, include=TRUE, echo=TRUE, message=FALSE}
+library(modelr)
+library(broom)
+library(tidyverse)
+library(fitdistrplus)
+```
+
+### Next, load some data...
+```{r}
+data("mtcars")
+glimpse(mtcars)
+```
+
+### Our dependent variable is mpg (it's the thing we want to know about)
+### Any or all of the other independent variables might help explain why it varies between different cars
+### Let's try a simple linear model with displacement and horsepower as explanatory variables...
+```{r}
+mod1 = lm(mpg ~ disp, data = mtcars)
+summary(mod1)
+```
+
+### That's a lot of summary information about our model and it's kinda confusing.
+  + "Call" shows what model you ran
+  + "Residuals" are essentially measures of how well your actual data fit the model
+  + "Coefficients" can be thought of as the intercept and slope of the best-fit line
+
+If you want a deeper explanation, see this website: https://feliperego.github.io/blog/2015/10/23/Interpreting-Model-Output-In-R
+
+It may help to look at it visually...
+```{r}
+ggplot(mtcars, aes(x=disp,y=mpg)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme_minimal()
+```
+
+### On this figure:
+  + The Residuals are the average distance of each point from the best-fit line
+  + The Coefficient for displacement is the slope
+  
+### In other words, looking at our model summary tells us that this model predicts that for every increase in displacement of 1 cu.in. we can expect our fuel efficiency to drop by 0.04 mpg
+
+## Perhaps there's a better model in our data, however...
+Let's look at one that incorporates speed instead
+```{r}
+mod2 = lm(mpg ~ qsec, data = mtcars)
+ggplot(mtcars, aes(x=disp,y=qsec)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  theme_minimal()
+```
+
+## How to compare these two different models?
+
+First thing is that you can visually look at the scatter around each line. By this measure, it seems clear our second model is a poorer fit than the first.
+
+We can explicity measure that scatter.  We call this the mean-squared-error of a model.
+The smaller, the better, so compare the two values from our models...
+```{r}
+mean(mod1$residuals^2)
+mean(mod2$residuals^2)
+```
+
+____________
+
+## We'll abandon our second model for now because it sucks (relative to the first one) and look at how to make predictions using it.
+
+The add_predictions() function from the modelr package lets us take our data frame and our model and look at what values our model assigns to our response variable (mpg). This is looking at ACTUAL vs PREDICTED values.
+If they are close enough for comfort we can move on and make predictions for unknown values in our model.
+```{r}
+df <- mtcars %>% 
+  add_predictions(mod1) 
+df[,c("mpg","pred")] %>% head()
+```
+
+_____________
+
+We can also ask R to predict dependent values based on hypothetical independent values. Let's say we wanted to know what mpg our model "thinks" a car would have if it had an engine displacement of 500 cubic inches.  What about a 900 cubib inch engine? What does our model say about the mpg in such a car?
+
+```{r}
+# Make a new dataframe with the predictor values we want to assess
+# mod1 only has "disp" as a predictor so that's what we want to add here
+newdf = data.frame(disp = c(500,600,700,800,900)) # anything specified in the model needs to be here with exact matching column names
+
+# making predictions
+pred = predict(mod1, newdata = newdf)
+
+# combining hypothetical input data with hypothetical predictions into one new data frame
+hyp_preds <- data.frame(disp = newdf$disp,
+                        pred = pred)
+
+# Add new column showing whether a data point is real or hypothetical
+df$PredictionType <- "Real"
+hyp_preds$PredictionType <- "Hypothetical"
+
+# joining our real data and hypothetical data (with model predictions)
+fullpreds <- full_join(df,hyp_preds)
+
+# plot those predictions on our original graph
+ggplot(fullpreds,aes(x=disp,y=pred,color=PredictionType)) +
+  geom_point() +
+  geom_point(aes(y=mpg),color="Black") +
+  theme_minimal()
+```
+
+### Note a few things about our model's predictions (colored points).  They fall right on the prediction line, as expected... but some of them are negative! Can a car have negative mpg?
+
+____________
+
+# At last, your assignment!
+
+  + Make a new Rproj and Rscript in your personal Assignment_8 directory and work from there.
+  + Write a script that:
+    1.  loads the "/Data/mushroom_growth.csv" data set
+    2.  creates several plots exploring relationships between the response and predictors
+    3.  defines at least 2 models that explain the **dependent variable "GrowthRate"**
+        + One must be a lm() and 
+        + one must be an aov()
+    4.  calculates the mean sq. error of each model
+    5.  selects the best model you tried
+    6.  adds predictions based on new hypothetical values for the independent variables used in your model
+    7.  plots these predictions alongside the real data
+  + Upload responses to the following as a numbered plaintext document to Canvas:
+    1.  Are any of your predicted response values from your best model scientifically meaningless? Explain.
+    2.  In your plots, did you find any non-linear relationships?  Do a bit of research online and give a link to at least one resource explaining how to deal with modeling non-linear relationships in R.
+    3.  Write the code you would use to model the data found in "/Data/non_linear_relationship.csv" with a linear model (there are a few ways of doing this)
