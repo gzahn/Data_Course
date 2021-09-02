@@ -11,132 +11,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # **Assignment 4**
 
-In this assignment, you will use R (within R-Studio) to:
-
-+ Use several methods to load external data files into R
-+ Explore parameters available for customizing the way data is read from a file
-+ Use base R tools to view attributes of data sets
-+ Perform simple summary statistics
-+ Use the built-in visualization methods to quickly look at relationships in your data
-+ Demonstrate one method for saving visualizations to an image file
-
-**All file paths should be relative, starting from *your* Assignment_4 directory!!**
-
-**This means that you need to create a new R-Project named "Assignment_4.Rproj" in your Assignment_4 directory, and work from scripts within that.**
+In this assignment, you will describe your final project idea and data.
 
 
 ## **For credit...**
 
-1.  Push a completed version of your Rproj and R-script (details at end of this assignment) to GitHub
-2.  Your score will also depend on whether any files generated in this workflow are found in your repository
-3.  There are 7 questions scattered through this walkthrough. Upload a plaintext file with numbered answers to the **bolded** assignment questions to Canvas. This shows that you worked through the assignment and lets me know to pull a fresh copy of your GitHub repo to grade.
-
+1.  Push all files to your github repository under the Assignment_4/ directory (txt document, fake data, example plot)
+2.  Upload your txt file (tasks 1-3) to Canvas
 
 ____________
 
 
-It would be terribly inconvenient if R made us manually enter our data. Thankfully, there are dozens (hundreds?)
-of ways that we can read external data into R for analysis.  Most of the time the data we want to analyze comes
-in the form of an Excel spreadsheet.  There are special ways to import Excel spreadsheets directly, but typically
-we don't want to store our data as .xlsx because it's a large bloated file format. People who work with data in
-"rectangular" format (like a spreadsheet) often use a form called "comma-separated-values," or .csv
+### Tasks:
 
+1.    Create a plaintext document named "final_project_idea.txt"
 
-We will use the built-in function read.table() to load some data.
+2.    In it, describe your idea for a data analysis final project
 
-```{r, echo=TRUE}
-?read.table() #This brings up the help file
-df <-  read.csv("../../Data/landdata-states.csv") # why did I change to read.csv ???
-class(df) # what type of object is df?
-head(df) # shows the first 6 elements of an object (first 6 rows if you give it a data frame)
-```
+3.    Also, Describe the sort of data you will use, potential sources, and what the data might look like
 
+4.    (If you already have data, skip this task) Create fake data that simulates what your final project data set might look like. Preferrably a csv file
 
-Now, we have a data frame loaded into R and stored as an object called "df."
-If you open that same file with a plain text editor you'd see a bunch of values separated by commas.
-The read.csv() function is a convenient way to tell R that those commas separate different values and each "\\n" (newline) character means a new row. It automatically treats the first row as column headers.  
-
-**Questions:**
-
-  + **1. What other stuff does read.csv() do automatically?**
-  + **2. How is it different from read.csv2()?**
-  + **3. Why does read.csv2() even exist?**
-
-
-Now, I notice that each column in this data frame has its own class. Let's look at a couple
-```{r, echo=TRUE}
-class(df$State)
-class(df$Date)
-```
-
-**Questions:**
-
-  + **4. How could I change the parameters of read.csv() to make it so the class of the "State" column is "character" instead of "factor?"**
-
-____________
-
-
-Now, let's explore this data set a bit with basic descriptive stats...
-
-```{r, echo=TRUE}
-dim(df) # dimensions of the data frame (rows, columns)
-str(df) # another nice way to glimpse a data frame
-summary(df) # summary() works differently for different data classes. Note how it summarizes factors vs numerics
-```
-
-**Questions:**
-
-  + **5. What command would give the summary stats for ONLY the Home.Value column?**
-  + **6. What value is returned by the command: names(df)[4]  ?**
-  
-____________
-
-
-We can do some very basic visualizations of our data as well. In many cases, a good image is much more descriptive than a boring table of summary statistics...
-
-```{r, echo=TRUE}
-hist(df$Land.Value) # histogram showing number of times each numeric value was seen in the vector "Land.Value"
-
-# If you want to look at land value by region, you could do this:
-plot(x=df$region,y=df$Land.Value)
-
-# Land value by year
-plot(x=df$Year,y=df$Land.Value)
-```
-
-Note that the plot() function automatically tries to determine the best type of plot for your data based on the classes of vectors that you give it.
-
-**Questions:**
-
-  + **7. What is happening when you add (...col=df\$region) to the above plotting code?**  
-  **In other words, what happens when you run: plot(x=df\$Year,y=df\$Land.Value,col=df\$region)**
-  
-_______________
-
-# Now, for the rest of the assignment...
-
-1.  Create a new R script as part of your Assignment 4 R-project. Name it "Assignment_4.R"
-2.  That script should do the following:
-    + Read in the file: "/Data/ITS_mapping.csv" (filepath starts in *your* Data_Course main directory)  ...good luck with that, hahaha!
-    + Somehow summarize all of the columns and do a bit of additional exploration (play with some functions)
-    + Make a boxplot where "Ecosystem" is on the x-axis and "Lat" is on the y-axis
-    + Write code to export this boxplot to a new file in your Assignment_4 directory called "silly_boxplot.png"
-      Hints on below ...
-3.  Make sure to save your completed script and Rproject and make sure your png file is saved correctly
-4.  Push all these saved changes and new files onto your GitHub repository so I can grade them
-5.  Don't forget the plaintext file with answers to bolded questions needs to go to Canvas as well!      
-
-_____________
-
-
-To use the base R method to save a plot to an image file, you just wrap your code for the image between two commands.
-
-```{r, eval=FALSE, include=TRUE}
-png(filename = "./silly_boxplot.png")
-#whatevercodeyoucameupwithforyourplot
-dev.off()
-```
-
-The png() function has lots of options you can tweak, but it opens a "graphics device" that starts collecting any output from R into a .png image file.
-
-The dev.off() function just closes the graphics device and writes the previous input to the file you specified.
+5.    Generate a plot (using ggplot) using either your real or fake data that shows at least one expected result

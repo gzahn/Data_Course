@@ -13,9 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this assignment, you will use R (within R-Studio) to load a data set and perform:
 
-+ point estimates (e.g., mean())
-+ interval estimates (e.g., confidence intervals)
 + Hypothesis testing / Model fitting (with linear models and ANOVA)
++ Model comparisons and selection
++ Model interpretation
++ Model predictions
 
 
 **All file paths should be relative, starting from *your* Assignment_8 directory!!**
@@ -46,6 +47,7 @@ ______________
 ### A statistical model is a simple (hopefully) equation that *explains* trends in your data
 ### "In what way does variable Y (The response) depend on other variables (X1 .... Xn) in the study?
 ### The model attempts to approximate this relationship
+### Statistical modeling is a very complex topic so we are just scratching the surface
 
 
 ### Decisions, decisions...
@@ -98,6 +100,7 @@ ____________
 ### First, load some useful packages...
 ```{r, eval=TRUE, include=TRUE, echo=TRUE, message=FALSE}
 library(modelr)
+library(easystats)
 library(broom)
 library(tidyverse)
 library(fitdistrplus)
@@ -133,8 +136,8 @@ ggplot(mtcars, aes(x=disp,y=mpg)) +
 ```
 
 ### On this figure:
-  + The Residuals are the average distance of each point from the best-fit line
-  + The Coefficient for displacement is the slope
+  + The Residuals are the distances of each point from the best-fit line
+  + The Coefficient for displacement is the slope of that line
   
 ### In other words, looking at our model summary tells us that this model predicts that for every increase in displacement of 1 cu.in. we can expect our fuel efficiency to drop by 0.04 mpg
 
@@ -161,19 +164,20 @@ mean(mod2$residuals^2)
 
 ____________
 
-## We'll abandon our second model for now because it sucks (relative to the first one) and look at how to make predictions using it.
+## We'll abandon our second model for now because it sucks (relative to the first one) and look at how to make predictions using mod1.
 
 The add_predictions() function from the modelr package lets us take our data frame and our model and look at what values our model assigns to our response variable (mpg). This is looking at ACTUAL vs PREDICTED values.
 If they are close enough for comfort we can move on and make predictions for unknown values in our model.
 ```{r}
 df <- mtcars %>% 
   add_predictions(mod1) 
-df[,c("mpg","pred")] %>% head()
+df %>% dplyr::select("mpg","pred")
+
 ```
 
 _____________
 
-We can also ask R to predict dependent values based on hypothetical independent values. Let's say we wanted to know what mpg our model "thinks" a car would have if it had an engine displacement of 500 cubic inches.  What about a 900 cubib inch engine? What does our model say about the mpg in such a car?
+We can also ask R to predict dependent values based on hypothetical independent values. Let's say we wanted to know what mpg our model "thinks" a car would have if it had an engine displacement of 500 cubic inches.  What about a 900 cubic inch engine? What does our model say about the mpg in such a car?
 
 ```{r}
 # Make a new dataframe with the predictor values we want to assess
@@ -201,8 +205,51 @@ ggplot(fullpreds,aes(x=disp,y=pred,color=PredictionType)) +
   theme_minimal()
 ```
 
-### Note a few things about our model's predictions (colored points).  They fall right on the prediction line, as expected... but some of them are negative! Can a car have negative mpg?
+### Note a few things about our model's predictions (colored points).  They fall right on the prediction line, as expected... but some of them are negative! Can a car have negative mpg?!
 
+
+### So, even a model that is good at explaining things within the bounds of your existing data might lose all relevance when you extrapolate out to hypothetical situations.
+
+
+One more thing for now is how we can compare predictions from several models simultaneously...
+
+```{r, message=FALSE, warning=FALSE}
+# Define a 3rd model
+mod3 <- glm(data=mtcars,
+            formula = mpg ~ hp + disp + factor(am) + qsec)
+
+# put all models into a list
+mods <- list(mod1=mod1,mod2=mod2,mod3=mod3)
+# apply "performance" function on all in the list and combine 
+map(mods,performance) %>% reduce(full_join)
+
+# gather residuals from all 3 models
+mtcars %>% 
+  gather_residuals(mod1,mod2,mod3) %>% 
+  ggplot(aes(x=model,y=resid,fill=model)) +
+  geom_boxplot(alpha=.5) +
+  geom_point() + 
+  theme_minimal()
+
+# gather predictions from all 3 models
+mtcars %>% 
+  gather_predictions(mod1,mod2,mod3) %>% 
+  ggplot(aes(x=disp,y=mpg)) +
+  geom_point(size=3) +
+  geom_point(aes(y=pred,color=model)) +
+  geom_smooth(aes(y=pred,color=model)) +
+  theme_minimal() +
+  annotate("text",x=250,y=32,label=mod1$call) +
+  annotate("text",x=250,y=30,label=mod2$call) +
+  annotate("text",x=250,y=28,label=mod3$call)
+
+```
+
+To me, I think that the 3rd model is the best of these 3. There's probably a better model out there, but this one is a good fit and useful for understanding mpg. There's an easy way to help put the model into interpretable English:
+
+```{r}
+report(mod3)
+```
 ____________
 
 # At last, your assignment!
@@ -211,9 +258,7 @@ ____________
   + Write a script that:
     1.  loads the "/Data/mushroom_growth.csv" data set
     2.  creates several plots exploring relationships between the response and predictors
-    3.  defines at least 2 models that explain the **dependent variable "GrowthRate"**
-        + One must be a lm() and 
-        + one must be an aov()
+    3.  defines at least 4 models that explain the **dependent variable "GrowthRate"**
     4.  calculates the mean sq. error of each model
     5.  selects the best model you tried
     6.  adds predictions based on new hypothetical values for the independent variables used in your model

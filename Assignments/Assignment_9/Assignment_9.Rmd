@@ -36,8 +36,9 @@ ____________
 
 + Use the data set "/Data/GradSchool_Admissions.csv"
 + You will explore and model the predictors of graduate school admission
-  - the "admit" column is coded as 1=success and 0=failure
+  - the "admit" column is coded as 1=success and 0=failure (that's binary, so model appropriately)
   - the other columns are the GRE score, the GPA, and the rank of the undergraduate institution, where I is "top-tier."
 + Document your data explorations, figures, and conclusions in a reproducible R-markdown report
++ That means I want to see, in your html report, your process of model evaluation and selection. Here's an [example](https://gzahn.github.io/data-course/Repository/Assignments/Assignment_9/example.html){target="_blank"}
 + Upload your **self-contained** R project, including knitted HTML report, to GitHub in *your* Assignment_9 directory
 

@@ -1,0 +1,230 @@
+---
+output: 
+html_document:
+  number_sections=TRUE
+pagetitle: Assignment_10
+---
+
+# **Assignment 10 - Working with genetic data in R**
+
+In this assignment, you will:
+
++ Learn a couple of packages for working with sequence data
+
++ Learn how to import, manipulate, and export genetic data
+
++ Align DNA and build phylogenetic trees
+
+
+________________
+
+
+## The CRAN packages we will use include:
+ 
+ + bioseq (gives dedicated DNA, RNA, and AA vector classes ... works with tidyverse!)
+ + ape (Analysis of Phylogenetics and Evolution)
+ + msa (Multiple Sequence Alignment)
+ + phangorn (for building and refining phylogenetic trees) 
+
+These can all be installed with install.packages()
+
+# Assignment:
+
+**All of this should be done in an Rmd file and knitted to html to turn in**
+
+**1. Go through the brief tutorial below** (this just barely scratches the surface of how to work with DNA sequences in R)
+
+**2. Read in "Homework_1.fasta" and "Homework_2.fasta"**
+
+**3. Combine those files into one**
+
+**4. Build a simple Neighbor-Joining tree of all those sequences**
+
+**5. Build a similar tree out of the reverse-compliments of all those sequences and compare**
+
+___
+
+### Load our packages 
+```{r, message=FALSE,warning=FALSE}
+library(bioseq)
+library(ape)
+library(msa)
+library(phangorn)
+library(tidyverse)
+library(Biostrings)
+```
+ 
+ 
+
+### Read in a fasta file 
+```{r}
+seqs <- read_fasta("./bacteria_16S.fasta")
+seqs[1:3] # take a quick look at them (just the first 3 for now)
+```
+ 
+___
+
+### Handy manipulations
+
+##### Complement
+```{r}
+compl <- seq_complement(seqs[1:3])
+compl
+```
+
+##### Reverse-Compliment
+```{r}
+seq_reverse(compl)
+```
+
+##### Transcribe to RNA
+```{r}
+seqs_rna <- seq_transcribe(seqs[1:3])
+seqs_rna
+```
+
+##### Translate RNA to AA
+```{r}
+seq_translate(seqs_rna)
+```
+
+### Pattern matching
+
+##### Using 'regular expressions'
+```{r}
+seqs[seq_detect_pattern(seqs,"AAAAA")] # show all seqs that have "AAAAA" anywhere
+seqs[seq_detect_pattern(seqs,"^AAT")] # show all seqs that START WITH "AAT"
+```
+
+##### Using biological sequences instead of just "character strings" is safer
+```{r}
+pattern <- dna("ACTWYC") #IUPAC symbols allowed
+seq_disambiguate_IUPAC(pattern)
+```
+
+```{r}
+seqs[seq_detect_pattern(seqs,pattern)] %>% head(3)
+```
+
+___
+
+### Let's build a tree!
+
+1. Align DNA sequences
+2. Build distance matrix from alignment
+3. Calculate tree
+4. Plot it
+
+```{r}
+# align the sequences
+seqs_set <- DNAStringSet(seqs) # convert for the alignment step
+# make names shorter
+splits <- names(seqs_set) %>% str_split(";")
+splits <- map(splits,`length<-`,7) # back-fill to make sure all elements have length of 7
+family <- splits %>% map_chr(5)
+genus <- splits %>% map_chr(6)
+names(seqs_set) <- paste(family,genus)
+
+# remove seqs that dont have genus assignment
+good_taxa <- names(seqs_set) %>% grep(pattern = "NA| $",invert = TRUE)
+seqs_set <- seqs_set[good_taxa]
+
+# align using msa package
+alignment <- msa(seqs_set,method = "Muscle") # this can take a few minutes
+alignment
+```
+
+```{r, fig.height=10,fig.width=10}
+dist <- dist.dna(as.DNAbin(alignment)) # make a simple distance matrix based on DNA position differences (has to be in DNAbin format)
+NJ <- bionj(dist) # calculate simple neighbor-joining tree
+plot(NJ)
+```
+
+___
+
+### Turn in:
+
+**1. Upload your rmd and html to your GitHub repository under "Assignment_10" directory**
+
+**2. On Canvas, upload a png image file showing your second tree plot so I know your GitHub repo is ready for grading**
+
+
+___
+
+
+# Bonus stuff:
+
+##### Condense tree tips based on phylogeny (group species together into single tips)
+```{r}
+
+seqs_chr <- seqs_set %>% as.character()
+seq_df <- data.frame(sequence=dna(seqs_chr),label=names(seqs_chr))
+seq_glom <- seq_df %>% group_by(label) %>%
+  summarize(taxa_group = paste(label, collapse = "/"),
+            consensus_seq = seq_consensus(dna(sequence)))
+```
+
+##### rebuild tree with condensed taxa
+```{r}
+names(seq_glom$consensus_seq) <- seq_glom$taxa_group
+alignment2 <- seq_glom$consensus_seq %>%
+  DNAStringSet(use.names = TRUE) %>%
+  msa(method="Muscle")
+```
+
+```{r}
+pd <- as.phyDat(alignment2) # convert alignment to phyDat (noticing a pattern of how each package has its own formats?)
+dm  <- dist.ml(pd) # maximum likelihood distance matrix
+treeUPGMA  <- upgma(dm) # build UPGMA tree
+treeNJ  <- NJ(dm) # build alternative Neighbor-Joining tree like before
+```
+
+Quick look at those trees
+```{r,fig.width=10}
+plot(treeNJ)
+```
+
+```{r,fig.width=10}
+plot(treeUPGMA)
+```
+
+**Find alternate tree with lower parsimony by randomly rearranging tips**
+```{r,fig.width=10}
+treePars  <- optim.parsimony(treeUPGMA, pd)
+plot(treePars)
+```
+
+**Using Maximum Likelihood**
+```{r}
+fit = pml(treeNJ, data=pd)
+fitJC  <- optim.pml(fit, TRUE) # Optimize fit to Jukes-Cantor substitution model
+```
+
+**Bootstrap analysis**
+```{r, message=FALSE, warning=FALSE}
+bs = bootstrap.pml(fitJC, bs=100, optNni=TRUE, control = pml.control(trace = 0)) # this takes a bit of time
+# It's rebuilding the tree 100 times and seeing how many times each node is returned in those stochastic simulations
+```
+
+**Bootstrap values show what percentage of times that node was resolved... i.e., how confident are we in that relationship**
+```{r,fig.width=10,fig.height=8}
+plotBS(midpoint(fitJC$tree), bs, p = 50, type="p")
+```
+
+##### Other 'ape' functions:
+
+```{r}
+# Image of alignment profile
+ape::image.DNAbin(as.DNAbin(alignment))
+```
+
+```{r}
+# Number of new lineages over evolutionary time
+ape::ltt.plot(NJ)
+```
+
+```{r, fig.width=10}
+# zoom in on section of tree by passing it the tips of interest
+ape::zoom(NJ, c(1:3))
+```
+

@@ -21,7 +21,7 @@ ________________
 
 #### **Install R**
 Use the following link to download R for your particular computer system:
-https://cran.cnr.berkeley.edu/
+https://cran.r-project.org/
 
 ---
 
@@ -91,12 +91,12 @@ Once you're in your Desktop folder (you can check with "pwd")
 copy and paste the following into your terminal:
 
 ```{bash, eval=FALSE, include=TRUE}
-git clone https://github.com/gzahn/test.git
+git clone https://github.com/gzahn/Data_Course.git
 ```
+
 ---
 
 This will download a folder onto your computer. **It will be found wherever you were when you entered the previous command**....so hopefully your Desktop. 
-This new folder has only one file in it called "README.md"
 
 If you have it, that means you successfully "cloned" my online repository onto your local computer.  This "git clone WHATEVER_WEBSITE_ADDRESS" will be very useful to you in this class. It's how you will access other materials from my GitHub repositories, including exams!
 
@@ -108,7 +108,8 @@ ________________
 ## Your GitHub account
 
 1.  Navigate online to https://github.com/ and sign up for a free account.
-Please choose a professional-sounding username. Don't sign up as "PukeMonster55" or anything like that.
+Please choose a professional-sounding username. Don't sign up as "PukeMonster55" or anything like that, because this username will be part of your personal website.
+
 This GitHub account is a way for you to store version-controlled code, data, and even your personal website that you will build by the end of the semester. It's something that you can put on your CV/Resume to demonstrate coding and data analysis ability.
 Save your password someplace safe. Don't give it to anyone, including me.
 
@@ -124,9 +125,34 @@ Save your password someplace safe. Don't give it to anyone, including me.
 ```{r, out.width = "600px",echo=FALSE}
 knitr::include_graphics("../../../media/newrepo.png")
 ```
-  
 
-3.  Back in your terminal, navigate to your Desktop with the command-line again
+See [these instructions](https://usethis.r-lib.org/articles/articles/git-credentials.html){target="_blank"} for setting up 2-factor authentication for RStudio.
+  
+Enable [two-factor authentication](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication){target="_blank"}
+
+Use the LastPass App for your phone, give it your phone number as a backup, and save your account recovery codes somewhere very safe (gmail draft message?)
+
+**You will need to [create a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){target="_blank"} to use GitHub from the command line**
+
+Copy your token and paste it into a text document. To set it as an "environment variable" enter the following in your command-line terminal, replacing TOKEN with the actual token you received online and YOUR_GITHUB_USERNAME with your username (keep all quotes as-is):
+
+        echo 'export GIT_PASSWORD="TOKEN"' >> ~/.bashrc
+        
+        echo 'export GIT_USERNAME="YOUR_GITHUB_USERNAME"' >> ~/.bashrc
+        
+        exec bash
+        
+
+You can now type the following to see/copy your command-line GitHub token:
+
+        echo $GIT_PASSWORD
+
+To get these to be automatically entered when you use git from the command-line or Rstudio, check out [this website](https://alanedwardes.com/blog/posts/git-username-password-environment-variables/){target="_blank"}
+
+
+You will have to add the file that you create with those instructions to the git config for each new repository.
+
+3.  In your terminal, navigate to your Desktop with the command-line again
 
 4.  Now clone the github page you created (The one called Data_Course_YOURLASTNAME)
   + Hint: use the same "git clone" command as above, but modify the web address to your new GitHub repository 

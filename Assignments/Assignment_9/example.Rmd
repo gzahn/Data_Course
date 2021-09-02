@@ -1,0 +1,223 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Example model exploration and interpretation (for assignment 9)
+
+
+I will be looking at the *Palmer Penguins* dataset from the *palmerpenguins* package.
+
+Some setup, first:
+
+```{r message=FALSE,warning=FALSE}
+library(tidyverse)
+library(modelr)
+library(easystats)
+library(palmerpenguins)
+library(GGally)
+```
+
+Now, a quick glance at the data structure:
+
+```{r message=FALSE,warning=FALSE,fig.align='center'}
+glimpse(penguins)
+penguins %>% 
+  select(species,body_mass_g,sex) %>% 
+  ggpairs()
+
+```
+
+I'll focus on modeling body mass of these penguins. From the *ggpairs* plot above, it seems likely that **species** and **sex** have significant effects, but I will explore other ways of accurately predicting body mass as well.
+
+
+Let's take a look at the distribution of body mass amongst these various penguin groups:
+
+```{r warning=FALSE,message=FALSE}
+penguins %>% 
+  ggplot(aes(x=body_mass_g,fill=sex)) +
+  geom_density(alpha=.5) +
+  facet_grid(island~species) +
+  theme_minimal()
+
+# quick test of normality
+ggpubr::ggqqplot(penguins$body_mass_g)
+```
+Looks good enough for me!
+
+_____
+
+
+First I'll define a few potential models with varying complexity:
+
+```{r message=FALSE,warning=FALSE}
+names(penguins)
+mod1 <- glm(data=penguins,
+            formula=body_mass_g ~ species + sex)
+
+mod2 <- glm(data=penguins,
+            formula=body_mass_g ~ species * sex)
+
+mod3 <- glm(data=penguins,
+            formula=body_mass_g ~ species * sex * island)
+
+mod4 <- glm(data=penguins,
+            formula=body_mass_g ~ species * sex * island + year)
+
+full_mod <- glm(data=penguins,
+            formula=body_mass_g ~ species * sex * island * year * flipper_length_mm * bill_length_mm * bill_depth_mm)
+```
+
+Next, I'm going to take that overly complex *full_mod* and see if I can winnow it down using stewise AIC:
+
+```{r message=FALSE, warning=FALSE}
+step <- MASS::stepAIC(full_mod,trace=0) # trace=0 suppresses lengthy output to console
+mod5 <- glm(data=penguins,
+            formula=step$formula) # use that AIC-selected model as mod5 (it's too big to print here)
+```
+
+Now, I'll compare the performance of each of these models using the *performance* package:
+
+```{r message=FALSE,warning=FALSE}
+comps <- compare_performance(mod1,mod2,mod3,mod4,mod5,
+                    rank=TRUE)
+comps
+
+# and a plot of that table
+comps %>% plot()
+```
+
+It sure looks like the complex mod5 outperforms the other models I tried. I have my worries that it's overfitting though, because the formula is so cluttered. Perhaps I'll try a scaled-back version of that model without so many interaction terms:
+
+
+
+```{r message=FALSE,warning=FALSE}
+names(penguins)
+mod6 <- glm(data=penguins,
+            formula = body_mass_g ~ (species * sex * island) + bill_length_mm + bill_depth_mm + flipper_length_mm + year)
+  
+compare_performance(mod1,mod2,mod3,mod4,mod5,mod6,
+                    rank=TRUE)
+
+```
+Though mod6 doesn't do a good of a job fitting the data, I feel better about it due to it's simplicity and flexibility in comparison to mod5. If you want to see the mod5 formula, I'm including it at the end of the document.
+
+
+Let's take a look at predictions:
+
+```{r message=FALSE,warning=FALSE}
+penguins %>% 
+  gather_predictions(mod1,mod2,mod3,mod4,mod5,mod6) %>% 
+  ggplot(aes(x=body_mass_g,y=pred,color=model)) +
+  geom_segment(aes(x=0,y=0,xend=6000,yend=6000),linetype=2, color="black",alpha=.5) +
+  geom_smooth(method = "lm",se=FALSE) +
+  facet_wrap(~species) +
+  theme_minimal() +
+  scale_color_viridis_d() +
+  labs(title = "Predictions vs observations",
+       subtitle = "dashed line indicates perfect overlap between observed values and model predictions")
+```
+<br><br><br><br>
+
+Looking at this plot, I see that mod5 is doing a *really* good job of making predictions within this data set. But I want to test it and mod6 in a cross-validation framework to see how it performs when it can't "see" the whole data set. Here, I will split the penguins data into a training and testing set, randomly.
+
+
+```{r message=FALSE,warning=FALSE}
+set.seed(123)
+training_samples <- caret::createDataPartition(seq_along(penguins$body_mass_g),
+                           p=.8)
+train_data <- penguins[training_samples$Resample1,]
+test_data <- penguins[-training_samples$Resample1,] # all rows not in training_samples
+```
+
+
+Re-training my models:
+
+```{r message=FALSE,warning=FALSE}
+mod5_formula <- mod5$formula
+mod6_formula <- mod6$formula
+
+mod5 <- glm(data=train_data,
+            formula = mod5_formula)
+
+mod6 <- glm(data=train_data,
+            formula = mod6_formula)
+
+```
+
+Now, testing their predictive ability against the test data set:
+
+```{r message=FALSE,warning=FALSE}
+
+gather_predictions(test_data, mod5, mod6) %>% 
+  ggplot(aes(x=body_mass_g,y=pred,color=model)) +
+  geom_segment(aes(x=0,y=0,xend=6000,yend=6000),linetype=2, color="black",alpha=.5) +
+  geom_smooth(method = "lm",se=FALSE) +
+  facet_wrap(~species,scales = "free") +
+  theme_minimal() +
+  scale_color_viridis_d() +
+  labs(title = "Predictions vs observations",
+       subtitle = "dashed line indicates perfect overlap between observed values and model predictions")
+
+```
+
+Okay, mod5 failed spectacularly for the Adelie penguins. So badly, it's throwing off the scale and predicting some penguins to be heavier than the largest blue whales. I'm definitely going with mod6. This is a common problem when dealing with models that are *overfit* to a data set! Once they're free to predict outside of their training, they look really stupid.
+
+Here's the model summary info for mod6, explaining body mass of these penguins:
+
+```{r message=FALSE,warning=FALSE}
+mod6 %>% model_parameters()
+
+```
+Takeaway messages:
+
+  1. Being a Gentoo penguin means you're probably 869 g heavier than an equivalent Adelie
+  2. Being male adds an expected 446 g to body mass
+  3. Increase of 1 mm bill length adds an expected 23 g body mass
+  4. Increase of 1 mm bill depth adds 65 g of expected body mass
+  5. Each increase in 1 mm flipper length is expected to indicate an additional 18 g of body mass
+  6. If you're a male Chinstrap penguin, go ahead and knock off 375 g of expected body mass
+  7. Each additional year in this series subtracts 48 g of expected body mass
+  8. If we know the year and your flipper length, bill length and depth, sex, and species, we can make a decent guess as to your body mass
+
+
+
+____
+
+One more thing, for a bonus... I'll take a look at dimensional reduction (NMDS) to see if we can find the same pattern from our model from another direction (for more confirmation of important parameters)
+
+```{r message=FALSE, warning=FALSE}
+
+NMDS_data <- penguins %>% 
+  select(bill_length_mm,bill_depth_mm,flipper_length_mm)
+comp_cases <- complete.cases(NMDS_data)
+
+NMDS_data <- NMDS_data[comp_cases,]
+
+MDS <- vegan::metaMDS(comm=NMDS_data,distance = "bray",autotransform = TRUE,k = 2,trace=0)
+
+penguins[comp_cases,] %>% 
+  mutate(MDS1=MDS$points[,1],
+         MDS2=MDS$points[,2]) %>% 
+  ggplot(aes(x=MDS1,y=MDS2,color=body_mass_g)) +
+  geom_point() +
+  scale_color_viridis_c() +
+  theme_minimal() + 
+  facet_wrap(~species)
+```
+
+The color scheme relates to body mass, the location in the plot relates to overall composition of bill_length_mm, bill_depth_mm, and flipper_length_mm. Again, we see that those characteristics, combined with species identity, are important for predicting body mass.
+
+_____
+
+_____
+
+
+### Just for fun, here's the horribly overfit mod5 formula:
+
+```{r message=FALSE,warning=FALSE}
+mod5$formula
+```

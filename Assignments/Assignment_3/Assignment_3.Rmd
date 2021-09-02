@@ -12,18 +12,19 @@ In this assignment you will:
 
 + Complete the work we start in class by filling in the [Assignment_3 R script](https://gzahn.github.io/data-course/Repository/Assignments/Assignment_3/Assignment_3.R){target="_blank"} 
   + Work with vectors and type conversions
-  + Begin to clean messy data with code
-  + Make simple scatterplots and export them to files
-  + Subset a raw data file and save the subset to a new data file
-  + Build data frames from scratch using vectors
+  + Perform simple summaries of numeric data
+  + Logical evaluations
+  + Subsetting
 
 __________
 
 
 ## **For credit ...**
 
-1.  Upload a completed version of the "Assignment_3.R" file to Canvas
-2.  Push that same completed file to your GitHub repository along with any generated files
+1.  Copy the numbered section (including your code) into a txt file and upload it to Canvas
+2.  Push that same complete file to your GitHub repository
+
+I should be able to pull your GitHub repo and see your updated Assignment_3.R file, and also see the answers to the last section in Canvas.
 
 __________
 

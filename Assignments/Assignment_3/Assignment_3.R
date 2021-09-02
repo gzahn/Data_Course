@@ -26,7 +26,7 @@ letters # built-in pre-made vector of a - z
 
 vector1 <- c(1,2,3,4,5,6,7,8,9,10)
 vector2 <- c(5,6,7,8,4,3,2,1,3,10)
-vector3 <- letters
+vector3 <- letters # letters and LETTERS are built-in vectors
 
 vector1 + 5
 vector2 / 2
@@ -34,6 +34,17 @@ vector1*vector2
 
 vector3 + 1 # can't add 1 to "a"
 
+
+# Logical expressions (pay attention to these...they are used ALL THE TIME)
+vector1 > 3
+vector1 >= 3
+vector1 < 5
+vector1 <= 5
+vector1 == 7
+letters == "a"
+letters != "c"
+letters %in% c("a","b","c","z")
+vector1 %in% 1:6
 
 
 # Data Frames ####
@@ -56,6 +67,7 @@ names(dat)
 dim(dat)
 head(dat)
 
+
 # You can access specific columns of a "data frame" by name using '$'
 dat$Species
 dat$Sepal.Length
@@ -63,6 +75,11 @@ dat$Sepal.Length
 # You can also use square brackets to get specific 1-D or 2-D subsets of a data frame (rows and/or columns)
 dat[1,1] # [Rows, Columns]
 dat[1:3,5]
+
+vector2[1]
+letters[1:7]
+letters[c(1,3,5,7)]
+
 
 # Plotting ####
 
@@ -93,91 +110,73 @@ as.factor(nums) # show in console
 nums_factor <- as.factor(nums) #assign it to a new object as a factor
 class(nums_factor) # check it
 
+
+# convert numeric to character
+as.character(vector1)
+as.character(vector1) + 5
+
+# convert character to numeric
+as.numeric(vector3)
+
+
+
+
 #check it out
 plot(nums) 
 plot(nums_factor)
 # take note of how numeric vectors and factors behave differently in plot()
 
-# Let's modify and save these plots. Why not!?
-?plot()
-plot(nums, main = "My Title", xlab = "My axis label", ylab = "My other axis label")
-
-
-?jpeg()
-
-
-dev.off()
 
 
 
+# Simple numeric functions
+# R is a language built for data analysis and statistics so there is a lot of functionality built-in
 
-# Making a data frame ####
+max(vector1)
+min(vector1)
+median(vector1)
+mean(vector1)
+range(vector1)
+summary(vector1)
 
-# LET'S LEARN HOW TO MAKE A DATA FRAME FROM SCRATCH... WE JUST FEED IT VECTORS WITH NAMES!
+# cumulative functions
+cumsum(vector1)
+cumprod(vector1)
+cummin(vector1)
+cummax(vector1)
 
-# make some vectors *of equal length* (or you can pull these from existing vectors)
-col1 = c("hat", "tie", "shoes", "bandana")
-col2 = c(1,2,3,4)
-col3 = factor(c(1,2,3,4)) # see how we can designate something as a factor             
+# even has built-in statistical distributions (we will see more of these later)
+dbinom(50,100,.5) # probability of getting exactly 50 heads out of 100 coin flips
 
-# here's the data frame command:
-data.frame(Clothes = col1, Numbers = col2, Factor_numbers = col3) # colname = vector, colname = vector....
-df1 = data.frame(Clothes = col1, Numbers = col2, Factor_numbers = col3) # assign to df1
-df1 # look at it...note column names are what we gave it.
-
-
-
-
-# Practice subsetting ####
-
-# Make a data frame from the first 20 rows of iris that has only Species and Sepal.Length columns
-# save it into an object called "dat3"
-
-
-
-
-
-# WRITING OUT FILES FROM R ####
-?write.csv()
-
-
-# Write your new object "dat3" to a file named "LASTNAME_first_file.csv" in your PERSONAL git repository
-
-
-
-
-### for-loops in R ####
-
-#simplest example:
-for(i in 1:10){
-  print(i)
-}
-
-#another easy one
-for(i in levels(dat$Species)){
-  print(i)
-}
-
-# can calculate something for each value of i ...can use to subset to groups of interest
-for(i in levels(dat$Species)){
-  print(mean(dat[dat$Species == i,"Sepal.Length"]))
-}
 
 
 
 # YOUR REMAINING HOMEWORK ASSIGNMENT (Fill in with code) ####
 
-# 1.  Make a scatterplot of Sepal.Length vs Sepal.Width. See if you can get the points to be colored by "Species"
+# 1.  Get a subset of the "iris" data frame where it's just even-numbered rows
+
+seq(2,150,2) # here's the code to get a list of the even numbers between 2 and 150
 
 
-# 2.  Write the code to save it (with meaningful labels) as a jpeg file
+
+# 2.  Create a new object called iris_chr which is a copy of iris, except where every column is a character class
 
 
-# 3.  Subset the Iris data set to only include rows from the setosa and virginica Species
+
+# 3.  Create a new numeric vector object named "Sepal.Area" which is the product of Sepal.Length and Sepal.Width
 
 
-# 4.  Write code to save this new subset as a .csv file called setosa_and_virginica.csv
+
+# 4.  Add Sepal.Area to the iris data frame as a new column
 
 
-# 5.  Upload this R script (with all answers filled in and tasks completed) to canvas and GitHub
-      # I should be able to run your R script and get all the plots created and saved, etc.
+
+# 5.  Create a new dataframe that is a subset of iris using only rows where Sepal.Area is greater than 20 
+      # (name it big_area_iris)
+
+
+
+# 6.  Upload the last numbered section of this R script (with all answers filled in and tasks completed) 
+      # to canvas
+      # I should be able to run your R script and get all the right objects generated
+
