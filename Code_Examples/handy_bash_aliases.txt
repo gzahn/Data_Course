@@ -1,0 +1,7 @@
+alias cd..='cd ..'
+alias u='clear; cd ../; pwd; ls -lhGgo'
+alias d='clear; cd -; ls -lhGgo'
+alias grep='grep --color=auto'
+alias ll='ls -ahl --group-directories-first'
+alias ls='ls --color=auto'
+

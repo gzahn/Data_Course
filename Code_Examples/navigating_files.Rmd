@@ -1,0 +1,102 @@
+---
+output: html_document
+---
+
+### Working with files and paths in R
+
+Usually, the data you analyze will be sitting in an excel or csv file. You will have to find it and import it into R using code. Also, you will probably need to output things from R like statistical tables, graphs, or cleaned data into new files.  All of these tasks require you to be able to navigate your computer storage. Let's take a look at a few things we can do within R:
+
+This command shows us the "path" to our current working directory. A path is like a set of directions for how to get from the very root of your computer to the current folder you're working in
+```{r}
+getwd()
+```
+"/" represents the *root* of my entire filesystem, and each slash represents a new subdirectory.
+
+
+You can list the files in my current working directory with the following:
+```{r}
+list.files()[1:10] # just the first 10 to save space
+```
+That command can be modified as well:
+```{r}
+list.files(pattern = "x") # just filenames that have "x" in them
+```
+You can search within any directory on your computer, by telling list.files() which "path" to search in:
+```{r}
+list.files(path = "/home/gzahn/Desktop/Bioinformatics/")
+```
+
+```{r}
+list.files(path = "/home/gzahn/Desktop/Bioinformatics/",
+           recursive = TRUE,
+           pattern = ".nex")
+
+```
+Note how "recursive = TRUE" tells it to descend into subdirectories of a given path. Those 4 files live in the "Fungal_Alignments" subdirectory within that path.
+
+Now a closely related function:
+```{r}
+mypath <- "~/Desktop/GIT_REPOSITORIES/Data_Course/Data"
+list.dirs(path = mypath, recursive = FALSE)
+```
+
+You can save this list of directories in case you want to work with it later:
+```{r}
+data_directories <- list.dirs(path = mypath, recursive = FALSE)
+data_directories[3]
+list.files(path = data_directories[3],full.names = TRUE)
+```
+
+You can ask questions about whether files or directories exist in a given location:
+```{r}
+file.exists("/home/gzahn/Desktop/GIT_REPOSITORIES/Data_Course/Data/flights/2679884.csv")
+dir.exists("/home/gzahn/Desktop/GIT_REPOSITORIES/Data_Course/Data/fights") # misspelled "flights"
+```
+You can create and modify and peek inside files as well:
+```{r}
+list.files(path = data_directories[3],full.names = TRUE)
+file.create(file.path(data_directories[3],"testfile")) # Says "TRUE" if it worked
+list.files(path = data_directories[3],full.names = TRUE)
+
+# be careful using file.remove() ... it's permanent!
+file.remove("/home/gzahn/Desktop/GIT_REPOSITORIES/Data_Course/Data/flights/testfile") # Says "TRUE" if it worked
+```
+
+Here are some other functions you should play with:
+```{r eval=FALSE}
+file.rename()
+file.append()
+file.copy()
+file.size()
+readLines()
+```
+
+
+## The most important thing is to make sure you know how file paths *work!*
+
+Do you know what is going on with the next 4 lines of code?
+```{r}
+getwd()
+list.files()[1:10]
+list.files(path = "..",full.names = TRUE)
+list.files(path = "../Assignments")
+```
+___
+
+This is all VERY useful once you start working with hundreds or thousands of data files for a given project. If I want to search my entire computer desktop and all the folders inside of it for fasta DNA sequence files and find the ones that match a pattern in naming:
+```{r warning=FALSE}
+mypath <- "~/Desktop"
+fastas <- list.files(mypath,recursive = TRUE,pattern = "*5.8S*.fasta$",full.names = TRUE) # any file that has "5.8S" in the name and ends with ".fasta"
+fastas
+```
+Since R did all the searching and saved the location of those files, I can have it automatically read them in and work with them. For example:
+```{r}
+fna <- ShortRead::readFasta(fastas)
+ShortRead::sread(fna)
+```
+
+#### What is the absolute path to your Desktop on your computer?
+
+#### Can you list all the files there?
+
+#### Can you navigate around and find files in a different directory?

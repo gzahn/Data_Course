@@ -1,0 +1,62 @@
+
+## A quick analysis
+
+This is just a glimpse of a simple analysis. It may not look simple right now, but pay attention to how just a few lines of code can give us professional figures and quality statistical results. I'm showing you this early on so you get an idea about what sorts of things you'll be able to create in a few short weeks.
+
+This is an analysis of a famous dataset that measured sepal and petal lengths and widths in three species of Iris flowers.
+
+If you were to look at this data set in Excel, it would look something like this:
+
+```{r}
+head(iris)
+```
+
+
+And a plot of Sepal Width vs Petal Width might look something like this:
+
+```{r, out.width = "650px",echo=FALSE}
+knitr::include_graphics("../../../data-course/media/excel_iris.png")
+```
+
+
+___
+
+But, honestly, that plot leaves a lot to be desired. If I was going to tell you how to recreate that plot, I'd basically need a video showing all the different options I clicked in Excel, how I had to rearrange and copy columns just to get it to work...and even then, it's a bit horrible.
+
+Contrast the above with this:
+
+```{r, message=FALSE,warning=FALSE}
+library(tidyverse)
+ggplot(iris, aes(x=Sepal.Width,y=Petal.Width,color=Species)) +
+  geom_point() + geom_smooth(method="lm") + theme_minimal()
+```
+
+Just a few lines of code and we've already got a MUCH better plot that even accounts for how the relationship changes between the 3 different Iris species.
+Now, if you want to run a statistical test to see if Petal Width **really** correlates with Sepal Width and Iris Species, it's pretty simple once you know a few functions:
+
+```{r}
+mod <- aov(data=iris, Petal.Width ~ Sepal.Width + Species)
+summary(mod) # This is an ANOVA model
+```
+
+
+If you want a text-based summary of what that statistical table is telling you, that's just another short bit of reproducible code:
+
+```{r message=FALSE}
+report::report(mod)
+```
+
+Come to class, do your assignments, do your practice time every day and this will be second-nature to you. Your lab reports for other classes are going to be painfully impressive, and you are going to be able to get a pay bump in whatever job you have.
+
+___
+
+
+Go a bit further, taking advantage of the resources on the course web page and things are going to be even cooler, like interactive HTML plots or animations:
+
+```{r message=FALSE}
+p <- ggplot(iris, aes(x=Sepal.Width,y=Petal.Width,color=Species)) +
+  geom_point() + theme_minimal()
+
+plotly::ggplotly(p)
+```
+
