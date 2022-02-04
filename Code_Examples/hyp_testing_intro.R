@@ -1,19 +1,19 @@
 # Hypothesis testing
 
-library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
 
 # T-Test ####
 
 # make 3 fake variables with random values from normal distributions
-x <- rnorm(100)
-y <- rnorm(100)
-z <- rnorm(100,5,.5)
+x=rnorm(100)
+y=rnorm(100)
+z=rnorm(100,5,.5)
 
 # build a plottable data frame
-df <-  data.frame(x,y,z)
-
-df <- pivot_longer(df,1:3, values_to = "Value",names_to = "Var")
-
+df = data.frame(x,y,z)
+df = gather(df,key = Var,value = Value,1:3)
 
 # plot density (shape of distribution)
 ggplot(df,aes(x=Value,fill=Var)) +
@@ -22,13 +22,13 @@ ggplot(df,aes(x=Value,fill=Var)) +
 # t-tests to determine whether the samples likely came from the same distributions
 t.test(x,y)
 t.test(x,z)
-t.test(y,z)
+
 
 
 # correlation between 2 variables ####
 
-count <- c(9,25,15,2,14,25,24,47)
-speed <-  c(2,3,5,9,14,24,29,34)
+count = c(9,25,15,2,14,25,24,47)
+speed = c(2,3,5,9,14,24,29,34)
 
 ggplot(mapping = aes(x=count,y=speed)) +
   geom_point() +
@@ -49,11 +49,11 @@ cor.test(count,speed)
 data("iris")
 
 # 1-way anova
-mod.aov <- aov(data=iris, Sepal.Length ~ Species)
+mod.aov = aov(data=iris, Sepal.Length ~ Species)
 summary(mod.aov)
 
 #ANCOVA
-mod.acv <- aov(data = iris, Sepal.Length ~ Species + Petal.Length)
+mod.acv = aov(data = iris, Sepal.Length ~ Species + Petal.Length)
 summary(mod.acv)
 
 
